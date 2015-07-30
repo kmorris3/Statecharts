@@ -63,6 +63,7 @@ events
   @enter_READY "CARD_READER ≔ READY" 
   @set_Unblock "Unblock ≔ FALSE" 
   @set_Block "Block ≔ TRUE" 
+  @enter_BLOCKED "GATE ≔ BLOCKED" > "As it is now this requires human input "
  end
  event CardOk  ordinary 
  where 

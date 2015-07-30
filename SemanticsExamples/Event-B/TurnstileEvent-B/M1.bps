@@ -35,11 +35,12 @@
 <org.eventb.core.psStatus name="CardIn/Requirement_2_READY/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="CardIn/Requirement_1_ACCEPT/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="CardIn/Requirement_2_ACCEPT/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="CardError/superstateof_GATE/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="CardError/superstateof_CARD_READER/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="CardError/Requirement_1_BLOCKED/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="CardError/Requirement_2_BLOCKED/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="CardError/Requirement_1_UNBLOCKED/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="CardError/Requirement_2_UNBLOCKED/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="CardError/Requirement_1_UNBLOCKED/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="CardError/Requirement_2_UNBLOCKED/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="CardError/Requirement_1_READY/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="CardError/Requirement_2_READY/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="CardError/Requirement_1_ACCEPT/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
