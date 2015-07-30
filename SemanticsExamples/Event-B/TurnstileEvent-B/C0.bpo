@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="6">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="MAIN_REGION_STATES" org.eventb.core.type="ℙ(MAIN_REGION_STATES)"/>
 <org.eventb.core.poIdentifier name="OFF" org.eventb.core.type="MAIN_REGION_STATES"/>
 <org.eventb.core.poIdentifier name="ON" org.eventb.core.type="MAIN_REGION_STATES"/>
 <org.eventb.core.poIdentifier name="OnOff_MAP" org.eventb.core.type="ℙ(MAIN_REGION_STATES×MAIN_REGION_STATES)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TurnstileEvent-B/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TurnstileEvent-B/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ON∈MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-B/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_0tAglDbUEeWHJII-BG_43A"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="OFF∈MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-B/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_0tAglTbUEeWHJII-BG_43A"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="partition(MAIN_REGION_STATES,{ON},{OFF})" org.eventb.core.source="/TurnstileEvent-B/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_0tAgljbUEeWHJII-BG_43A"/>
