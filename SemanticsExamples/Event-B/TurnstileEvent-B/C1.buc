@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.extendsContext name="_0tGAIDbUEeWHJII-BG_43A" org.eventb.core.target="C0"/>
+<org.eventb.core.carrierSet name="_0tGAITbUEeWHJII-BG_43A" org.eventb.core.identifier="GATE_STATES"/>
+<org.eventb.core.carrierSet name="_0tGAIjbUEeWHJII-BG_43A" org.eventb.core.identifier="CARD_READER_STATES"/>
+<org.eventb.core.constant name="_0tGAIzbUEeWHJII-BG_43A" org.eventb.core.identifier="GATE_NULL"/>
+<org.eventb.core.constant name="_0tGAJDbUEeWHJII-BG_43A" org.eventb.core.identifier="BLOCKED"/>
+<org.eventb.core.constant name="_0tGAJTbUEeWHJII-BG_43A" org.eventb.core.identifier="UNBLOCKED"/>
+<org.eventb.core.constant name="_0tGnMDbUEeWHJII-BG_43A" org.eventb.core.identifier="CARD_READER_NULL"/>
+<org.eventb.core.constant name="_0tGnMTbUEeWHJII-BG_43A" org.eventb.core.identifier="READY"/>
+<org.eventb.core.constant name="_0tGnMjbUEeWHJII-BG_43A" org.eventb.core.identifier="READING"/>
+<org.eventb.core.constant name="_0tGnMzbUEeWHJII-BG_43A" org.eventb.core.identifier="ACCEPT"/>
+<org.eventb.core.constant name="_0tGnNDbUEeWHJII-BG_43A" org.eventb.core.identifier="M1_OnOff_MAP"/>
+<org.eventb.core.axiom name="_0tGnNTbUEeWHJII-BG_43A" org.eventb.core.label="typeof_GATE_NULL" org.eventb.core.predicate="GATE_NULL ∈ GATE_STATES"/>
+<org.eventb.core.axiom name="_0tGnNjbUEeWHJII-BG_43A" org.eventb.core.label="typeof_CARD_READER_NULL" org.eventb.core.predicate="CARD_READER_NULL ∈ CARD_READER_STATES"/>
+<org.eventb.core.axiom name="_0tGnNzbUEeWHJII-BG_43A" org.eventb.core.label="typeof_BLOCKED" org.eventb.core.predicate="BLOCKED ∈ GATE_STATES"/>
+<org.eventb.core.axiom name="_0tGnODbUEeWHJII-BG_43A" org.eventb.core.label="typeof_UNBLOCKED" org.eventb.core.predicate="UNBLOCKED ∈ GATE_STATES"/>
+<org.eventb.core.axiom name="_0tHOQDbUEeWHJII-BG_43A" org.eventb.core.label="typeof_READY" org.eventb.core.predicate="READY ∈ CARD_READER_STATES"/>
+<org.eventb.core.axiom name="_0tHOQTbUEeWHJII-BG_43A" org.eventb.core.label="typeof_READING" org.eventb.core.predicate="READING ∈ CARD_READER_STATES"/>
+<org.eventb.core.axiom name="_0tHOQjbUEeWHJII-BG_43A" org.eventb.core.label="typeof_ACCEPT" org.eventb.core.predicate="ACCEPT ∈ CARD_READER_STATES"/>
+<org.eventb.core.axiom name="_0tHOQzbUEeWHJII-BG_43A" org.eventb.core.label="distinct_states_in_GATE_STATES" org.eventb.core.predicate=" partition(GATE_STATES, {BLOCKED}, {UNBLOCKED}, {GATE_NULL})"/>
+<org.eventb.core.axiom name="_0tHORDbUEeWHJII-BG_43A" org.eventb.core.label="distinct_states_in_CARD_READER_STATES" org.eventb.core.predicate=" partition(CARD_READER_STATES, {READY}, {READING}, {ACCEPT}, {CARD_READER_NULL})"/>
+<org.eventb.core.axiom name="_0tHORTbUEeWHJII-BG_43A" org.eventb.core.label="define_M1_OnOff_MAP" org.eventb.core.predicate="M1_OnOff_MAP = {ON↦OFF, OFF↦ON}"/>
+<org.eventb.core.axiom name="_0tHORjbUEeWHJII-BG_43A" org.eventb.core.label="domain_M_OnOff_MAP" org.eventb.core.predicate="dom(M1_OnOff_MAP) = MAIN_REGION_STATES"/>
+<org.eventb.core.axiom name="_0tH1UDbUEeWHJII-BG_43A" org.eventb.core.label="range_M1_OnOff_MAP" org.eventb.core.predicate="ran(M1_OnOff_MAP) = MAIN_REGION_STATES"/>
+</org.eventb.core.contextFile>

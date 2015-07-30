@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="MAIN_REGION_STATES" org.eventb.core.type="ℙ(MAIN_REGION_STATES)"/>
+<org.eventb.core.poIdentifier name="OFF" org.eventb.core.type="MAIN_REGION_STATES"/>
+<org.eventb.core.poIdentifier name="ON" org.eventb.core.type="MAIN_REGION_STATES"/>
+<org.eventb.core.poIdentifier name="OnOff_MAP" org.eventb.core.type="ℙ(MAIN_REGION_STATES×MAIN_REGION_STATES)"/>
+<org.eventb.core.poPredicate name="MAIN_REGION_STATET" org.eventb.core.predicate="ON∈MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-B/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_0tAglDbUEeWHJII-BG_43A"/>
+<org.eventb.core.poPredicate name="MAIN_REGION_STATEU" org.eventb.core.predicate="OFF∈MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-B/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_0tAglTbUEeWHJII-BG_43A"/>
+<org.eventb.core.poPredicate name="MAIN_REGION_STATEV" org.eventb.core.predicate="partition(MAIN_REGION_STATES,{ON},{OFF})" org.eventb.core.source="/TurnstileEvent-B/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_0tAgljbUEeWHJII-BG_43A"/>
+<org.eventb.core.poPredicate name="MAIN_REGION_STATEW" org.eventb.core.predicate="OnOff_MAP={ON ↦ OFF,OFF ↦ ON}" org.eventb.core.source="/TurnstileEvent-B/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_0tAglzbUEeWHJII-BG_43A"/>
+<org.eventb.core.poPredicate name="MAIN_REGION_STATEX" org.eventb.core.predicate="dom(OnOff_MAP)=MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-B/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_0tBHoDbUEeWHJII-BG_43A"/>
+<org.eventb.core.poPredicate name="MAIN_REGION_STATEY" org.eventb.core.predicate="ran(OnOff_MAP)=MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-B/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_0tBHoTbUEeWHJII-BG_43A"/>
+<org.eventb.core.poIdentifier name="CARD_READER_STATES" org.eventb.core.type="ℙ(CARD_READER_STATES)"/>
+<org.eventb.core.poIdentifier name="GATE_STATES" org.eventb.core.type="ℙ(GATE_STATES)"/>
+<org.eventb.core.poIdentifier name="ACCEPT" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poIdentifier name="CARD_READER_NULL" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poIdentifier name="M1_OnOff_MAP" org.eventb.core.type="ℙ(MAIN_REGION_STATES×MAIN_REGION_STATES)"/>
+<org.eventb.core.poIdentifier name="READING" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="READY" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="UNBLOCKED" org.eventb.core.type="GATE_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TurnstileEvent-B/C1.bpo|org.eventb.core.poFile#C1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="GATE_NULL∈GATE_STATES" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_0tGnNTbUEeWHJII-BG_43A"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="CARD_READER_NULL∈CARD_READER_STATES" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_0tGnNjbUEeWHJII-BG_43A"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="BLOCKED∈GATE_STATES" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_0tGnNzbUEeWHJII-BG_43A"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="UNBLOCKED∈GATE_STATES" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_0tGnODbUEeWHJII-BG_43A"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="READY∈CARD_READER_STATES" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_0tHOQDbUEeWHJII-BG_43A"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="READING∈CARD_READER_STATES" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_0tHOQTbUEeWHJII-BG_43A"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="ACCEPT∈CARD_READER_STATES" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_0tHOQjbUEeWHJII-BG_43A"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL})" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_0tHOQzbUEeWHJII-BG_43A"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL})" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_0tHORDbUEeWHJII-BG_43A"/>
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="M1_OnOff_MAP={ON ↦ OFF,OFF ↦ ON}" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_0tHORTbUEeWHJII-BG_43A"/>
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="dom(M1_OnOff_MAP)=MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_0tHORjbUEeWHJII-BG_43A"/>
+<org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="ran(M1_OnOff_MAP)=MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_0tH1UDbUEeWHJII-BG_43A"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

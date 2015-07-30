@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
-<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.seesContext name="_0tN78DbUEeWHJII-BG_43A" org.eventb.core.target="C0"/>
+<org.eventb.core.variable name="_0tN78TbUEeWHJII-BG_43A" org.eventb.core.identifier="MAIN_REGION"/>
+<org.eventb.core.invariant name="_0tN78jbUEeWHJII-BG_43A" org.eventb.core.label="typeof_MAIN_REGION" org.eventb.core.predicate="MAIN_REGION ∈ MAIN_REGION_STATES"/>
+<org.eventb.core.event name="_0tN78zbUEeWHJII-BG_43A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_0tN79DbUEeWHJII-BG_43A" org.eventb.core.assignment="MAIN_REGION≔OFF" org.eventb.core.label="init_MAIN_REGION"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_0tN79TbUEeWHJII-BG_43A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="OnOff">
+<org.eventb.core.parameter name="_0tN79jbUEeWHJII-BG_43A" org.eventb.core.identifier="s"/>
+<org.eventb.core.guard name="_0tN79zbUEeWHJII-BG_43A" org.eventb.core.label="typeof_s" org.eventb.core.predicate="s ∈ dom(OnOff_MAP) ∧ s=MAIN_REGION"/>
+<org.eventb.core.guard name="_0tOjADbUEeWHJII-BG_43A" org.eventb.core.label="isin_ON_OFF" org.eventb.core.predicate="MAIN_REGION=ON ∨ MAIN_REGION=OFF"/>
+<org.eventb.core.action name="_0tOjATbUEeWHJII-BG_43A" org.eventb.core.assignment="MAIN_REGION≔OnOff_MAP(s)" org.eventb.core.label="enter_OFF_ON"/>
+</org.eventb.core.event>
 </org.eventb.core.machineFile>
