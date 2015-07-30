@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="SM0_STATES" org.eventb.core.type="ℙ(SM0_STATES)"/>
+<org.eventb.core.poIdentifier name="ON_OFF" org.eventb.core.type="SM0_STATES"/>
+<org.eventb.core.poPredicate name="SM0_STATET" org.eventb.core.predicate="ON_OFF∈SM0_STATES" org.eventb.core.source="/TurnstileUMLB/M0_implicitContext.buc|org.eventb.core.contextFile#M0_implicitContext|org.eventb.core.axiom#_zDlwYf_ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.poPredicate name="SM0_STATEU" org.eventb.core.predicate="partition(SM0_STATES,{ON_OFF})" org.eventb.core.source="/TurnstileUMLB/M0_implicitContext.buc|org.eventb.core.contextFile#M0_implicitContext|org.eventb.core.axiom#_zDlwYv_ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.poIdentifier name="ON_OFF_SM1_STATES" org.eventb.core.type="ℙ(ON_OFF_SM1_STATES)"/>
+<org.eventb.core.poIdentifier name="OFF" org.eventb.core.type="ON_OFF_SM1_STATES"/>
+<org.eventb.core.poIdentifier name="ON" org.eventb.core.type="ON_OFF_SM1_STATES"/>
+<org.eventb.core.poIdentifier name="ON_OFF_SM1_NULL" org.eventb.core.type="ON_OFF_SM1_STATES"/>
+<org.eventb.core.poPredicate name="ON_OFF_SM1_STATET" org.eventb.core.predicate="ON_OFF_SM1_NULL∈ON_OFF_SM1_STATES" org.eventb.core.source="/TurnstileUMLB/M1_implicitContext.buc|org.eventb.core.contextFile#M1_implicitContext|org.eventb.core.axiom#_zDzy1f_ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.poPredicate name="ON_OFF_SM1_STATEU" org.eventb.core.predicate="OFF∈ON_OFF_SM1_STATES" org.eventb.core.source="/TurnstileUMLB/M1_implicitContext.buc|org.eventb.core.contextFile#M1_implicitContext|org.eventb.core.axiom#_zD0Z4P_ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.poPredicate name="ON_OFF_SM1_STATEV" org.eventb.core.predicate="ON∈ON_OFF_SM1_STATES" org.eventb.core.source="/TurnstileUMLB/M1_implicitContext.buc|org.eventb.core.contextFile#M1_implicitContext|org.eventb.core.axiom#_zD0Z4f_ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.poPredicate name="ON_OFF_SM1_STATEW" org.eventb.core.predicate="partition(ON_OFF_SM1_STATES,{OFF},{ON},{ON_OFF_SM1_NULL})" org.eventb.core.source="/TurnstileUMLB/M1_implicitContext.buc|org.eventb.core.contextFile#M1_implicitContext|org.eventb.core.axiom#_zD0Z4v_ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.poIdentifier name="CARD_READER_STATES" org.eventb.core.type="ℙ(CARD_READER_STATES)"/>
+<org.eventb.core.poIdentifier name="GATE_STATES" org.eventb.core.type="ℙ(GATE_STATES)"/>
+<org.eventb.core.poIdentifier name="ACCEPT" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poIdentifier name="CARD_READER_NULL" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poIdentifier name="READING" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="READY" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="UNBLOCKED" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poPredicate name="CARD_READER_STATET" org.eventb.core.predicate="GATE_NULL∈GATE_STATES" org.eventb.core.source="/TurnstileUMLB/M2_implicitContext.buc|org.eventb.core.contextFile#M2_implicitContext|org.eventb.core.axiom#_7ZDo8AQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poPredicate name="CARD_READER_STATEU" org.eventb.core.predicate="CARD_READER_NULL∈CARD_READER_STATES" org.eventb.core.source="/TurnstileUMLB/M2_implicitContext.buc|org.eventb.core.contextFile#M2_implicitContext|org.eventb.core.axiom#_7ZDo8QQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poPredicate name="CARD_READER_STATEV" org.eventb.core.predicate="BLOCKED∈GATE_STATES" org.eventb.core.source="/TurnstileUMLB/M2_implicitContext.buc|org.eventb.core.contextFile#M2_implicitContext|org.eventb.core.axiom#_7ZDo8gQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poPredicate name="CARD_READER_STATEW" org.eventb.core.predicate="UNBLOCKED∈GATE_STATES" org.eventb.core.source="/TurnstileUMLB/M2_implicitContext.buc|org.eventb.core.contextFile#M2_implicitContext|org.eventb.core.axiom#_7ZDo8wQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poPredicate name="CARD_READER_STATEX" org.eventb.core.predicate="READY∈CARD_READER_STATES" org.eventb.core.source="/TurnstileUMLB/M2_implicitContext.buc|org.eventb.core.contextFile#M2_implicitContext|org.eventb.core.axiom#_7ZEQAAQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poPredicate name="CARD_READER_STATEY" org.eventb.core.predicate="READING∈CARD_READER_STATES" org.eventb.core.source="/TurnstileUMLB/M2_implicitContext.buc|org.eventb.core.contextFile#M2_implicitContext|org.eventb.core.axiom#_7ZEQAQQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poPredicate name="CARD_READER_STATEZ" org.eventb.core.predicate="ACCEPT∈CARD_READER_STATES" org.eventb.core.source="/TurnstileUMLB/M2_implicitContext.buc|org.eventb.core.contextFile#M2_implicitContext|org.eventb.core.axiom#_7ZEQAgQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poPredicate name="CARD_READER_STATE[" org.eventb.core.predicate="partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL})" org.eventb.core.source="/TurnstileUMLB/M2_implicitContext.buc|org.eventb.core.contextFile#M2_implicitContext|org.eventb.core.axiom#_7ZE3EAQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poPredicate name="CARD_READER_STATE\" org.eventb.core.predicate="partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL})" org.eventb.core.source="/TurnstileUMLB/M2_implicitContext.buc|org.eventb.core.contextFile#M2_implicitContext|org.eventb.core.axiom#_7ZE3EQQrEeW63N5SQfCAKg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="GATE" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poIdentifier name="ON_OFF_SM1" org.eventb.core.type="ON_OFF_SM1_STATES"/>
+<org.eventb.core.poIdentifier name="SM0" org.eventb.core.type="SM0_STATES"/>
+<org.eventb.core.poPredicate name="CARD_READES" org.eventb.core.predicate="SM0∈SM0_STATES" org.eventb.core.source="/TurnstileUMLB/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#_zDhe8f_ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.poPredicate name="CARD_READET" org.eventb.core.predicate="ON_OFF_SM1∈ON_OFF_SM1_STATES" org.eventb.core.source="/TurnstileUMLB/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_zDu6Uv_ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.poPredicate name="CARD_READEU" org.eventb.core.predicate="ON_OFF_SM1≠ON_OFF_SM1_NULL⇔SM0=ON_OFF" org.eventb.core.source="/TurnstileUMLB/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_zDu6U__ZEeSwtrZ15v7AYA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/superstateof_GATE/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPM2_implicitContexy"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="GATE_NULL≠GATE_NULL⇔OFF=ON" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMgQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileUMLB/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_zDu6VP_ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_zDuTQf_ZEeSwtrZ15v7AYB"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMgQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#INITIALISATION\/superstateof_GATE\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/superstateof_CARD_READER/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPM2_implicitContexy"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="CARD_READER_NULL≠CARD_READER_NULL⇔OFF=ON" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMwQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileUMLB/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_zDu6VP_ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_zDuTQf_ZEeSwtrZ15v7AYB"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMwQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#INITIALISATION\/superstateof_CARD_READER\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTM2_implicitContexy" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="CARD_READER'" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="GATE'" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poIdentifier name="SM0'" org.eventb.core.type="SM0_STATES"/>
+<org.eventb.core.poIdentifier name="ON_OFF_SM1'" org.eventb.core.type="ON_OFF_SM1_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPM2_implicitContexy" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTM2_implicitContexy" org.eventb.core.poStamp="1"/>
+<org.eventb.core.poSequent name="OnOff/superstateof_GATE/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPM2_implicitContexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="GATE_NULL≠GATE_NULL⇔OFF=ON" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMgQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileUMLB/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_zDu6Vv_ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_zDuTQf_ZEeSwtrZ15v7AYC"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMgQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#OnOff\/superstateof_GATE\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="OnOff/superstateof_CARD_READER/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPM2_implicitContexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="CARD_READER_NULL≠CARD_READER_NULL⇔OFF=ON" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMwQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileUMLB/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_zDu6Vv_ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_zDuTQf_ZEeSwtrZ15v7AYC"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMwQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#OnOff\/superstateof_CARD_READER\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTM2_implicitContexz" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="CARD_READER'" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="GATE'" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poIdentifier name="ON_OFF_SM1'" org.eventb.core.type="ON_OFF_SM1_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPM2_implicitContexz" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTM2_implicitContexz" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ON_OFF_SM1=ON" org.eventb.core.source="/TurnstileUMLB/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_zDu6Vv_ZEeSwtrZ15v7AYA|org.eventb.core.guard#_zDvhYP_ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="SM0=ON_OFF" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_zDuTQf_ZEeSwtrZ15v7AYC|org.eventb.core.guard#_7Y3bsQQrEeW63N5SQfCAKg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="OffOn/superstateof_GATE/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPM2_implicitContex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="BLOCKED≠GATE_NULL⇔ON=ON" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMgQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileUMLB/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_zDvhY__ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_zDuTQf_ZEeSwtrZ15v7AYD"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMgQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#OffOn\/superstateof_GATE\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="OffOn/superstateof_CARD_READER/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPM2_implicitContex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="READY≠CARD_READER_NULL⇔ON=ON" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMwQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileUMLB/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_zDvhY__ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_zDuTQf_ZEeSwtrZ15v7AYD"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMwQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#OffOn\/superstateof_CARD_READER\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTM2_implicitContex{" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="CARD_READER'" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="GATE'" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poIdentifier name="ON_OFF_SM1'" org.eventb.core.type="ON_OFF_SM1_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPM2_implicitContex{" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTM2_implicitContex{" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ON_OFF_SM1=OFF" org.eventb.core.source="/TurnstileUMLB/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_zDvhY__ZEeSwtrZ15v7AYA|org.eventb.core.guard#_zDvhZf_ZEeSwtrZ15v7AYA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="CardIn/superstateof_CARD_READER/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPM2_implicitContex\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="READING≠CARD_READER_NULL⇔ON_OFF_SM1=ON" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMwQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_c41sEAQkEeWlEPYzM36IWg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMwQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#CardIn\/superstateof_CARD_READER\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTM2_implicitContex|" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="CARD_READER'" org.eventb.core.type="CARD_READER_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPM2_implicitContex|" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTM2_implicitContex\|" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="CARD_READER=READY" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_c41sEAQkEeWlEPYzM36IWg|org.eventb.core.guard#_7Y5Q4AQrEeW63N5SQfCAKg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="CardError/superstateof_CARD_READER/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPM2_implicitContex}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="READY≠CARD_READER_NULL⇔ON_OFF_SM1=ON" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMwQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_wQut0AQkEeWlEPYzM36IWg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMwQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#CardError\/superstateof_CARD_READER\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTM2_implicitContex}" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="CARD_READER'" org.eventb.core.type="CARD_READER_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPM2_implicitContex}" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTM2_implicitContex}" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="CARD_READER=READING" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_wQut0AQkEeWlEPYzM36IWg|org.eventb.core.guard#_7Y538QQrEeW63N5SQfCAKg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="CardOk/superstateof_GATE/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPM2_implicitContex~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="UNBLOCKED≠GATE_NULL⇔ON_OFF_SM1=ON" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMgQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_wQvU4AQkEeWlEPYzM36IWg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMgQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#CardOk\/superstateof_GATE\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CardOk/superstateof_CARD_READER/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPM2_implicitContex~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ACCEPT≠CARD_READER_NULL⇔ON_OFF_SM1=ON" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMwQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_wQvU4AQkEeWlEPYzM36IWg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMwQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#CardOk\/superstateof_CARD_READER\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTM2_implicitContex~" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="CARD_READER'" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="GATE'" org.eventb.core.type="GATE_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPM2_implicitContex~" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTM2_implicitContex~" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="GATE=BLOCKED" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_wQvU4AQkEeWlEPYzM36IWg|org.eventb.core.guard#_7Y538wQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="CARD_READER=READING" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_wQvU4AQkEeWlEPYzM36IWg|org.eventb.core.guard#_7Y6fAAQrEeW63N5SQfCAKg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="Reset/superstateof_GATE/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPM2_implicitContey'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="BLOCKED≠GATE_NULL⇔ON_OFF_SM1=ON" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMgQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_-OQYoAQkEeWlEPYzM36IWg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMgQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#Reset\/superstateof_GATE\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="Reset/superstateof_CARD_READER/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPM2_implicitContey'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="READY≠CARD_READER_NULL⇔ON_OFF_SM1=ON" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMwQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_-OQYoAQkEeWlEPYzM36IWg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMwQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#Reset\/superstateof_CARD_READER\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTM2_implicitContey'" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="CARD_READER'" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="GATE'" org.eventb.core.type="GATE_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPM2_implicitContey'" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTM2_implicitContey'" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="GATE=UNBLOCKED" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_-OQYoAQkEeWlEPYzM36IWg|org.eventb.core.guard#_7Y6fAwQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="CARD_READER=ACCEPT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_-OQYoAQkEeWlEPYzM36IWg|org.eventb.core.guard#_7Y6fBAQrEeW63N5SQfCAKg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="Unblock/superstateof_GATE/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPM2_implicitContey("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="UNBLOCKED≠GATE_NULL⇔ON_OFF_SM1=ON" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMgQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_T60LsAQlEeWlEPYzM36IWg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMgQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#Unblock\/superstateof_GATE\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="Unblock/superstateof_CARD_READER/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPM2_implicitContey("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ACCEPT≠CARD_READER_NULL⇔ON_OFF_SM1=ON" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMwQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_T60LsAQlEeWlEPYzM36IWg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMwQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#Unblock\/superstateof_CARD_READER\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTM2_implicitContey(" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="CARD_READER'" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="GATE'" org.eventb.core.type="GATE_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPM2_implicitContey(" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTM2_implicitContey(" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="GATE=BLOCKED" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_T60LsAQlEeWlEPYzM36IWg|org.eventb.core.guard#_7Y7GEgQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="CARD_READER=READING" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_T60LsAQlEeWlEPYzM36IWg|org.eventb.core.guard#_7Y7GEwQrEeW63N5SQfCAKg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="Block/superstateof_GATE/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPM2_implicitContey)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="BLOCKED≠GATE_NULL⇔ON_OFF_SM1=ON" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMgQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_T60ywAQlEeWlEPYzM36IWg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMgQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#Block\/superstateof_GATE\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="Block/superstateof_CARD_READER/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPM2_implicitContey)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="READY≠CARD_READER_NULL⇔ON_OFF_SM1=ON" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMwQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_T60ywAQlEeWlEPYzM36IWg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMwQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#Block\/superstateof_CARD_READER\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTM2_implicitContey)" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="CARD_READER'" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="GATE'" org.eventb.core.type="GATE_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPM2_implicitContey)" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTM2_implicitContey)" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="GATE=UNBLOCKED" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_T60ywAQlEeWlEPYzM36IWg|org.eventb.core.guard#_7Y7tIgQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="CARD_READER=ACCEPT" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_T60ywAQlEeWlEPYzM36IWg|org.eventb.core.guard#_7Y7tIwQrEeW63N5SQfCAKg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TurnstileUMLB/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="GATE∈GATE_STATES" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMAQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="CARD_READER∈CARD_READER_STATES" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMQQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="GATE≠GATE_NULL⇔ON_OFF_SM1=ON" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMgQrEeW63N5SQfCAKg"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="CARD_READER≠CARD_READER_NULL⇔ON_OFF_SM1=ON" org.eventb.core.source="/TurnstileUMLB/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_7Y8UMwQrEeW63N5SQfCAKg"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

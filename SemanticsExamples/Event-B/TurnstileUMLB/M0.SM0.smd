@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:statemachines="http://soton.ac.uk/models/eventb/statemachines/2014" xmi:id="_5dY-8P90EeSSTIwS7e19rA" type="Statemachines" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_6y_YkP93EeSSTIwS7e19rA" type="2006">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_6y_Ykf93EeSSTIwS7e19rA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_6y_Ykv93EeSSTIwS7e19rA" fontName=".Helvetica Neue DeskInterface"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_6y_Yk_93EeSSTIwS7e19rA"/>
+    <element xmi:type="statemachines:Initial" href="M0.bum#http://soton.ac.uk/models/eventb/statemachines/2014::Initial::M0.SM0.SM0_initial1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6y_YlP93EeSSTIwS7e19rA" x="101" y="55"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_7M9XwP93EeSSTIwS7e19rA" type="2008">
+    <children xmi:type="notation:DecorationNode" xmi:id="_7M9-0P93EeSSTIwS7e19rA" type="5009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_7M9-0f93EeSSTIwS7e19rA" type="7012">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_7M9-0v93EeSSTIwS7e19rA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_7M9-0_93EeSSTIwS7e19rA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_7M9-1P93EeSSTIwS7e19rA" type="7013">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_7M9-1f93EeSSTIwS7e19rA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_7M9-1v93EeSSTIwS7e19rA"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_7M9Xwf93EeSSTIwS7e19rA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_7M9Xwv93EeSSTIwS7e19rA" fontName=".Helvetica Neue DeskInterface"/>
+    <element xmi:type="statemachines:State" href="M0.bum#http://soton.ac.uk/models/eventb/statemachines/2014::State::M0.SM0.ON_OFF"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7M9Xw_93EeSSTIwS7e19rA" x="171" y="81"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_5dY-8f90EeSSTIwS7e19rA"/>
+  <element xmi:type="statemachines:Statemachine" href="M0.bum#http://soton.ac.uk/models/eventb/statemachines/2014::Statemachine::M0.SM0"/>
+</notation:Diagram>

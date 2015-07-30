@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="typeof_ON_OFF" org.eventb.core.predicate="ON_OFF∈SM0_STATES" org.eventb.core.source="/TurnstileUMLB/M0_implicitContext.buc|org.eventb.core.contextFile#M0_implicitContext|org.eventb.core.axiom#_zDlwYf_ZEeSwtrZ15v7AYA" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="distinct_states_in_SM0_STATES" org.eventb.core.predicate="partition(SM0_STATES,{ON_OFF})" org.eventb.core.source="/TurnstileUMLB/M0_implicitContext.buc|org.eventb.core.contextFile#M0_implicitContext|org.eventb.core.axiom#_zDlwYv_ZEeSwtrZ15v7AYA" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="ON_OFF" org.eventb.core.source="/TurnstileUMLB/M0_implicitContext.buc|org.eventb.core.contextFile#M0_implicitContext|org.eventb.core.constant#_zDlwYP_ZEeSwtrZ15v7AYA" org.eventb.core.type="SM0_STATES"/>
+<org.eventb.core.scCarrierSet name="SM0_STATES" org.eventb.core.source="/TurnstileUMLB/M0_implicitContext.buc|org.eventb.core.contextFile#M0_implicitContext|org.eventb.core.carrierSet#_zDlJUP_ZEeSwtrZ15v7AYA" org.eventb.core.type="ℙ(SM0_STATES)"/>
+</org.eventb.core.scContextFile>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="SM0_STATES" org.eventb.core.type="ℙ(SM0_STATES)"/>
+<org.eventb.core.poIdentifier name="ON_OFF" org.eventb.core.type="SM0_STATES"/>
+<org.eventb.core.poPredicate name="SM0_STATET" org.eventb.core.predicate="ON_OFF∈SM0_STATES" org.eventb.core.source="/TurnstileUMLB/M0_implicitContext.buc|org.eventb.core.contextFile#M0_implicitContext|org.eventb.core.axiom#_zDlwYf_ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.poPredicate name="SM0_STATEU" org.eventb.core.predicate="partition(SM0_STATES,{ON_OFF})" org.eventb.core.source="/TurnstileUMLB/M0_implicitContext.buc|org.eventb.core.contextFile#M0_implicitContext|org.eventb.core.axiom#_zDlwYv_ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.poIdentifier name="ON_OFF_SM1_STATES" org.eventb.core.type="ℙ(ON_OFF_SM1_STATES)"/>
+<org.eventb.core.poIdentifier name="OFF" org.eventb.core.type="ON_OFF_SM1_STATES"/>
+<org.eventb.core.poIdentifier name="ON" org.eventb.core.type="ON_OFF_SM1_STATES"/>
+<org.eventb.core.poIdentifier name="ON_OFF_SM1_NULL" org.eventb.core.type="ON_OFF_SM1_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TurnstileUMLB/M1_implicitContext.bpo|org.eventb.core.poFile#M1_implicitContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ON_OFF_SM1_NULL∈ON_OFF_SM1_STATES" org.eventb.core.source="/TurnstileUMLB/M1_implicitContext.buc|org.eventb.core.contextFile#M1_implicitContext|org.eventb.core.axiom#_zDzy1f_ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="OFF∈ON_OFF_SM1_STATES" org.eventb.core.source="/TurnstileUMLB/M1_implicitContext.buc|org.eventb.core.contextFile#M1_implicitContext|org.eventb.core.axiom#_zD0Z4P_ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="ON∈ON_OFF_SM1_STATES" org.eventb.core.source="/TurnstileUMLB/M1_implicitContext.buc|org.eventb.core.contextFile#M1_implicitContext|org.eventb.core.axiom#_zD0Z4f_ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="partition(ON_OFF_SM1_STATES,{OFF},{ON},{ON_OFF_SM1_NULL})" org.eventb.core.source="/TurnstileUMLB/M1_implicitContext.buc|org.eventb.core.contextFile#M1_implicitContext|org.eventb.core.axiom#_zD0Z4v_ZEeSwtrZ15v7AYA"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

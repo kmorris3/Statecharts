@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.extendsContext name="_zDzy0P_ZEeSwtrZ15v7AYA" org.eventb.core.target="M0_implicitContext"/>
+<org.eventb.core.carrierSet name="_zDzy0f_ZEeSwtrZ15v7AYA" org.eventb.core.identifier="ON_OFF_SM1_STATES"/>
+<org.eventb.core.constant name="_zDzy0v_ZEeSwtrZ15v7AYA" org.eventb.core.identifier="ON_OFF_SM1_NULL"/>
+<org.eventb.core.constant name="_zDzy0__ZEeSwtrZ15v7AYA" org.eventb.core.identifier="OFF"/>
+<org.eventb.core.constant name="_zDzy1P_ZEeSwtrZ15v7AYA" org.eventb.core.identifier="ON"/>
+<org.eventb.core.axiom name="_zDzy1f_ZEeSwtrZ15v7AYA" org.eventb.core.label="typeof_ON_OFF_SM1_NULL" org.eventb.core.predicate="ON_OFF_SM1_NULL ∈ ON_OFF_SM1_STATES"/>
+<org.eventb.core.axiom name="_zD0Z4P_ZEeSwtrZ15v7AYA" org.eventb.core.label="typeof_OFF" org.eventb.core.predicate="OFF ∈ ON_OFF_SM1_STATES"/>
+<org.eventb.core.axiom name="_zD0Z4f_ZEeSwtrZ15v7AYA" org.eventb.core.label="typeof_ON" org.eventb.core.predicate="ON ∈ ON_OFF_SM1_STATES"/>
+<org.eventb.core.axiom name="_zD0Z4v_ZEeSwtrZ15v7AYA" org.eventb.core.label="distinct_states_in_ON_OFF_SM1_STATES" org.eventb.core.predicate=" partition(ON_OFF_SM1_STATES, {OFF}, {ON}, {ON_OFF_SM1_NULL})"/>
+</org.eventb.core.contextFile>

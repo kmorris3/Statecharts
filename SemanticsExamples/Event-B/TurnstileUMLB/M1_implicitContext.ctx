@@ -1,0 +1,13 @@
+context M1_implicitContext 
+extends 
+ M0_implicitContext
+sets 
+ ON_OFF_SM1_STATES 
+constants 
+ ON_OFF_SM1_NULL  OFF  ON 
+axioms 
+ @typeof_ON_OFF_SM1_NULL "ON_OFF_SM1_NULL ∈ ON_OFF_SM1_STATES"  
+ @typeof_OFF "OFF ∈ ON_OFF_SM1_STATES"  
+ @typeof_ON "ON ∈ ON_OFF_SM1_STATES"  
+ @distinct_states_in_ON_OFF_SM1_STATES " partition(ON_OFF_SM1_STATES, {OFF}, {ON}, {ON_OFF_SM1_NULL})"  
+end

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.carrierSet name="_zDlJUP_ZEeSwtrZ15v7AYA" org.eventb.core.identifier="SM0_STATES"/>
+<org.eventb.core.constant name="_zDlwYP_ZEeSwtrZ15v7AYA" org.eventb.core.identifier="ON_OFF"/>
+<org.eventb.core.axiom name="_zDlwYf_ZEeSwtrZ15v7AYA" org.eventb.core.label="typeof_ON_OFF" org.eventb.core.predicate="ON_OFF ∈ SM0_STATES"/>
+<org.eventb.core.axiom name="_zDlwYv_ZEeSwtrZ15v7AYA" org.eventb.core.label="distinct_states_in_SM0_STATES" org.eventb.core.predicate=" partition(SM0_STATES, {ON_OFF})"/>
+</org.eventb.core.contextFile>

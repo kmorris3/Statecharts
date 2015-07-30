@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scSeesContext name="'" org.eventb.core.scTarget="/TurnstileUMLB/M0_implicitContext.bcc" org.eventb.core.source="/TurnstileUMLB/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.seesContext#_zDg34P_ZEeSwtrZ15v7AYA"/>
+<org.eventb.core.scInternalContext name="M0_implicitContext">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="typeof_ON_OFF" org.eventb.core.predicate="ON_OFF∈SM0_STATES" org.eventb.core.source="/TurnstileUMLB/M0_implicitContext.buc|org.eventb.core.contextFile#M0_implicitContext|org.eventb.core.axiom#_zDlwYf_ZEeSwtrZ15v7AYA" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="distinct_states_in_SM0_STATES" org.eventb.core.predicate="partition(SM0_STATES,{ON_OFF})" org.eventb.core.source="/TurnstileUMLB/M0_implicitContext.buc|org.eventb.core.contextFile#M0_implicitContext|org.eventb.core.axiom#_zDlwYv_ZEeSwtrZ15v7AYA" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="ON_OFF" org.eventb.core.source="/TurnstileUMLB/M0_implicitContext.buc|org.eventb.core.contextFile#M0_implicitContext|org.eventb.core.constant#_zDlwYP_ZEeSwtrZ15v7AYA" org.eventb.core.type="SM0_STATES"/>
+<org.eventb.core.scCarrierSet name="SM0_STATES" org.eventb.core.source="/TurnstileUMLB/M0_implicitContext.buc|org.eventb.core.contextFile#M0_implicitContext|org.eventb.core.carrierSet#_zDlJUP_ZEeSwtrZ15v7AYA" org.eventb.core.type="ℙ(SM0_STATES)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInvariant name="M0_implicitContexu" org.eventb.core.label="typeof_SM0" org.eventb.core.predicate="SM0∈SM0_STATES" org.eventb.core.source="/TurnstileUMLB/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#_zDhe8f_ZEeSwtrZ15v7AYA" org.eventb.core.theorem="false"/>
+<org.eventb.core.scVariable name="SM0" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/TurnstileUMLB/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.variable#_zDhe8P_ZEeSwtrZ15v7AYA" org.eventb.core.type="SM0_STATES"/>
+<org.eventb.core.scEvent name="M0_implicitContexv" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/TurnstileUMLB/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_zDhe8v_ZEeSwtrZ15v7AYA">
+<org.eventb.core.scAction name="'" org.eventb.core.assignment="SM0 ≔ ON_OFF" org.eventb.core.label="init_SM0" org.eventb.core.source="/TurnstileUMLB/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_zDhe8v_ZEeSwtrZ15v7AYA|org.eventb.core.action#_zDhe8__ZEeSwtrZ15v7AYA"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="M0_implicitContexw" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="OnOff" org.eventb.core.source="/TurnstileUMLB/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_zDiGAP_ZEeSwtrZ15v7AYA">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="StartOn_type" org.eventb.core.predicate="StartOn∈BOOL" org.eventb.core.source="/TurnstileUMLB/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_zDiGAP_ZEeSwtrZ15v7AYA|org.eventb.core.guard#_zDiGAv_ZEeSwtrZ15v7AYA" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="isin_ON_OFF" org.eventb.core.predicate="SM0=ON_OFF" org.eventb.core.source="/TurnstileUMLB/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_zDiGAP_ZEeSwtrZ15v7AYA|org.eventb.core.guard#_zDiGA__ZEeSwtrZ15v7AYA" org.eventb.core.theorem="false"/>
+<org.eventb.core.scParameter name="StartOn" org.eventb.core.source="/TurnstileUMLB/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_zDiGAP_ZEeSwtrZ15v7AYA|org.eventb.core.parameter#_zDiGAf_ZEeSwtrZ15v7AYA" org.eventb.core.type="BOOL"/>
+</org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>
