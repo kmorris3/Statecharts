@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="at_init" org.eventb.core.type="ℙ(ℤ×ℙ(ℤ))"/>
+<org.eventb.core.poIdentifier name="evts" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="t_CLEAR" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="t_COMPLETE_SET_UP" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="t_relative_CLEAR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="t_relative_COMPLETE_SET_UP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="timed_CLEAR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="timed_COMPLETE_SET_UP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_UQ" org.eventb.core.predicate="timed_CLEAR∈ℕ∧t_CLEAR∈ℙ(ℕ)" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SYTuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_UR" org.eventb.core.predicate="timed_COMPLETE_SET_UP∈ℕ∧t_COMPLETE_SET_UP∈ℙ(ℕ)" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SYjuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_US" org.eventb.core.predicate="partition(evts,{timed_CLEAR},{timed_COMPLETE_SET_UP})" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SYzuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_UT" org.eventb.core.predicate="t_CLEAR=(∅ ⦂ ℙ(ℤ))∧t_COMPLETE_SET_UP=(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SZDuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_UU" org.eventb.core.predicate="t_relative_CLEAR=2∧t_relative_COMPLETE_SET_UP=2" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SZTuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_UV" org.eventb.core.predicate="evts∈ℙ(ℕ)" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SZjuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_UW" org.eventb.core.predicate="evts={timed_CLEAR,timed_COMPLETE_SET_UP}" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SZzuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_UX" org.eventb.core.predicate="at_init={timed_CLEAR ↦ t_CLEAR,timed_COMPLETE_SET_UP ↦ t_COMPLETE_SET_UP}" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SaDuKEeWbda7YAokC2A"/>
+<org.eventb.core.poIdentifier name="MAIN_REGION_STATES" org.eventb.core.type="ℙ(MAIN_REGION_STATES)"/>
+<org.eventb.core.poIdentifier name="OFF" org.eventb.core.type="MAIN_REGION_STATES"/>
+<org.eventb.core.poIdentifier name="ON" org.eventb.core.type="MAIN_REGION_STATES"/>
+<org.eventb.core.poIdentifier name="OnOff_MAP" org.eventb.core.type="ℙ(MAIN_REGION_STATES×MAIN_REGION_STATES)"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_UY" org.eventb.core.predicate="ON∈MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-B/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_a-MO5Ts7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_UZ" org.eventb.core.predicate="OFF∈MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-B/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_a-MO5js7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_U[" org.eventb.core.predicate="partition(MAIN_REGION_STATES,{ON},{OFF})" org.eventb.core.source="/TurnstileEvent-B/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_a-MO5zs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_U\" org.eventb.core.predicate="OnOff_MAP={ON ↦ OFF,OFF ↦ ON}" org.eventb.core.source="/TurnstileEvent-B/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_a-MO6Ds7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_U]" org.eventb.core.predicate="dom(OnOff_MAP)=MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-B/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_a-MO6Ts7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_U^" org.eventb.core.predicate="ran(OnOff_MAP)=MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-B/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_a-MO6js7EeWug48DvK-uQw"/>
+<org.eventb.core.poIdentifier name="CARD_READER_STATES" org.eventb.core.type="ℙ(CARD_READER_STATES)"/>
+<org.eventb.core.poIdentifier name="GATE_STATES" org.eventb.core.type="ℙ(GATE_STATES)"/>
+<org.eventb.core.poIdentifier name="ACCEPT" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poIdentifier name="CARD_READER_NULL" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poIdentifier name="M1_OnOff_MAP" org.eventb.core.type="ℙ(MAIN_REGION_STATES×MAIN_REGION_STATES)"/>
+<org.eventb.core.poIdentifier name="READING" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="READY" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="UNBLOCKED" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_U_" org.eventb.core.predicate="GATE_NULL∈GATE_STATES" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_a-SVgjs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_U`" org.eventb.core.predicate="CARD_READER_NULL∈CARD_READER_STATES" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_a-SVgzs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_Ua" org.eventb.core.predicate="BLOCKED∈GATE_STATES" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_a-SVhDs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_Ub" org.eventb.core.predicate="UNBLOCKED∈GATE_STATES" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_a-SVhTs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_Uc" org.eventb.core.predicate="READY∈CARD_READER_STATES" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_a-SVhjs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_Ud" org.eventb.core.predicate="READING∈CARD_READER_STATES" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_a-SVhzs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_Ue" org.eventb.core.predicate="ACCEPT∈CARD_READER_STATES" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_a-SViDs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_Uf" org.eventb.core.predicate="partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL})" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_a-SViTs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_Ug" org.eventb.core.predicate="partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL})" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_a-S8kDs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_Uh" org.eventb.core.predicate="M1_OnOff_MAP={ON ↦ OFF,OFF ↦ ON}" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_a-S8kTs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_Ui" org.eventb.core.predicate="dom(M1_OnOff_MAP)=MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_a-S8kjs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_Uj" org.eventb.core.predicate="ran(M1_OnOff_MAP)=MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-B/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#_a-S8kzs7EeWug48DvK-uQw"/>
+<org.eventb.core.poIdentifier name="READY_STATES" org.eventb.core.type="ℙ(READY_STATES)"/>
+<org.eventb.core.poIdentifier name="CLEAR" org.eventb.core.type="READY_STATES"/>
+<org.eventb.core.poIdentifier name="COMPLETE_SET_UP" org.eventb.core.type="READY_STATES"/>
+<org.eventb.core.poIdentifier name="READY_FINAL" org.eventb.core.type="READY_STATES"/>
+<org.eventb.core.poIdentifier name="READY_NULL" org.eventb.core.type="READY_STATES"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_Uk" org.eventb.core.predicate="READY_NULL∈READY_STATES" org.eventb.core.source="/TurnstileEvent-B/C2.buc|org.eventb.core.contextFile#C2|org.eventb.core.axiom#_BlxSpDt-EeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_Ul" org.eventb.core.predicate="CLEAR∈READY_STATES" org.eventb.core.source="/TurnstileEvent-B/C2.buc|org.eventb.core.contextFile#C2|org.eventb.core.axiom#_BlxSpTt-EeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_Um" org.eventb.core.predicate="COMPLETE_SET_UP∈READY_STATES" org.eventb.core.source="/TurnstileEvent-B/C2.buc|org.eventb.core.contextFile#C2|org.eventb.core.axiom#_BlxSpjt-EeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_Un" org.eventb.core.predicate="READY_FINAL∈READY_STATES" org.eventb.core.source="/TurnstileEvent-B/C2.buc|org.eventb.core.contextFile#C2|org.eventb.core.axiom#_BlxSpzt-EeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_Uo" org.eventb.core.predicate="partition(READY_STATES,{CLEAR},{COMPLETE_SET_UP},{READY_FINAL},{READY_NULL})" org.eventb.core.source="/TurnstileEvent-B/C2.buc|org.eventb.core.contextFile#C2|org.eventb.core.axiom#_BlxSqDt-EeWbda7YAokC2A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Block" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="GATE" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poIdentifier name="MAIN_REGION" org.eventb.core.type="MAIN_REGION_STATES"/>
+<org.eventb.core.poIdentifier name="READY_REGION" org.eventb.core.type="READY_STATES"/>
+<org.eventb.core.poIdentifier name="Unblock" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="at" org.eventb.core.type="ℙ(ℤ×ℙ(ℤ))"/>
+<org.eventb.core.poIdentifier name="now" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="timed_CLEAR_Label" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="timed_COMPLETE_SET_UP_Label" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poPredicate name="timed_COMPLETE_SET_UP_Labem" org.eventb.core.predicate="now∈ℕ" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poPredicate name="timed_COMPLETE_SET_UP_Laben" org.eventb.core.predicate="at∈evts → ℙ(ℕ)" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poPredicate name="timed_COMPLETE_SET_UP_Labeo" org.eventb.core.predicate="dom(at)=evts" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMjukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poPredicate name="timed_COMPLETE_SET_UP_Labep" org.eventb.core.predicate="∀e⦂ℤ·e∈evts∧at(e)≠(∅ ⦂ ℙ(ℤ))⇒now≤min(at(e))" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dY2QDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poPredicate name="timed_COMPLETE_SET_UP_Labeq" org.eventb.core.predicate="MAIN_REGION∈MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-B/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#_a-ph5Ts7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="timed_COMPLETE_SET_UP_Laber" org.eventb.core.predicate="GATE∈GATE_STATES" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_a-xduTs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="timed_COMPLETE_SET_UP_Labes" org.eventb.core.predicate="CARD_READER∈CARD_READER_STATES" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_a-xdujs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="timed_COMPLETE_SET_UP_Labet" org.eventb.core.predicate="GATE≠GATE_NULL⇔MAIN_REGION=ON" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_a-yEwDs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="timed_COMPLETE_SET_UP_Labeu" org.eventb.core.predicate="CARD_READER≠CARD_READER_NULL⇔MAIN_REGION=ON" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_a-yEwTs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="timed_COMPLETE_SET_UP_Labev" org.eventb.core.predicate="Block∈BOOL" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_a-yEwjs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="timed_COMPLETE_SET_UP_Labew" org.eventb.core.predicate="Unblock∈BOOL" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_a-yEwzs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="timed_COMPLETE_SET_UP_Labex" org.eventb.core.predicate="GATE=BLOCKED⇒Block=TRUE" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_a-yExDs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="timed_COMPLETE_SET_UP_Labey" org.eventb.core.predicate="GATE=BLOCKED⇒Unblock=FALSE" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_a-yExTs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="timed_COMPLETE_SET_UP_Labez" org.eventb.core.predicate="GATE=UNBLOCKED⇒Block=FALSE" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_a-yExjs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="timed_COMPLETE_SET_UP_Labe{" org.eventb.core.predicate="GATE=UNBLOCKED⇒Unblock=TRUE" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_a-yExzs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="timed_COMPLETE_SET_UP_Labe|" org.eventb.core.predicate="CARD_READER=READY⇒Block=TRUE" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_a-yEyDs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="timed_COMPLETE_SET_UP_Labe}" org.eventb.core.predicate="CARD_READER=READY⇒Unblock=FALSE" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_a-yEyTs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="timed_COMPLETE_SET_UP_Labe~" org.eventb.core.predicate="CARD_READER=ACCEPT⇒Block=FALSE" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_a-yr0Ds7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="timed_COMPLETE_SET_UP_Labf'" org.eventb.core.predicate="CARD_READER=ACCEPT⇒Unblock=TRUE" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_a-yr0Ts7EeWug48DvK-uQw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/superstateof_READY_REGION/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labem"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="READY_NULL≠READY_NULL⇔CARD_READER_NULL=READY" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-yr0js7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t15UFzuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#INITIALISATION\/superstateof_READY_REGION\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtimed_COMPLETE_SET_UP_Labem" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CARD_READER'" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="GATE'" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poIdentifier name="now'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="timed_COMPLETE_SET_UP_Label'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="Block'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="MAIN_REGION'" org.eventb.core.type="MAIN_REGION_STATES"/>
+<org.eventb.core.poIdentifier name="at'" org.eventb.core.type="ℙ(ℤ×ℙ(ℤ))"/>
+<org.eventb.core.poIdentifier name="timed_CLEAR_Label'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="READY_REGION'" org.eventb.core.type="READY_STATES"/>
+<org.eventb.core.poIdentifier name="Unblock'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtimed_COMPLETE_SET_UP_Labem" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTtimed_COMPLETE_SET_UP_Labem" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="OnOff_OFF/superstateof_READY_REGION/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Laben"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="READY_NULL≠READY_NULL⇔CARD_READER_NULL=READY" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-yr1zs7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t15UGzuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#OnOff_OFF\/superstateof_READY_REGION\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtimed_COMPLETE_SET_UP_Laben" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CARD_READER'" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="GATE'" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poIdentifier name="s" org.eventb.core.type="MAIN_REGION_STATES"/>
+<org.eventb.core.poIdentifier name="Block'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="MAIN_REGION'" org.eventb.core.type="MAIN_REGION_STATES"/>
+<org.eventb.core.poIdentifier name="READY_REGION'" org.eventb.core.type="READY_STATES"/>
+<org.eventb.core.poIdentifier name="Unblock'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtimed_COMPLETE_SET_UP_Laben" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTtimed_COMPLETE_SET_UP_Laben" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(OnOff_MAP)∧s=MAIN_REGION" org.eventb.core.source="/TurnstileEvent-B/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_a-ph6Ds7EeWug48DvK-uQw|org.eventb.core.guard#_a-ph6js7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="MAIN_REGION=ON∨MAIN_REGION=OFF" org.eventb.core.source="/TurnstileEvent-B/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_a-ph6Ds7EeWug48DvK-uQw|org.eventb.core.guard#_a-ph6zs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="MAIN_REGION=ON" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-yr1zs7EeWug48DvK-uQw|org.eventb.core.guard#_a-yr2Ts7EeWug48DvK-uQw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="OnOff_ON/superstateof_READY_REGION/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labeo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="CLEAR≠READY_NULL⇔READY=READY" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-zS4js7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t15UHjuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#OnOff_ON\/superstateof_READY_REGION\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtimed_COMPLETE_SET_UP_Labeo" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CARD_READER'" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="GATE'" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poIdentifier name="s" org.eventb.core.type="MAIN_REGION_STATES"/>
+<org.eventb.core.poIdentifier name="Block'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="MAIN_REGION'" org.eventb.core.type="MAIN_REGION_STATES"/>
+<org.eventb.core.poIdentifier name="READY_REGION'" org.eventb.core.type="READY_STATES"/>
+<org.eventb.core.poIdentifier name="Unblock'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtimed_COMPLETE_SET_UP_Labeo" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTtimed_COMPLETE_SET_UP_Labeo" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(OnOff_MAP)∧s=MAIN_REGION" org.eventb.core.source="/TurnstileEvent-B/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_a-ph6Ds7EeWug48DvK-uQw|org.eventb.core.guard#_a-ph6js7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="MAIN_REGION=ON∨MAIN_REGION=OFF" org.eventb.core.source="/TurnstileEvent-B/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_a-ph6Ds7EeWug48DvK-uQw|org.eventb.core.guard#_a-ph6zs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="MAIN_REGION=OFF" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-zS4js7EeWug48DvK-uQw|org.eventb.core.guard#_a-zS5Ds7EeWug48DvK-uQw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="CardIn/superstateof_READY_REGION/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labep"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="READY_NULL≠READY_NULL⇔READING=READY" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-zS6Ts7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t157IjuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#CardIn\/superstateof_READY_REGION\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtimed_COMPLETE_SET_UP_Labep" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CARD_READER'" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="READY_REGION'" org.eventb.core.type="READY_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtimed_COMPLETE_SET_UP_Labep" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTtimed_COMPLETE_SET_UP_Labep" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="CARD_READER=READY" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-zS6Ts7EeWug48DvK-uQw|org.eventb.core.guard#_a-zS6js7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="READY_REGION=READY_FINAL" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t157IjuQEeWbda7YAokC2A|org.eventb.core.guard#_t157JDuQEeWbda7YAokC2A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="CardError/superstateof_READY_REGION/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labeq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="CLEAR≠READY_NULL⇔READY=READY" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-zS7Ds7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t157JjuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#CardError\/superstateof_READY_REGION\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtimed_COMPLETE_SET_UP_Labeq" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CARD_READER'" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="GATE'" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poIdentifier name="Block'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="READY_REGION'" org.eventb.core.type="READY_STATES"/>
+<org.eventb.core.poIdentifier name="Unblock'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtimed_COMPLETE_SET_UP_Labeq" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTtimed_COMPLETE_SET_UP_Labeq" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="CARD_READER=READING" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-zS7Ds7EeWug48DvK-uQw|org.eventb.core.guard#_a-z58Ds7EeWug48DvK-uQw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="CardOk/superstateof_READY_REGION/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Laber"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="READY_REGION≠READY_NULL⇔ACCEPT=READY" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-z59Ts7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t157KTuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#CardOk\/superstateof_READY_REGION\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtimed_COMPLETE_SET_UP_Laber" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CARD_READER'" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="GATE'" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poIdentifier name="Block'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="Unblock'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtimed_COMPLETE_SET_UP_Laber" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTtimed_COMPLETE_SET_UP_Laber" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="CARD_READER=READING" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-z59Ts7EeWug48DvK-uQw|org.eventb.core.guard#_a-z59js7EeWug48DvK-uQw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="Reset/superstateof_READY_REGION/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labes"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="CLEAR≠READY_NULL⇔READY=READY" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-0hATs7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t157KzuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#Reset\/superstateof_READY_REGION\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtimed_COMPLETE_SET_UP_Labes" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="CARD_READER'" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.poIdentifier name="GATE'" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poIdentifier name="Block'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="READY_REGION'" org.eventb.core.type="READY_STATES"/>
+<org.eventb.core.poIdentifier name="Unblock'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtimed_COMPLETE_SET_UP_Labes" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTtimed_COMPLETE_SET_UP_Labes" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="CARD_READER=ACCEPT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-0hATs7EeWug48DvK-uQw|org.eventb.core.guard#_a-0hAjs7EeWug48DvK-uQw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTtimed_COMPLETE_SET_UP_Labet" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="GATE'" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poIdentifier name="Block'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="Unblock'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtimed_COMPLETE_SET_UP_Labet" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTtimed_COMPLETE_SET_UP_Labet" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="GATE=UNBLOCKED" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-0hBzs7EeWug48DvK-uQw|org.eventb.core.guard#_a-0hCDs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Block=TRUE" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-0hBzs7EeWug48DvK-uQw|org.eventb.core.guard#_a-0hCTs7EeWug48DvK-uQw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTtimed_COMPLETE_SET_UP_Labeu" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="GATE'" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.poIdentifier name="Block'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="Unblock'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtimed_COMPLETE_SET_UP_Labeu" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTtimed_COMPLETE_SET_UP_Labeu" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="GATE=BLOCKED" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-1IEjs7EeWug48DvK-uQw|org.eventb.core.guard#_a-1IEzs7EeWug48DvK-uQw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Unblock=TRUE" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-1IEjs7EeWug48DvK-uQw|org.eventb.core.guard#_a-1IFDs7EeWug48DvK-uQw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="add_timed_CLEAR/check_t_CLEAR/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTHYPtimed_COMPLETE_SET_UP_Labev)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="timed_CLEAR∈dom(at)∧at∈ℤ ⇸ ℙ(ℤ)" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iNDuQEeWbda7YAokC2A|org.eventb.core.guard#_t16iODuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iNDuQEeWbda7YAokC2A|org.eventb.core.guard#_t16iODuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTHYPtimed_COMPLETE_SET_UP_Labev)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add_timed_CLEAR/define_e/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labev"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="timed_CLEAR∈dom(at)" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dZdUDukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9dZdUzukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-1IGDs7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dZdUDukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9dZdUzukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iNDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#add_timed_CLEAR\/define_e\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add_timed_CLEAR/check_now/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labev"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="now&lt;now+t_relative_CLEAR" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dZdUDukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9daEYDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-1IGDs7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dZdUDukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9daEYDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iNDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#add_timed_CLEAR\/check_now\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add_timed_CLEAR/update_at/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labev"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="timed_CLEAR∈dom(at)∧at∈ℤ ⇸ ℙ(ℤ)" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iNDuQEeWbda7YAokC2A|org.eventb.core.action#_t16iPDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iNDuQEeWbda7YAokC2A|org.eventb.core.action#_t16iPDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labev"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add_timed_CLEAR/update_at/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labev"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="at{timed_CLEAR ↦ at(timed_CLEAR)∪{now+t_relative_CLEAR}}=at{timed_CLEAR ↦ at(timed_CLEAR)∪{now+t_relative_CLEAR}}" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dZdUDukEeWWWsH7L7p9tQ|org.eventb.core.action#_9daEYTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-1IGDs7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dZdUDukEeWWWsH7L7p9tQ|org.eventb.core.action#_9daEYTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iNDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#add_timed_CLEAR\/update_at\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtimed_COMPLETE_SET_UP_Labev" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="e" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="at'" org.eventb.core.type="ℙ(ℤ×ℙ(ℤ))"/>
+<org.eventb.core.poIdentifier name="ntime" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPtimed_COMPLETE_SET_UP_Labev)" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTtimed_COMPLETE_SET_UP_Labev" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="timed_CLEAR∈dom(at)" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iNDuQEeWbda7YAokC2A|org.eventb.core.guard#_t16iNjuQEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="now&lt;now+t_relative_CLEAR" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iNDuQEeWbda7YAokC2A|org.eventb.core.guard#_t16iNzuQEeWbda7YAokC2A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtimed_COMPLETE_SET_UP_Labev" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTHYPtimed_COMPLETE_SET_UP_Labev)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="at(timed_CLEAR)=(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iNDuQEeWbda7YAokC2A|org.eventb.core.guard#_t16iODuQEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="READY_REGION=CLEAR" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iNDuQEeWbda7YAokC2A|org.eventb.core.guard#_t16iOTuQEeWbda7YAokC2A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="add_timed_COMPLETE_SET_UP/check_t_COMPLETE_SET_UP/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTHYPtimed_COMPLETE_SET_UP_Labew)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="timed_COMPLETE_SET_UP∈dom(at)∧at∈ℤ ⇸ ℙ(ℤ)" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iPTuQEeWbda7YAokC2A|org.eventb.core.guard#_t17JQjuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iPTuQEeWbda7YAokC2A|org.eventb.core.guard#_t17JQjuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTHYPtimed_COMPLETE_SET_UP_Labew)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add_timed_COMPLETE_SET_UP/define_e/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labew"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="timed_COMPLETE_SET_UP∈dom(at)" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dZdUDukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9dZdUzukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-1IGDs7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dZdUDukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9dZdUzukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iPTuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#add_timed_COMPLETE_SET_UP\/define_e\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add_timed_COMPLETE_SET_UP/check_now/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labew"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="now&lt;now+t_relative_COMPLETE_SET_UP" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dZdUDukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9daEYDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-1IGDs7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dZdUDukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9daEYDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iPTuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#add_timed_COMPLETE_SET_UP\/check_now\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add_timed_COMPLETE_SET_UP/update_at/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labew"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="timed_COMPLETE_SET_UP∈dom(at)∧at∈ℤ ⇸ ℙ(ℤ)" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iPTuQEeWbda7YAokC2A|org.eventb.core.action#_t17JRjuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iPTuQEeWbda7YAokC2A|org.eventb.core.action#_t17JRjuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labew"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add_timed_COMPLETE_SET_UP/update_at/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labew"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="at{timed_COMPLETE_SET_UP ↦ at(timed_COMPLETE_SET_UP)∪{now+t_relative_COMPLETE_SET_UP}}=at{timed_COMPLETE_SET_UP ↦ at(timed_COMPLETE_SET_UP)∪{now+t_relative_COMPLETE_SET_UP}}" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dZdUDukEeWWWsH7L7p9tQ|org.eventb.core.action#_9daEYTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-1IGDs7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dZdUDukEeWWWsH7L7p9tQ|org.eventb.core.action#_9daEYTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iPTuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#add_timed_COMPLETE_SET_UP\/update_at\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtimed_COMPLETE_SET_UP_Labew" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="e" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="at'" org.eventb.core.type="ℙ(ℤ×ℙ(ℤ))"/>
+<org.eventb.core.poIdentifier name="ntime" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPtimed_COMPLETE_SET_UP_Labew)" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTtimed_COMPLETE_SET_UP_Labew" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="timed_COMPLETE_SET_UP∈dom(at)" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iPTuQEeWbda7YAokC2A|org.eventb.core.guard#_t17JQDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="now&lt;now+t_relative_COMPLETE_SET_UP" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iPTuQEeWbda7YAokC2A|org.eventb.core.guard#_t17JQTuQEeWbda7YAokC2A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtimed_COMPLETE_SET_UP_Labew" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTHYPtimed_COMPLETE_SET_UP_Labew)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="at(timed_COMPLETE_SET_UP)=(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iPTuQEeWbda7YAokC2A|org.eventb.core.guard#_t17JQjuQEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="READY_REGION=COMPLETE_SET_UP" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t16iPTuQEeWbda7YAokC2A|org.eventb.core.guard#_t17JQzuQEeWbda7YAokC2A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="use_timed_CLEAR/check_now/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTHYPtimed_COMPLETE_SET_UP_Labex("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="timed_CLEAR∈dom(at)∧at∈ℤ ⇸ ℙ(ℤ)" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17JRzuQEeWbda7YAokC2A|org.eventb.core.guard#_t17JSjuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17JRzuQEeWbda7YAokC2A|org.eventb.core.guard#_t17JSjuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTHYPtimed_COMPLETE_SET_UP_Labex("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="use_timed_CLEAR/superstateof_READY_REGION/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labex"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="COMPLETE_SET_UP≠READY_NULL⇔CARD_READER=READY" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-1IGjs7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17JRzuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#use_timed_CLEAR\/superstateof_READY_REGION\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="use_timed_CLEAR/define_e/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labex"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="timed_CLEAR∈dom(at)" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9darcDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-1IGjs7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9darcDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17JRzuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#use_timed_CLEAR\/define_e\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="use_timed_CLEAR/check_now/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labex"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="now∈at(timed_CLEAR)" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9darcTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-1IGjs7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9darcTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17JRzuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#use_timed_CLEAR\/check_now\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="use_timed_CLEAR/general_update_at/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labex"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="timed_CLEAR∈dom(at)∧at∈ℤ ⇸ ℙ(ℤ)" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17JRzuQEeWbda7YAokC2A|org.eventb.core.action#_t17JTjuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17JRzuQEeWbda7YAokC2A|org.eventb.core.action#_t17JTjuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labex"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="use_timed_CLEAR/general_update_at/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labex"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="at{timed_CLEAR ↦ at(timed_CLEAR) ∖ {now}}=at{timed_CLEAR ↦ at(timed_CLEAR) ∖ {now}}" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ|org.eventb.core.action#_9darcjukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-1IGjs7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ|org.eventb.core.action#_9darcjukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17JRzuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#use_timed_CLEAR\/general_update_at\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtimed_COMPLETE_SET_UP_Labex" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="e" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="at'" org.eventb.core.type="ℙ(ℤ×ℙ(ℤ))"/>
+<org.eventb.core.poIdentifier name="timed_CLEAR_Label'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="READY_REGION'" org.eventb.core.type="READY_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPtimed_COMPLETE_SET_UP_Labex(" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTtimed_COMPLETE_SET_UP_Labex" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="timed_CLEAR∈dom(at)" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17JRzuQEeWbda7YAokC2A|org.eventb.core.guard#_t17JSTuQEeWbda7YAokC2A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtimed_COMPLETE_SET_UP_Labex" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTHYPtimed_COMPLETE_SET_UP_Labex(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="now∈at(timed_CLEAR)" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17JRzuQEeWbda7YAokC2A|org.eventb.core.guard#_t17JSjuQEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="timed_CLEAR_Label=TRUE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17JRzuQEeWbda7YAokC2A|org.eventb.core.guard#_t17JSzuQEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="READY_REGION=CLEAR" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17JRzuQEeWbda7YAokC2A|org.eventb.core.guard#_t17JTDuQEeWbda7YAokC2A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="use_timed_COMPLETE_SET_UP/check_now/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTHYPtimed_COMPLETE_SET_UP_Labey("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="timed_COMPLETE_SET_UP∈dom(at)∧at∈ℤ ⇸ ℙ(ℤ)" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17wUjuQEeWbda7YAokC2A|org.eventb.core.guard#_t17wVTuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17wUjuQEeWbda7YAokC2A|org.eventb.core.guard#_t17wVTuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTHYPtimed_COMPLETE_SET_UP_Labey("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="use_timed_COMPLETE_SET_UP/superstateof_READY_REGION/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labey"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="READY_FINAL≠READY_NULL⇔CARD_READER=READY" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-1IGjs7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17wUjuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#use_timed_COMPLETE_SET_UP\/superstateof_READY_REGION\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="use_timed_COMPLETE_SET_UP/define_e/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labey"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="timed_COMPLETE_SET_UP∈dom(at)" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9darcDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-1IGjs7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9darcDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17wUjuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#use_timed_COMPLETE_SET_UP\/define_e\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="use_timed_COMPLETE_SET_UP/check_now/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labey"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="now∈at(timed_COMPLETE_SET_UP)" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9darcTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-1IGjs7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9darcTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17wUjuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#use_timed_COMPLETE_SET_UP\/check_now\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="use_timed_COMPLETE_SET_UP/general_update_at/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labey"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="timed_COMPLETE_SET_UP∈dom(at)∧at∈ℤ ⇸ ℙ(ℤ)" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17wUjuQEeWbda7YAokC2A|org.eventb.core.action#_t17wWTuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17wUjuQEeWbda7YAokC2A|org.eventb.core.action#_t17wWTuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labey"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="use_timed_COMPLETE_SET_UP/general_update_at/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTALLHYPtimed_COMPLETE_SET_UP_Labey"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="at{timed_COMPLETE_SET_UP ↦ at(timed_COMPLETE_SET_UP) ∖ {now}}=at{timed_COMPLETE_SET_UP ↦ at(timed_COMPLETE_SET_UP) ∖ {now}}" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ|org.eventb.core.action#_9darcjukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_a-1IGjs7EeWug48DvK-uQw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ|org.eventb.core.action#_9darcjukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17wUjuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poSequent#use_timed_COMPLETE_SET_UP\/general_update_at\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtimed_COMPLETE_SET_UP_Labey" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="e" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="timed_COMPLETE_SET_UP_Label'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="at'" org.eventb.core.type="ℙ(ℤ×ℙ(ℤ))"/>
+<org.eventb.core.poIdentifier name="READY_REGION'" org.eventb.core.type="READY_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPtimed_COMPLETE_SET_UP_Labey(" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTtimed_COMPLETE_SET_UP_Labey" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="timed_COMPLETE_SET_UP∈dom(at)" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17wUjuQEeWbda7YAokC2A|org.eventb.core.guard#_t17wVDuQEeWbda7YAokC2A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtimed_COMPLETE_SET_UP_Labey" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTHYPtimed_COMPLETE_SET_UP_Labey(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="now∈at(timed_COMPLETE_SET_UP)" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17wUjuQEeWbda7YAokC2A|org.eventb.core.guard#_t17wVTuQEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="timed_COMPLETE_SET_UP_Label=TRUE" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17wUjuQEeWbda7YAokC2A|org.eventb.core.guard#_t17wVjuQEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="READY_REGION=COMPLETE_SET_UP" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17wUjuQEeWbda7YAokC2A|org.eventb.core.guard#_t17wVzuQEeWbda7YAokC2A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="tic/check_timed_CLEAR_Label/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTHYPtimed_COMPLETE_SET_UP_Labez'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="timed_CLEAR_Label=FALSE∨(timed_CLEAR_Label=TRUE⇒timed_CLEAR∈dom(at)∧at∈ℤ ⇸ ℙ(ℤ))" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17wXDuQEeWbda7YAokC2A|org.eventb.core.guard#_t18XYDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17wXDuQEeWbda7YAokC2A|org.eventb.core.guard#_t18XYDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTHYPtimed_COMPLETE_SET_UP_Labez'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="tic/check_timed_COMPLETE_SET_UP_Label/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTHYPtimed_COMPLETE_SET_UP_Labez)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="timed_COMPLETE_SET_UP_Label=FALSE∨(timed_COMPLETE_SET_UP_Label=TRUE⇒timed_COMPLETE_SET_UP∈dom(at)∧at∈ℤ ⇸ ℙ(ℤ))" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17wXDuQEeWbda7YAokC2A|org.eventb.core.guard#_t18XYTuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17wXDuQEeWbda7YAokC2A|org.eventb.core.guard#_t18XYTuQEeWbda7YAokC2A"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTHYPtimed_COMPLETE_SET_UP_Labez)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtimed_COMPLETE_SET_UP_Labez" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="now'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="timed_COMPLETE_SET_UP_Label'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="timed_CLEAR_Label'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPtimed_COMPLETE_SET_UP_Labez'" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTIDENTtimed_COMPLETE_SET_UP_Labez" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="∀e⦂ℤ·e∈dom(at)∧at(e)≠(∅ ⦂ ℙ(ℤ))⇒now+1≤min(at(e))" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dbSgDukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9db5kDukEeWWWsH7L7p9tQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPtimed_COMPLETE_SET_UP_Labez)" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTHYPtimed_COMPLETE_SET_UP_Labez'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="timed_CLEAR_Label=FALSE∨(timed_CLEAR_Label=TRUE∧¬now∈at(timed_CLEAR))" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17wXDuQEeWbda7YAokC2A|org.eventb.core.guard#_t18XYDuQEeWbda7YAokC2A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtimed_COMPLETE_SET_UP_Labez" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#EVTHYPtimed_COMPLETE_SET_UP_Labez)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="timed_COMPLETE_SET_UP_Label=FALSE∨(timed_COMPLETE_SET_UP_Label=TRUE∧¬now∈at(timed_COMPLETE_SET_UP))" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.event#_t17wXDuQEeWbda7YAokC2A|org.eventb.core.guard#_t18XYTuQEeWbda7YAokC2A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TurnstileEvent-B/M2.bpo|org.eventb.core.poFile#M2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="READY_REGION∈READY_STATES" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UEzuQEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="READY_REGION≠READY_NULL⇔CARD_READER=READY" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFDuQEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="timed_CLEAR_Label∈BOOL" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFTuQEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="timed_COMPLETE_SET_UP_Label∈BOOL" org.eventb.core.source="/TurnstileEvent-B/M2.bum|org.eventb.core.machineFile#M2|org.eventb.core.invariant#_t15UFjuQEeWbda7YAokC2A"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

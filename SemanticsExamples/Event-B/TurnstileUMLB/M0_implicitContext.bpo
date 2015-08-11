@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="SM0_STATES" org.eventb.core.type="ℙ(SM0_STATES)"/>
 <org.eventb.core.poIdentifier name="ON_OFF" org.eventb.core.type="SM0_STATES"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TurnstileUMLB/M0_implicitContext.bpo|org.eventb.core.poFile#M0_implicitContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TurnstileUMLB/M0_implicitContext.bpo|org.eventb.core.poFile#M0_implicitContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ON_OFF∈SM0_STATES" org.eventb.core.source="/TurnstileUMLB/M0_implicitContext.buc|org.eventb.core.contextFile#M0_implicitContext|org.eventb.core.axiom#_zDlwYf_ZEeSwtrZ15v7AYA"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="partition(SM0_STATES,{ON_OFF})" org.eventb.core.source="/TurnstileUMLB/M0_implicitContext.buc|org.eventb.core.contextFile#M0_implicitContext|org.eventb.core.axiom#_zDlwYv_ZEeSwtrZ15v7AYA"/>
 </org.eventb.core.poPredicateSet>

@@ -1,4 +1,6 @@
 context C0 
+extends
+ Clock_Context
 sets 
  MAIN_REGION_STATES 
 constants 

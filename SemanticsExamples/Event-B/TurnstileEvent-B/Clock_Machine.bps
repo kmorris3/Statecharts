@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+<org.eventb.core.psStatus name="define_events/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/typeof_now/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/typeof_at/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/domain_at/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/define_events/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="add/typeof_at/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="add/domain_at/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="add/define_events/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="add/update_at/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="use/check_now/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="use/typeof_at/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="use/domain_at/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="use/define_events/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="use/general_update_at/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="tic/check_at/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="tic/typeof_now/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="tic/define_events/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>

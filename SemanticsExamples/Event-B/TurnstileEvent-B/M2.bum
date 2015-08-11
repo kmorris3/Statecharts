@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="_t14tADuQEeWbda7YAokC2A" org.eventb.core.target="M1"/>
+<org.eventb.core.seesContext name="_t14tATuQEeWbda7YAokC2A" org.eventb.core.target="C2"/>
+<org.eventb.core.variable name="_t14tAjuQEeWbda7YAokC2A" org.eventb.core.identifier="GATE"/>
+<org.eventb.core.variable name="_t14tAzuQEeWbda7YAokC2A" org.eventb.core.identifier="CARD_READER"/>
+<org.eventb.core.variable name="_t14tBDuQEeWbda7YAokC2A" org.eventb.core.identifier="MAIN_REGION"/>
+<org.eventb.core.variable name="_t14tBTuQEeWbda7YAokC2A" org.eventb.core.identifier="Block"/>
+<org.eventb.core.variable name="_t14tBjuQEeWbda7YAokC2A" org.eventb.core.identifier="Unblock"/>
+<org.eventb.core.variable name="_t14tBzuQEeWbda7YAokC2A" org.eventb.core.identifier="now"/>
+<org.eventb.core.variable name="_t14tCDuQEeWbda7YAokC2A" org.eventb.core.identifier="at"/>
+<org.eventb.core.variable name="_t15UEDuQEeWbda7YAokC2A" org.eventb.core.identifier="READY_REGION"/>
+<org.eventb.core.variable name="_t15UETuQEeWbda7YAokC2A" org.eventb.core.identifier="timed_COMPLETE_SET_UP_Label"/>
+<org.eventb.core.variable name="_t15UEjuQEeWbda7YAokC2A" org.eventb.core.identifier="timed_CLEAR_Label"/>
+<org.eventb.core.invariant name="_t15UEzuQEeWbda7YAokC2A" org.eventb.core.label="typeof_READY_REGION" org.eventb.core.predicate="READY_REGION ∈ READY_STATES"/>
+<org.eventb.core.invariant name="_t15UFDuQEeWbda7YAokC2A" org.eventb.core.label="superstateof_READY_REGION" org.eventb.core.predicate="READY_REGION ≠ READY_NULL ⇔ CARD_READER = READY"/>
+<org.eventb.core.invariant name="_t15UFTuQEeWbda7YAokC2A" org.eventb.core.label="typeof_timed_CLEAR_Label" org.eventb.core.predicate="timed_CLEAR_Label ∈ BOOL"/>
+<org.eventb.core.invariant name="_t15UFjuQEeWbda7YAokC2A" org.eventb.core.label="typeof_timed_COMPLETE_SET_UP_Label" org.eventb.core.predicate="timed_COMPLETE_SET_UP_Label ∈ BOOL"/>
+<org.eventb.core.event name="_t15UFzuQEeWbda7YAokC2A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_t15UGDuQEeWbda7YAokC2A" org.eventb.core.assignment="timed_COMPLETE_SET_UP_Label ≔ TRUE" org.eventb.core.label="init_timed_COMPLETE_SET_UP_Label"/>
+<org.eventb.core.action name="_t15UGTuQEeWbda7YAokC2A" org.eventb.core.assignment="timed_CLEAR_Label ≔ TRUE" org.eventb.core.label="init_timed_CLEAR_Label"/>
+<org.eventb.core.action name="_t15UGjuQEeWbda7YAokC2A" org.eventb.core.assignment="READY_REGION ≔ READY_NULL" org.eventb.core.label="init_READY_REGION"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_t15UGzuQEeWbda7YAokC2A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="OnOff_OFF">
+<org.eventb.core.refinesEvent name="_t15UHDuQEeWbda7YAokC2A" org.eventb.core.target="OnOff_OFF"/>
+<org.eventb.core.action name="_t15UHTuQEeWbda7YAokC2A" org.eventb.core.assignment="READY_REGION ≔ READY_NULL" org.eventb.core.label="leave_READY_REGION"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_t15UHjuQEeWbda7YAokC2A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="OnOff_ON">
+<org.eventb.core.refinesEvent name="_t157IDuQEeWbda7YAokC2A" org.eventb.core.target="OnOff_ON"/>
+<org.eventb.core.action name="_t157ITuQEeWbda7YAokC2A" org.eventb.core.assignment="READY_REGION ≔ CLEAR" org.eventb.core.comment="I should ¬ be allowed to trigger the timed_CLEAR event with an &#10;   previous value for the time·  There should be a way to reset the clock &#10;   @clear_timed_CLEAR at(timed_CLEAR)≔∅" org.eventb.core.label="enter_CLEAR"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_t157IjuQEeWbda7YAokC2A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="CardIn">
+<org.eventb.core.refinesEvent name="_t157IzuQEeWbda7YAokC2A" org.eventb.core.target="CardIn"/>
+<org.eventb.core.guard name="_t157JDuQEeWbda7YAokC2A" org.eventb.core.label="isin_READY_FINAL" org.eventb.core.predicate="READY_REGION = READY_FINAL"/>
+<org.eventb.core.action name="_t157JTuQEeWbda7YAokC2A" org.eventb.core.assignment="READY_REGION ≔ READY_NULL" org.eventb.core.label="leave_READY_REGION"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_t157JjuQEeWbda7YAokC2A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="CardError">
+<org.eventb.core.refinesEvent name="_t157JzuQEeWbda7YAokC2A" org.eventb.core.target="CardError"/>
+<org.eventb.core.action name="_t157KDuQEeWbda7YAokC2A" org.eventb.core.assignment="READY_REGION ≔ CLEAR" org.eventb.core.label="enter_CLEAR"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_t157KTuQEeWbda7YAokC2A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="CardOk">
+<org.eventb.core.refinesEvent name="_t157KjuQEeWbda7YAokC2A" org.eventb.core.target="CardOk"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_t157KzuQEeWbda7YAokC2A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Reset">
+<org.eventb.core.refinesEvent name="_t157LDuQEeWbda7YAokC2A" org.eventb.core.target="Reset"/>
+<org.eventb.core.action name="_t157LTuQEeWbda7YAokC2A" org.eventb.core.assignment="READY_REGION ≔ CLEAR" org.eventb.core.comment=" To clear any old information in the clock event map&#10;   @clear_timed_CLEAR at(timed_CLEAR)≔∅&#10;   @clear_timed_COMPLETE_SET_UP at(timed_COMPLETE_SET_UP)≔∅" org.eventb.core.label="enter_CLEAR"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_t16iMDuQEeWbda7YAokC2A" org.eventb.core.comment="Handles unnamed transition with conditions· Can be removed" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="UNBLOCKED_OUT_TRANS">
+<org.eventb.core.refinesEvent name="_t16iMTuQEeWbda7YAokC2A" org.eventb.core.target="UNBLOCKED_OUT_TRANS"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_t16iMjuQEeWbda7YAokC2A" org.eventb.core.comment="Handles unnamed transition with conditions· Can be removed" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="BLOCKED_OUT_TRANS">
+<org.eventb.core.refinesEvent name="_t16iMzuQEeWbda7YAokC2A" org.eventb.core.target="BLOCKED_OUT_TRANS"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_t16iNDuQEeWbda7YAokC2A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="add_timed_CLEAR">
+<org.eventb.core.refinesEvent name="_t16iNTuQEeWbda7YAokC2A" org.eventb.core.target="add"/>
+<org.eventb.core.guard name="_t16iNjuQEeWbda7YAokC2A" org.eventb.core.label="define_e" org.eventb.core.predicate="timed_CLEAR ∈ dom(at)"/>
+<org.eventb.core.guard name="_t16iNzuQEeWbda7YAokC2A" org.eventb.core.label="check_now" org.eventb.core.predicate="now &lt; now+t_relative_CLEAR"/>
+<org.eventb.core.guard name="_t16iODuQEeWbda7YAokC2A" org.eventb.core.label="check_t_CLEAR" org.eventb.core.predicate="at(timed_CLEAR)=∅"/>
+<org.eventb.core.guard name="_t16iOTuQEeWbda7YAokC2A" org.eventb.core.label="isin_CLEAR" org.eventb.core.predicate="READY_REGION = CLEAR"/>
+<org.eventb.core.witness name="_t16iOjuQEeWbda7YAokC2A" org.eventb.core.label="e" org.eventb.core.predicate="e=timed_CLEAR"/>
+<org.eventb.core.witness name="_t16iOzuQEeWbda7YAokC2A" org.eventb.core.label="ntime" org.eventb.core.predicate="ntime = now+t_relative_CLEAR"/>
+<org.eventb.core.action name="_t16iPDuQEeWbda7YAokC2A" org.eventb.core.assignment="at(timed_CLEAR) ≔ at(timed_CLEAR) ∪ {now+t_relative_CLEAR}" org.eventb.core.label="update_at"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_t16iPTuQEeWbda7YAokC2A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="add_timed_COMPLETE_SET_UP">
+<org.eventb.core.refinesEvent name="_t16iPjuQEeWbda7YAokC2A" org.eventb.core.target="add"/>
+<org.eventb.core.guard name="_t17JQDuQEeWbda7YAokC2A" org.eventb.core.label="define_e" org.eventb.core.predicate="timed_COMPLETE_SET_UP ∈ dom(at)"/>
+<org.eventb.core.guard name="_t17JQTuQEeWbda7YAokC2A" org.eventb.core.label="check_now" org.eventb.core.predicate="now &lt; now+t_relative_COMPLETE_SET_UP"/>
+<org.eventb.core.guard name="_t17JQjuQEeWbda7YAokC2A" org.eventb.core.label="check_t_COMPLETE_SET_UP" org.eventb.core.predicate="at(timed_COMPLETE_SET_UP)=∅"/>
+<org.eventb.core.guard name="_t17JQzuQEeWbda7YAokC2A" org.eventb.core.label="isin_CLEAR" org.eventb.core.predicate="READY_REGION = COMPLETE_SET_UP"/>
+<org.eventb.core.witness name="_t17JRDuQEeWbda7YAokC2A" org.eventb.core.label="e" org.eventb.core.predicate="e=timed_COMPLETE_SET_UP"/>
+<org.eventb.core.witness name="_t17JRTuQEeWbda7YAokC2A" org.eventb.core.label="ntime" org.eventb.core.predicate="ntime = now+t_relative_COMPLETE_SET_UP"/>
+<org.eventb.core.action name="_t17JRjuQEeWbda7YAokC2A" org.eventb.core.assignment="at(timed_COMPLETE_SET_UP) ≔ at(timed_COMPLETE_SET_UP) ∪ {now+t_relative_COMPLETE_SET_UP}" org.eventb.core.label="update_at"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_t17JRzuQEeWbda7YAokC2A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="use_timed_CLEAR">
+<org.eventb.core.refinesEvent name="_t17JSDuQEeWbda7YAokC2A" org.eventb.core.target="use"/>
+<org.eventb.core.guard name="_t17JSTuQEeWbda7YAokC2A" org.eventb.core.label="define_e" org.eventb.core.predicate="timed_CLEAR ∈ dom(at)"/>
+<org.eventb.core.guard name="_t17JSjuQEeWbda7YAokC2A" org.eventb.core.label="check_now" org.eventb.core.predicate="now ∈ at(timed_CLEAR)"/>
+<org.eventb.core.guard name="_t17JSzuQEeWbda7YAokC2A" org.eventb.core.label="cheack_timed_CLEAR" org.eventb.core.predicate="timed_CLEAR_Label = TRUE"/>
+<org.eventb.core.guard name="_t17JTDuQEeWbda7YAokC2A" org.eventb.core.label="isin_CLEAR" org.eventb.core.predicate="READY_REGION=CLEAR"/>
+<org.eventb.core.witness name="_t17JTTuQEeWbda7YAokC2A" org.eventb.core.label="e" org.eventb.core.predicate="e=timed_CLEAR"/>
+<org.eventb.core.action name="_t17JTjuQEeWbda7YAokC2A" org.eventb.core.assignment="at(timed_CLEAR) ≔ at(timed_CLEAR) ∖ {now}" org.eventb.core.label="general_update_at"/>
+<org.eventb.core.action name="_t17wUDuQEeWbda7YAokC2A" org.eventb.core.assignment="timed_CLEAR_Label ≔ FALSE" org.eventb.core.label="update_timed_CLEAR_Label"/>
+<org.eventb.core.action name="_t17wUTuQEeWbda7YAokC2A" org.eventb.core.assignment="READY_REGION ≔ COMPLETE_SET_UP" org.eventb.core.label="enter_COMPLETE_SET_UP"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_t17wUjuQEeWbda7YAokC2A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="use_timed_COMPLETE_SET_UP">
+<org.eventb.core.refinesEvent name="_t17wUzuQEeWbda7YAokC2A" org.eventb.core.target="use"/>
+<org.eventb.core.guard name="_t17wVDuQEeWbda7YAokC2A" org.eventb.core.label="define_e" org.eventb.core.predicate="timed_COMPLETE_SET_UP ∈ dom(at)"/>
+<org.eventb.core.guard name="_t17wVTuQEeWbda7YAokC2A" org.eventb.core.label="check_now" org.eventb.core.predicate="now ∈ at(timed_COMPLETE_SET_UP)"/>
+<org.eventb.core.guard name="_t17wVjuQEeWbda7YAokC2A" org.eventb.core.label="cheack_timed_CLEAR" org.eventb.core.predicate="timed_COMPLETE_SET_UP_Label = TRUE"/>
+<org.eventb.core.guard name="_t17wVzuQEeWbda7YAokC2A" org.eventb.core.label="isin_CLEAR" org.eventb.core.predicate="READY_REGION=COMPLETE_SET_UP"/>
+<org.eventb.core.witness name="_t17wWDuQEeWbda7YAokC2A" org.eventb.core.label="e" org.eventb.core.predicate="e=timed_COMPLETE_SET_UP"/>
+<org.eventb.core.action name="_t17wWTuQEeWbda7YAokC2A" org.eventb.core.assignment="at(timed_COMPLETE_SET_UP) ≔ at(timed_COMPLETE_SET_UP) ∖ {now}" org.eventb.core.label="general_update_at"/>
+<org.eventb.core.action name="_t17wWjuQEeWbda7YAokC2A" org.eventb.core.assignment="timed_COMPLETE_SET_UP_Label ≔ FALSE" org.eventb.core.label="update_timed_CLEAR_Label"/>
+<org.eventb.core.action name="_t17wWzuQEeWbda7YAokC2A" org.eventb.core.assignment="READY_REGION ≔ READY_FINAL" org.eventb.core.label="enter_COMPLETE_SET_UP"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_t17wXDuQEeWbda7YAokC2A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="tic">
+<org.eventb.core.refinesEvent name="_t17wXTuQEeWbda7YAokC2A" org.eventb.core.target="tic"/>
+<org.eventb.core.guard name="_t18XYDuQEeWbda7YAokC2A" org.eventb.core.label="check_timed_CLEAR_Label" org.eventb.core.predicate="(timed_CLEAR_Label = FALSE) ∨  (timed_CLEAR_Label = TRUE ∧ ¬ now∈at(timed_CLEAR)) "/>
+<org.eventb.core.guard name="_t18XYTuQEeWbda7YAokC2A" org.eventb.core.label="check_timed_COMPLETE_SET_UP_Label" org.eventb.core.predicate="(timed_COMPLETE_SET_UP_Label = FALSE) ∨ (timed_COMPLETE_SET_UP_Label = TRUE ∧ ¬ now∈at(timed_COMPLETE_SET_UP)) "/>
+<org.eventb.core.action name="_t18XYjuQEeWbda7YAokC2A" org.eventb.core.assignment="timed_CLEAR_Label ≔ TRUE" org.eventb.core.label="reset_timed_CLEAR_Label"/>
+<org.eventb.core.action name="_t18XYzuQEeWbda7YAokC2A" org.eventb.core.assignment="timed_COMPLETE_SET_UP_Label ≔ TRUE" org.eventb.core.label="reset_timed_COMPLETE_SET_UP_Label"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.constant name="_5U1rUDuKEeWbda7YAokC2A" org.eventb.core.identifier="timed_CLEAR"/>
+<org.eventb.core.constant name="_5U1rUTuKEeWbda7YAokC2A" org.eventb.core.comment="List of Events" org.eventb.core.identifier="timed_COMPLETE_SET_UP"/>
+<org.eventb.core.constant name="_5U1rUjuKEeWbda7YAokC2A" org.eventb.core.identifier="t_CLEAR"/>
+<org.eventb.core.constant name="_5U1rUzuKEeWbda7YAokC2A" org.eventb.core.comment="Corresponding times" org.eventb.core.identifier="t_COMPLETE_SET_UP"/>
+<org.eventb.core.constant name="_5U1rVDuKEeWbda7YAokC2A" org.eventb.core.identifier="t_relative_CLEAR"/>
+<org.eventb.core.constant name="_5U1rVTuKEeWbda7YAokC2A" org.eventb.core.comment="Corresponding relative times" org.eventb.core.identifier="t_relative_COMPLETE_SET_UP"/>
+<org.eventb.core.constant name="_5U1rVjuKEeWbda7YAokC2A" org.eventb.core.identifier="evts"/>
+<org.eventb.core.constant name="_5U2SYDuKEeWbda7YAokC2A" org.eventb.core.identifier="at_init"/>
+<org.eventb.core.axiom name="_5U2SYTuKEeWbda7YAokC2A" org.eventb.core.label="typeof_timed_CLEAR" org.eventb.core.predicate="timed_CLEAR ∈ ℕ ∧ t_CLEAR ∈ ℙ(ℕ)"/>
+<org.eventb.core.axiom name="_5U2SYjuKEeWbda7YAokC2A" org.eventb.core.label="typeof_timed_COMPLETE_SET_UP" org.eventb.core.predicate="timed_COMPLETE_SET_UP ∈ ℕ ∧ t_COMPLETE_SET_UP ∈ ℙ(ℕ)"/>
+<org.eventb.core.axiom name="_5U2SYzuKEeWbda7YAokC2A" org.eventb.core.label="distinct_Events_Lables" org.eventb.core.predicate="partition(evts, {timed_CLEAR}, {timed_COMPLETE_SET_UP})"/>
+<org.eventb.core.axiom name="_5U2SZDuKEeWbda7YAokC2A" org.eventb.core.label="axm1" org.eventb.core.predicate="t_CLEAR=∅ ∧ t_COMPLETE_SET_UP=∅"/>
+<org.eventb.core.axiom name="_5U2SZTuKEeWbda7YAokC2A" org.eventb.core.label="axm2" org.eventb.core.predicate="t_relative_CLEAR=2 ∧ t_relative_COMPLETE_SET_UP=2"/>
+<org.eventb.core.axiom name="_5U2SZjuKEeWbda7YAokC2A" org.eventb.core.comment="KMW: DO I need this for proofs" org.eventb.core.label="axm3" org.eventb.core.predicate="evts ∈ ℙ(ℕ)"/>
+<org.eventb.core.axiom name="_5U2SZzuKEeWbda7YAokC2A" org.eventb.core.comment="finite set of events for a model" org.eventb.core.label="axm4" org.eventb.core.predicate="evts={timed_CLEAR, timed_COMPLETE_SET_UP}"/>
+<org.eventb.core.axiom name="_5U2SaDuKEeWbda7YAokC2A" org.eventb.core.label="axm5" org.eventb.core.predicate="at_init = {timed_CLEAR ↦ t_CLEAR, timed_COMPLETE_SET_UP ↦ t_COMPLETE_SET_UP}"/>
+</org.eventb.core.contextFile>

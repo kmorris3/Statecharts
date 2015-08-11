@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="at_init" org.eventb.core.type="ℙ(ℤ×ℙ(ℤ))"/>
+<org.eventb.core.poIdentifier name="evts" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="t_CLEAR" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="t_COMPLETE_SET_UP" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="t_relative_CLEAR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="t_relative_COMPLETE_SET_UP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="timed_CLEAR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="timed_COMPLETE_SET_UP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_UQ" org.eventb.core.predicate="timed_CLEAR∈ℕ∧t_CLEAR∈ℙ(ℕ)" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SYTuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_UR" org.eventb.core.predicate="timed_COMPLETE_SET_UP∈ℕ∧t_COMPLETE_SET_UP∈ℙ(ℕ)" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SYjuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_US" org.eventb.core.predicate="partition(evts,{timed_CLEAR},{timed_COMPLETE_SET_UP})" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SYzuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_UT" org.eventb.core.predicate="t_CLEAR=(∅ ⦂ ℙ(ℤ))∧t_COMPLETE_SET_UP=(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SZDuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_UU" org.eventb.core.predicate="t_relative_CLEAR=2∧t_relative_COMPLETE_SET_UP=2" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SZTuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_UV" org.eventb.core.predicate="evts∈ℙ(ℕ)" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SZjuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_UW" org.eventb.core.predicate="evts={timed_CLEAR,timed_COMPLETE_SET_UP}" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SZzuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="t_relative_COMPLETE_SET_UX" org.eventb.core.predicate="at_init={timed_CLEAR ↦ t_CLEAR,timed_COMPLETE_SET_UP ↦ t_COMPLETE_SET_UP}" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SaDuKEeWbda7YAokC2A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="at" org.eventb.core.type="ℙ(ℤ×ℙ(ℤ))"/>
+<org.eventb.core.poIdentifier name="now" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="define_events/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#HYPClock_Contexw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀e⦂ℤ·(e∈evts⇒e∈dom(at)∧at∈ℤ ⇸ ℙ(ℤ))∧(e∈evts∧at(e)≠(∅ ⦂ ℙ(ℤ))⇒(∃b⦂ℤ·∀x⦂ℤ·x∈at(e)⇒b≤x))" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dY2QDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dY2QDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#HYPClock_Contexw"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/typeof_now/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTALLHYPClock_Contexy"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dY2QTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poSequent#INITIALISATION\/typeof_now\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#HYPClock_Contexw|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/typeof_at/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTALLHYPClock_Contexy"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="at_init∈evts → ℙ(ℕ)" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dY2QTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poSequent#INITIALISATION\/typeof_at\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#HYPClock_Contexw|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/domain_at/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTALLHYPClock_Contexy"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(at_init)=evts" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMjukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dY2QTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMjukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poSequent#INITIALISATION\/domain_at\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#HYPClock_Contexw|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/define_events/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTALLHYPClock_Contexy"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀e⦂ℤ·e∈evts∧at_init(e)≠(∅ ⦂ ℙ(ℤ))⇒0≤min(at_init(e))" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dY2QDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dY2QTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dY2QDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poSequent#INITIALISATION\/define_events\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTClock_Contexy" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="now'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="at'" org.eventb.core.type="ℙ(ℤ×ℙ(ℤ))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPClock_Contexy" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTIDENTClock_Contexy" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="add/typeof_at/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTALLHYPClock_Contexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="at{e ↦ at(e)∪{ntime}}∈evts → ℙ(ℕ)" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dZdUDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poSequent#add\/typeof_at\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#HYPClock_Contexw|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add/domain_at/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTALLHYPClock_Contexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(at{e ↦ at(e)∪{ntime}})=evts" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMjukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dZdUDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMjukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poSequent#add\/domain_at\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#HYPClock_Contexw|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add/define_events/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTALLHYPClock_Contexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀e0⦂ℤ·e0∈evts∧(at{e ↦ at(e)∪{ntime}})(e0)≠(∅ ⦂ ℙ(ℤ))⇒now≤min((at{e ↦ at(e)∪{ntime}})(e0))" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dY2QDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dZdUDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dY2QDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poSequent#add\/define_events\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="add/update_at/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTALLHYPClock_Contexz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="e∈dom(at)∧at∈ℤ ⇸ ℙ(ℤ)" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dZdUDukEeWWWsH7L7p9tQ|org.eventb.core.action#_9daEYTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dZdUDukEeWWWsH7L7p9tQ|org.eventb.core.action#_9daEYTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTALLHYPClock_Contexz"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTClock_Contexz" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="e" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="at'" org.eventb.core.type="ℙ(ℤ×ℙ(ℤ))"/>
+<org.eventb.core.poIdentifier name="ntime" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPClock_Contexz" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTIDENTClock_Contexz" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="e∈dom(at)" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dZdUDukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9dZdUzukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="now&lt;ntime" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dZdUDukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9daEYDukEeWWWsH7L7p9tQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="use/check_now/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTHYPClock_Contex{'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="e∈dom(at)∧at∈ℤ ⇸ ℙ(ℤ)" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9darcTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9darcTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTHYPClock_Contex{'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="use/typeof_at/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTALLHYPClock_Contex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="at{e ↦ at(e) ∖ {now}}∈evts → ℙ(ℕ)" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poSequent#use\/typeof_at\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#HYPClock_Contexw|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="use/domain_at/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTALLHYPClock_Contex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(at{e ↦ at(e) ∖ {now}})=evts" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMjukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMjukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poSequent#use\/domain_at\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#HYPClock_Contexw|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="use/define_events/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTALLHYPClock_Contex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀e0⦂ℤ·e0∈evts∧(at{e ↦ at(e) ∖ {now}})(e0)≠(∅ ⦂ ℙ(ℤ))⇒now≤min((at{e ↦ at(e) ∖ {now}})(e0))" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dY2QDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dY2QDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poSequent#use\/define_events\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="use/general_update_at/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTALLHYPClock_Contex{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="e∈dom(at)∧at∈ℤ ⇸ ℙ(ℤ)" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ|org.eventb.core.action#_9darcjukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ|org.eventb.core.action#_9darcjukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTALLHYPClock_Contex{"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTClock_Contex{" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="e" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="at'" org.eventb.core.type="ℙ(ℤ×ℙ(ℤ))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPClock_Contex{'" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTIDENTClock_Contex{" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="e∈dom(at)" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9darcDukEeWWWsH7L7p9tQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPClock_Contex{" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTHYPClock_Contex{'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="now∈at(e)" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9daEYjukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9darcTukEeWWWsH7L7p9tQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="tic/check_at/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTIDENTClock_Contex\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀e⦂ℤ·(e∈dom(at)⇒at∈ℤ ⇸ ℙ(ℤ))∧(e∈dom(at)∧at(e)≠(∅ ⦂ ℙ(ℤ))⇒(∃b⦂ℤ·∀x⦂ℤ·x∈at(e)⇒b≤x))" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dbSgDukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9db5kDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dbSgDukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9db5kDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTIDENTClock_Contex\|"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="tic/typeof_now/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTALLHYPClock_Contex\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="now+1∈ℕ" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dbSgDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poSequent#tic\/typeof_now\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#HYPClock_Contexw|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="tic/define_events/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTALLHYPClock_Contex\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀e⦂ℤ·e∈evts∧at(e)≠(∅ ⦂ ℙ(ℤ))⇒now+1≤min(at(e))" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dY2QDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dbSgDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dY2QDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poSequent#tic\/define_events\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTClock_Contex|" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="now'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPClock_Contex|" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#EVTIDENTClock_Contex\|" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="∀e⦂ℤ·e∈dom(at)∧at(e)≠(∅ ⦂ ℙ(ℤ))⇒now+1≤min(at(e))" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.event#_9dbSgDukEeWWWsH7L7p9tQ|org.eventb.core.guard#_9db5kDukEeWWWsH7L7p9tQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPClock_Contexw" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="now∈ℕ" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMDukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="at∈evts → ℙ(ℕ)" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMTukEeWWWsH7L7p9tQ"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="dom(at)=evts" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dYPMjukEeWWWsH7L7p9tQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Machine.bpo|org.eventb.core.poFile#Clock_Machine|org.eventb.core.poPredicateSet#HYPClock_Contexw" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀e⦂ℤ·e∈evts∧at(e)≠(∅ ⦂ ℙ(ℤ))⇒now≤min(at(e))" org.eventb.core.source="/TurnstileEvent-B/Clock_Machine.bum|org.eventb.core.machineFile#Clock_Machine|org.eventb.core.invariant#_9dY2QDukEeWWWsH7L7p9tQ"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

@@ -1,0 +1,18 @@
+context Clock_Context 
+
+constants timed_CLEAR timed_COMPLETE_SET_UP > "List of Events"
+          t_CLEAR t_COMPLETE_SET_UP > "Corresponding times"
+          t_relative_CLEAR t_relative_COMPLETE_SET_UP > "Corresponding relative times"
+          evts at_init 
+
+axioms
+  @typeof_timed_CLEAR "timed_CLEAR ∈ ℕ ∧ t_CLEAR ∈ ℙ(ℕ)"
+  @typeof_timed_COMPLETE_SET_UP "timed_COMPLETE_SET_UP ∈ ℕ ∧ t_COMPLETE_SET_UP ∈ ℙ(ℕ)"
+  @distinct_Events_Lables "partition(evts, {timed_CLEAR}, {timed_COMPLETE_SET_UP})" 
+  @axm1 "t_CLEAR=∅ ∧ t_COMPLETE_SET_UP=∅"
+  @axm2 "t_relative_CLEAR=2 ∧ t_relative_COMPLETE_SET_UP=2"
+  @axm3 "evts ∈ ℙ(ℕ)"
+  @axm4 "evts={timed_CLEAR, timed_COMPLETE_SET_UP}" >  "finite set of events for a model"
+  @axm5 "at_init = {timed_CLEAR ↦ t_CLEAR, timed_COMPLETE_SET_UP ↦ t_COMPLETE_SET_UP}"
+end
+

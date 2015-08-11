@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.seesContext name="_9dXoIDukEeWWWsH7L7p9tQ" org.eventb.core.target="Clock_Context"/>
+<org.eventb.core.variable name="_9dXoITukEeWWWsH7L7p9tQ" org.eventb.core.comment="real current time" org.eventb.core.identifier="now"/>
+<org.eventb.core.variable name="_9dXoIjukEeWWWsH7L7p9tQ" org.eventb.core.comment="stands for activation times and is the event−calender∈&#10;             function that gives for every event element of evts, a set of activation&#10;             times in the future&#10;             Note∈  When one of the events has an empty time list the machine fails" org.eventb.core.identifier="at"/>
+<org.eventb.core.invariant name="_9dYPMDukEeWWWsH7L7p9tQ" org.eventb.core.label="typeof_now" org.eventb.core.predicate="now ∈ ℕ"/>
+<org.eventb.core.invariant name="_9dYPMTukEeWWWsH7L7p9tQ" org.eventb.core.label="typeof_at" org.eventb.core.predicate="at ∈ evts → ℙ(ℕ)"/>
+<org.eventb.core.invariant name="_9dYPMjukEeWWWsH7L7p9tQ" org.eventb.core.label="domain_at" org.eventb.core.predicate="dom(at)=evts"/>
+<org.eventb.core.invariant name="_9dY2QDukEeWWWsH7L7p9tQ" org.eventb.core.label="define_events" org.eventb.core.predicate="∀e · (e ∈ evts ∧ at(e) ≠ ∅ ⇒ now ≤ min(at(e)))"/>
+<org.eventb.core.event name="_9dY2QTukEeWWWsH7L7p9tQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_9dY2QjukEeWWWsH7L7p9tQ" org.eventb.core.assignment="now ≔ 0" org.eventb.core.label="init_now"/>
+<org.eventb.core.action name="_9dY2QzukEeWWWsH7L7p9tQ" org.eventb.core.assignment="at ≔ at_init" org.eventb.core.label="init_at"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_9dZdUDukEeWWWsH7L7p9tQ" org.eventb.core.comment="Adds a new future activation time ntime in the calendar of events e" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="add">
+<org.eventb.core.parameter name="_9dZdUTukEeWWWsH7L7p9tQ" org.eventb.core.identifier="e"/>
+<org.eventb.core.parameter name="_9dZdUjukEeWWWsH7L7p9tQ" org.eventb.core.identifier="ntime"/>
+<org.eventb.core.guard name="_9dZdUzukEeWWWsH7L7p9tQ" org.eventb.core.label="define_e" org.eventb.core.predicate="e ∈ dom(at)"/>
+<org.eventb.core.guard name="_9daEYDukEeWWWsH7L7p9tQ" org.eventb.core.comment="Geoff What happens if you allow the model to add events in the pass&#10;                                  and then proof that the model never does" org.eventb.core.label="check_now" org.eventb.core.predicate="now &lt; ntime"/>
+<org.eventb.core.action name="_9daEYTukEeWWWsH7L7p9tQ" org.eventb.core.assignment="at(e) ≔ at(e) ∪ {ntime}" org.eventb.core.label="update_at"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_9daEYjukEeWWWsH7L7p9tQ" org.eventb.core.comment=" Activtes an event e, at the current time now,&#10;     if e has ben scheduled to this current time (now ∈ at(e));&#10;     in this case we remove  the current time from the calender of e· " org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="use">
+<org.eventb.core.parameter name="_9daEYzukEeWWWsH7L7p9tQ" org.eventb.core.identifier="e"/>
+<org.eventb.core.guard name="_9darcDukEeWWWsH7L7p9tQ" org.eventb.core.label="define_e" org.eventb.core.predicate="e ∈ dom(at)"/>
+<org.eventb.core.guard name="_9darcTukEeWWWsH7L7p9tQ" org.eventb.core.label="check_now" org.eventb.core.predicate="now ∈ at(e)"/>
+<org.eventb.core.action name="_9darcjukEeWWWsH7L7p9tQ" org.eventb.core.assignment="at(e) ≔ at(e) ∖ {now}" org.eventb.core.label="general_update_at"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_9dbSgDukEeWWWsH7L7p9tQ" org.eventb.core.comment=" Time progression, current time is increased to now+1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="tic">
+<org.eventb.core.guard name="_9db5kDukEeWWWsH7L7p9tQ" org.eventb.core.label="check_at" org.eventb.core.predicate="∀e · e ∈ dom(at) ∧ at(e) ≠ ∅ ⇒ now + 1 ≤ min(at(e))"/>
+<org.eventb.core.action name="_9db5kTukEeWWWsH7L7p9tQ" org.eventb.core.assignment="now ≔  now + 1" org.eventb.core.label="update_now"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

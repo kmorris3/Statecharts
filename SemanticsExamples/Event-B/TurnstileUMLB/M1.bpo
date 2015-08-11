@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="1">
-<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="SM0_STATES" org.eventb.core.type="ℙ(SM0_STATES)"/>
 <org.eventb.core.poIdentifier name="ON_OFF" org.eventb.core.type="SM0_STATES"/>
 <org.eventb.core.poPredicate name="SM0_STATET" org.eventb.core.predicate="ON_OFF∈SM0_STATES" org.eventb.core.source="/TurnstileUMLB/M0_implicitContext.buc|org.eventb.core.contextFile#M0_implicitContext|org.eventb.core.axiom#_zDlwYf_ZEeSwtrZ15v7AYA"/>
@@ -14,12 +14,12 @@
 <org.eventb.core.poPredicate name="ON_OFF_SM1_STATEV" org.eventb.core.predicate="ON∈ON_OFF_SM1_STATES" org.eventb.core.source="/TurnstileUMLB/M1_implicitContext.buc|org.eventb.core.contextFile#M1_implicitContext|org.eventb.core.axiom#_zD0Z4f_ZEeSwtrZ15v7AYA"/>
 <org.eventb.core.poPredicate name="ON_OFF_SM1_STATEW" org.eventb.core.predicate="partition(ON_OFF_SM1_STATES,{OFF},{ON},{ON_OFF_SM1_NULL})" org.eventb.core.source="/TurnstileUMLB/M1_implicitContext.buc|org.eventb.core.contextFile#M1_implicitContext|org.eventb.core.axiom#_zD0Z4v_ZEeSwtrZ15v7AYA"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="ON_OFF_SM1" org.eventb.core.type="ON_OFF_SM1_STATES"/>
 <org.eventb.core.poIdentifier name="SM0" org.eventb.core.type="SM0_STATES"/>
 <org.eventb.core.poPredicate name="ON_OFF_SM2" org.eventb.core.predicate="SM0∈SM0_STATES" org.eventb.core.source="/TurnstileUMLB/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#_zDhe8f_ZEeSwtrZ15v7AYA"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="INITIALISATION/superstateof_ON_OFF_SM1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="INITIALISATION/superstateof_ON_OFF_SM1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPM1_implicitContexw"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="OFF≠ON_OFF_SM1_NULL⇔ON_OFF=ON_OFF" org.eventb.core.source="/TurnstileUMLB/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_zDu6U__ZEeSwtrZ15v7AYA"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileUMLB/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_zDhe8v_ZEeSwtrZ15v7AYA"/>
@@ -28,12 +28,12 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#INITIALISATION\/superstateof_ON_OFF_SM1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTM1_implicitContexw" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="EVTIDENTM1_implicitContexw" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="SM0'" org.eventb.core.type="SM0_STATES"/>
 <org.eventb.core.poIdentifier name="ON_OFF_SM1'" org.eventb.core.type="ON_OFF_SM1_STATES"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPM1_implicitContexw" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTM1_implicitContexw" org.eventb.core.poStamp="1"/>
-<org.eventb.core.poSequent name="OnOff/superstateof_ON_OFF_SM1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="EVTALLHYPM1_implicitContexw" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTM1_implicitContexw" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="OnOff/superstateof_ON_OFF_SM1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPM1_implicitContexx"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="OFF≠ON_OFF_SM1_NULL⇔SM0=ON_OFF" org.eventb.core.source="/TurnstileUMLB/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_zDu6U__ZEeSwtrZ15v7AYA"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileUMLB/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_zDiGAP_ZEeSwtrZ15v7AYA"/>
@@ -42,7 +42,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#OnOff\/superstateof_ON_OFF_SM1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="OnOff/isin_ON_OFF/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="OnOff/isin_ON_OFF/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPM1_implicitContexx"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="SM0=ON_OFF" org.eventb.core.source="/TurnstileUMLB/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_zDiGAP_ZEeSwtrZ15v7AYA|org.eventb.core.guard#_zDiGA__ZEeSwtrZ15v7AYA"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileUMLB/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_zDiGAP_ZEeSwtrZ15v7AYA"/>
@@ -50,14 +50,14 @@
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileUMLB/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_zDu6Vv_ZEeSwtrZ15v7AYA"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#OnOff\/isin_ON_OFF\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTM1_implicitContexx" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="EVTIDENTM1_implicitContexx" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="StartOn" org.eventb.core.type="BOOL"/>
 <org.eventb.core.poIdentifier name="ON_OFF_SM1'" org.eventb.core.type="ON_OFF_SM1_STATES"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPM1_implicitContexx" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTM1_implicitContexx" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="EVTALLHYPM1_implicitContexx" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTM1_implicitContexx" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ON_OFF_SM1=ON" org.eventb.core.source="/TurnstileUMLB/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_zDu6Vv_ZEeSwtrZ15v7AYA|org.eventb.core.guard#_zDvhYP_ZEeSwtrZ15v7AYA"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="OffOn/superstateof_ON_OFF_SM1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="OffOn/superstateof_ON_OFF_SM1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPM1_implicitContexy"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ON≠ON_OFF_SM1_NULL⇔SM0=ON_OFF" org.eventb.core.source="/TurnstileUMLB/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_zDu6U__ZEeSwtrZ15v7AYA"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileUMLB/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_zDiGAP_ZEeSwtrZ15v7AYA"/>
@@ -66,7 +66,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#OffOn\/superstateof_ON_OFF_SM1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="OffOn/isin_ON_OFF/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="OffOn/isin_ON_OFF/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPM1_implicitContexy"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="SM0=ON_OFF" org.eventb.core.source="/TurnstileUMLB/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_zDiGAP_ZEeSwtrZ15v7AYA|org.eventb.core.guard#_zDiGA__ZEeSwtrZ15v7AYA"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/TurnstileUMLB/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_zDiGAP_ZEeSwtrZ15v7AYA"/>
@@ -74,14 +74,14 @@
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/TurnstileUMLB/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_zDvhY__ZEeSwtrZ15v7AYA"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#OffOn\/isin_ON_OFF\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTM1_implicitContexy" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="EVTIDENTM1_implicitContexy" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="StartOn" org.eventb.core.type="BOOL"/>
 <org.eventb.core.poIdentifier name="ON_OFF_SM1'" org.eventb.core.type="ON_OFF_SM1_STATES"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPM1_implicitContexy" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTM1_implicitContexy" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="EVTALLHYPM1_implicitContexy" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTM1_implicitContexy" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ON_OFF_SM1=OFF" org.eventb.core.source="/TurnstileUMLB/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#_zDvhY__ZEeSwtrZ15v7AYA|org.eventb.core.guard#_zDvhZf_ZEeSwtrZ15v7AYA"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TurnstileUMLB/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ON_OFF_SM1∈ON_OFF_SM1_STATES" org.eventb.core.source="/TurnstileUMLB/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_zDu6Uv_ZEeSwtrZ15v7AYA"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ON_OFF_SM1≠ON_OFF_SM1_NULL⇔SM0=ON_OFF" org.eventb.core.source="/TurnstileUMLB/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#_zDu6U__ZEeSwtrZ15v7AYA"/>
 </org.eventb.core.poPredicateSet>

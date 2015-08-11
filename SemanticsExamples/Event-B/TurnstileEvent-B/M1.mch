@@ -4,7 +4,7 @@ refines
 sees 
  C1
 variables 
- GATE  CARD_READER  MAIN_REGION  Block  Unblock 
+ GATE  CARD_READER  MAIN_REGION  Block  Unblock  now  at 
 invariants 
  @typeof_GATE "GATE ∈ GATE_STATES"  
  @typeof_CARD_READER "CARD_READER ∈ CARD_READER_STATES"  
@@ -100,5 +100,17 @@ events
   @enter_UNBLOCKED "GATE ≔ UNBLOCKED" 
   @set_Unblock "Unblock ≔ TRUE" 
   @set_Block "Block ≔ FALSE" 
+ end
+ event add  extended ordinary 
+ refines
+ M0·add
+ end
+ event use  extended ordinary 
+ refines
+ M0·use
+ end
+ event tic  extended ordinary 
+ refines
+ M0·tic
  end
 end

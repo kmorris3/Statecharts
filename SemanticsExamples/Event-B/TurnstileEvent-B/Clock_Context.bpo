@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="at_init" org.eventb.core.type="ℙ(ℤ×ℙ(ℤ))"/>
+<org.eventb.core.poIdentifier name="evts" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="t_CLEAR" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="t_COMPLETE_SET_UP" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="t_relative_CLEAR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="t_relative_COMPLETE_SET_UP" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="timed_CLEAR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="timed_COMPLETE_SET_UP" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TurnstileEvent-B/Clock_Context.bpo|org.eventb.core.poFile#Clock_Context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="timed_CLEAR∈ℕ∧t_CLEAR∈ℙ(ℕ)" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SYTuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="timed_COMPLETE_SET_UP∈ℕ∧t_COMPLETE_SET_UP∈ℙ(ℕ)" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SYjuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="partition(evts,{timed_CLEAR},{timed_COMPLETE_SET_UP})" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SYzuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="t_CLEAR=(∅ ⦂ ℙ(ℤ))∧t_COMPLETE_SET_UP=(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SZDuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="t_relative_CLEAR=2∧t_relative_COMPLETE_SET_UP=2" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SZTuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="evts∈ℙ(ℕ)" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SZjuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="evts={timed_CLEAR,timed_COMPLETE_SET_UP}" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SZzuKEeWbda7YAokC2A"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="at_init={timed_CLEAR ↦ t_CLEAR,timed_COMPLETE_SET_UP ↦ t_COMPLETE_SET_UP}" org.eventb.core.source="/TurnstileEvent-B/Clock_Context.buc|org.eventb.core.contextFile#Clock_Context|org.eventb.core.axiom#_5U2SaDuKEeWbda7YAokC2A"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
