@@ -52,14 +52,14 @@
 <org.eventb.core.action name="_a-z58Ts7EeWug48DvK-uQw" org.eventb.core.assignment="CARD_READER ≔ READY" org.eventb.core.label="enter_READY"/>
 <org.eventb.core.action name="_a-z58js7EeWug48DvK-uQw" org.eventb.core.assignment="Unblock ≔ FALSE" org.eventb.core.label="set_Unblock"/>
 <org.eventb.core.action name="_a-z58zs7EeWug48DvK-uQw" org.eventb.core.assignment="Block ≔ TRUE" org.eventb.core.label="set_Block"/>
-<org.eventb.core.action name="_a-z59Ds7EeWug48DvK-uQw" org.eventb.core.assignment="GATE ≔ BLOCKED" org.eventb.core.comment="As it is now this requires human input " org.eventb.core.label="enter_BLOCKED"/>
+<org.eventb.core.action name="_a-z59Ds7EeWug48DvK-uQw" org.eventb.core.assignment="GATE ≔ BLOCKED" org.eventb.core.comment="This should be an action that triggers the&#10;Event UNBLOCKED_OUT_TRANS &#10;As it is now this requires human input. " org.eventb.core.label="enter_BLOCKED"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_a-z59Ts7EeWug48DvK-uQw" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CardOk">
 <org.eventb.core.guard name="_a-z59js7EeWug48DvK-uQw" org.eventb.core.label="isin_READING" org.eventb.core.predicate="CARD_READER = READING"/>
 <org.eventb.core.action name="_a-z59zs7EeWug48DvK-uQw" org.eventb.core.assignment="Unblock ≔ TRUE" org.eventb.core.label="set_Unblock"/>
 <org.eventb.core.action name="_a-z5-Ds7EeWug48DvK-uQw" org.eventb.core.assignment="Block ≔ FALSE" org.eventb.core.label="set_Block"/>
 <org.eventb.core.action name="_a-z5-Ts7EeWug48DvK-uQw" org.eventb.core.assignment="CARD_READER ≔ ACCEPT" org.eventb.core.label="enter_ACCEPT"/>
-<org.eventb.core.action name="_a-0hADs7EeWug48DvK-uQw" org.eventb.core.assignment="GATE ≔ UNBLOCKED" org.eventb.core.comment="As it is now this requires human input " org.eventb.core.label="enter_UNBLOCKED"/>
+<org.eventb.core.action name="_a-0hADs7EeWug48DvK-uQw" org.eventb.core.assignment="GATE ≔ UNBLOCKED" org.eventb.core.comment="This should be an action that triggers the&#10;Event BLOCKED_OUT_TRANS&#10;As it is now this requires human inpu" org.eventb.core.label="enter_UNBLOCKED"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="_a-0hATs7EeWug48DvK-uQw" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Reset">
 <org.eventb.core.guard name="_a-0hAjs7EeWug48DvK-uQw" org.eventb.core.label="isin_ACCEPT" org.eventb.core.predicate="CARD_READER = ACCEPT"/>
@@ -68,14 +68,14 @@
 <org.eventb.core.action name="_a-0hBTs7EeWug48DvK-uQw" org.eventb.core.assignment="CARD_READER ≔ READY" org.eventb.core.label="enter_READY"/>
 <org.eventb.core.action name="_a-0hBjs7EeWug48DvK-uQw" org.eventb.core.assignment="GATE ≔ BLOCKED" org.eventb.core.comment="As it is now this requires human input " org.eventb.core.label="enter_BLOCKED"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_a-0hBzs7EeWug48DvK-uQw" org.eventb.core.comment="Handles unnamed transition with conditions· Can be removed" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="UNBLOCKED_OUT_TRANS">
+<org.eventb.core.event name="_a-0hBzs7EeWug48DvK-uQw" org.eventb.core.comment="Handles unnamed transition with conditions" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="UNBLOCKED_OUT_TRANS">
 <org.eventb.core.guard name="_a-0hCDs7EeWug48DvK-uQw" org.eventb.core.label="isin_UNBLOCKED" org.eventb.core.predicate="GATE = UNBLOCKED"/>
 <org.eventb.core.guard name="_a-0hCTs7EeWug48DvK-uQw" org.eventb.core.label="check_Block" org.eventb.core.predicate="Block=TRUE"/>
 <org.eventb.core.action name="_a-0hCjs7EeWug48DvK-uQw" org.eventb.core.assignment="GATE ≔ BLOCKED" org.eventb.core.label="enter_BLOCKED"/>
 <org.eventb.core.action name="_a-1IEDs7EeWug48DvK-uQw" org.eventb.core.assignment="Unblock ≔ FALSE" org.eventb.core.label="set_Unblock"/>
 <org.eventb.core.action name="_a-1IETs7EeWug48DvK-uQw" org.eventb.core.assignment="Block ≔ TRUE" org.eventb.core.comment="Need to add raise Reset some how· Short way is to copy actions, but this isn't always the desire behavior·" org.eventb.core.label="set_Block"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_a-1IEjs7EeWug48DvK-uQw" org.eventb.core.comment="Handles unnamed transition with conditions· Can be removed" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="BLOCKED_OUT_TRANS">
+<org.eventb.core.event name="_a-1IEjs7EeWug48DvK-uQw" org.eventb.core.comment="Handles unnamed transition with conditions" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="BLOCKED_OUT_TRANS">
 <org.eventb.core.guard name="_a-1IEzs7EeWug48DvK-uQw" org.eventb.core.label="isin_BLOCKED" org.eventb.core.predicate="GATE = BLOCKED"/>
 <org.eventb.core.guard name="_a-1IFDs7EeWug48DvK-uQw" org.eventb.core.label="check_Unblock" org.eventb.core.predicate="Unblock=TRUE"/>
 <org.eventb.core.action name="_a-1IFTs7EeWug48DvK-uQw" org.eventb.core.assignment="GATE ≔ UNBLOCKED" org.eventb.core.label="enter_UNBLOCKED"/>

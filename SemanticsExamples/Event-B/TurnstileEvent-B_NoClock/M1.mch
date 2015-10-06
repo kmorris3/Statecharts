@@ -4,7 +4,7 @@ refines
 sees 
  C1
 variables 
- GATE  CARD_READER  MAIN_REGION  Block  Unblock  now  at 
+ GATE  CARD_READER  MAIN_REGION  Block  Unblock 
 invariants 
  @typeof_GATE "GATE ∈ GATE_STATES"  
  @typeof_CARD_READER "CARD_READER ∈ CARD_READER_STATES"  
@@ -63,7 +63,9 @@ events
   @enter_READY "CARD_READER ≔ READY" 
   @set_Unblock "Unblock ≔ FALSE" 
   @set_Block "Block ≔ TRUE" 
-  @enter_BLOCKED "GATE ≔ BLOCKED" > "As it is now this requires human input "
+  @enter_BLOCKED "GATE ≔ BLOCKED" > "This should be an action that triggers the
+Event UNBLOCKED_OUT_TRANS 
+As it is now this requires human input. "
  end
  event CardOk  ordinary 
  where 
@@ -72,7 +74,9 @@ events
   @set_Unblock "Unblock ≔ TRUE" 
   @set_Block "Block ≔ FALSE" 
   @enter_ACCEPT "CARD_READER ≔ ACCEPT" 
-  @enter_UNBLOCKED "GATE ≔ UNBLOCKED" > "As it is now this requires human input "
+  @enter_UNBLOCKED "GATE ≔ UNBLOCKED" > "This should be an action that triggers the
+Event BLOCKED_OUT_TRANS
+As it is now this requires human inpu"
  end
  event Reset  ordinary 
  where 
@@ -83,7 +87,7 @@ events
   @enter_READY "CARD_READER ≔ READY" 
   @enter_BLOCKED "GATE ≔ BLOCKED" > "As it is now this requires human input "
  end
- event UNBLOCKED_OUT_TRANS  ordinary > "Handles unnamed transition with conditions· Can be removed"
+ event UNBLOCKED_OUT_TRANS  ordinary > "Handles unnamed transition with conditions"
  where 
    @isin_UNBLOCKED "GATE = UNBLOCKED"  
    @check_Block "Block=TRUE"  
@@ -92,7 +96,7 @@ events
   @set_Unblock "Unblock ≔ FALSE" 
   @set_Block "Block ≔ TRUE" > "Need to add raise Reset some how· Short way is to copy actions, but this isn't always the desire behavior·"
  end
- event BLOCKED_OUT_TRANS  ordinary > "Handles unnamed transition with conditions· Can be removed"
+ event BLOCKED_OUT_TRANS  ordinary > "Handles unnamed transition with conditions"
  where 
    @isin_BLOCKED "GATE = BLOCKED"  
    @check_Unblock "Unblock=TRUE"  
@@ -100,17 +104,5 @@ events
   @enter_UNBLOCKED "GATE ≔ UNBLOCKED" 
   @set_Unblock "Unblock ≔ TRUE" 
   @set_Block "Block ≔ FALSE" 
- end
- event add  extended ordinary 
- refines
- M0·add
- end
- event use  extended ordinary 
- refines
- M0·use
- end
- event tic  extended ordinary 
- refines
- M0·tic
  end
 end
