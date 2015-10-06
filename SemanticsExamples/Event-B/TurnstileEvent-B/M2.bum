@@ -53,7 +53,7 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="_t16iNDuQEeWbda7YAokC2A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="add_timed_CLEAR">
 <org.eventb.core.refinesEvent name="_t16iNTuQEeWbda7YAokC2A" org.eventb.core.target="add"/>
-<org.eventb.core.guard name="_t16iNjuQEeWbda7YAokC2A" org.eventb.core.label="define_e" org.eventb.core.predicate="timed_CLEAR ∈ dom(at)"/>
+<org.eventb.core.guard name="_t16iNjuQEeWbda7YAokC2A" org.eventb.core.comment="KMW: Check what happens to the model checker in the absence of this guard" org.eventb.core.label="define_e" org.eventb.core.predicate="timed_CLEAR ∈ dom(at)"/>
 <org.eventb.core.guard name="_t16iNzuQEeWbda7YAokC2A" org.eventb.core.label="check_now" org.eventb.core.predicate="now &lt; now+t_relative_CLEAR"/>
 <org.eventb.core.guard name="_t16iODuQEeWbda7YAokC2A" org.eventb.core.label="check_t_CLEAR" org.eventb.core.predicate="at(timed_CLEAR)=∅"/>
 <org.eventb.core.guard name="_t16iOTuQEeWbda7YAokC2A" org.eventb.core.label="isin_CLEAR" org.eventb.core.predicate="READY_REGION = CLEAR"/>
@@ -73,7 +73,7 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="_t17JRzuQEeWbda7YAokC2A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="use_timed_CLEAR">
 <org.eventb.core.refinesEvent name="_t17JSDuQEeWbda7YAokC2A" org.eventb.core.target="use"/>
-<org.eventb.core.guard name="_t17JSTuQEeWbda7YAokC2A" org.eventb.core.label="define_e" org.eventb.core.predicate="timed_CLEAR ∈ dom(at)"/>
+<org.eventb.core.guard name="_t17JSTuQEeWbda7YAokC2A" org.eventb.core.comment="KMW: MC check" org.eventb.core.label="define_e" org.eventb.core.predicate="timed_CLEAR ∈ dom(at)"/>
 <org.eventb.core.guard name="_t17JSjuQEeWbda7YAokC2A" org.eventb.core.label="check_now" org.eventb.core.predicate="now ∈ at(timed_CLEAR)"/>
 <org.eventb.core.guard name="_t17JSzuQEeWbda7YAokC2A" org.eventb.core.label="cheack_timed_CLEAR" org.eventb.core.predicate="timed_CLEAR_Label = TRUE"/>
 <org.eventb.core.guard name="_t17JTDuQEeWbda7YAokC2A" org.eventb.core.label="isin_CLEAR" org.eventb.core.predicate="READY_REGION=CLEAR"/>
