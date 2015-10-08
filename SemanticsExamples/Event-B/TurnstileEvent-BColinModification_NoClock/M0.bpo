@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="MAIN_REGION_STATES" org.eventb.core.type="ℙ(MAIN_REGION_STATES)"/>
+<org.eventb.core.poIdentifier name="OFF" org.eventb.core.type="MAIN_REGION_STATES"/>
+<org.eventb.core.poIdentifier name="ON" org.eventb.core.type="MAIN_REGION_STATES"/>
+<org.eventb.core.poIdentifier name="OnOff_MAP" org.eventb.core.type="ℙ(MAIN_REGION_STATES×MAIN_REGION_STATES)"/>
+<org.eventb.core.poPredicate name="MAIN_REGION_STATET" org.eventb.core.predicate="ON∈MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-BColinModification_NoClock/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_tAjYFG2DEeWREprGD_RH_A"/>
+<org.eventb.core.poPredicate name="MAIN_REGION_STATEU" org.eventb.core.predicate="OFF∈MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-BColinModification_NoClock/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_tAjYFW2DEeWREprGD_RH_A"/>
+<org.eventb.core.poPredicate name="MAIN_REGION_STATEV" org.eventb.core.predicate="partition(MAIN_REGION_STATES,{ON},{OFF})" org.eventb.core.source="/TurnstileEvent-BColinModification_NoClock/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_tAjYFm2DEeWREprGD_RH_A"/>
+<org.eventb.core.poPredicate name="MAIN_REGION_STATEW" org.eventb.core.predicate="OnOff_MAP={ON ↦ OFF,OFF ↦ ON}" org.eventb.core.source="/TurnstileEvent-BColinModification_NoClock/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_tAjYF22DEeWREprGD_RH_A"/>
+<org.eventb.core.poPredicate name="MAIN_REGION_STATEX" org.eventb.core.predicate="dom(OnOff_MAP)=MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-BColinModification_NoClock/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_tAjYGG2DEeWREprGD_RH_A"/>
+<org.eventb.core.poPredicate name="MAIN_REGION_STATEY" org.eventb.core.predicate="ran(OnOff_MAP)=MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-BColinModification_NoClock/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#_tAj_IG2DEeWREprGD_RH_A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/TurnstileEvent-BColinModification_NoClock/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="MAIN_REGION" org.eventb.core.type="MAIN_REGION_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTMAIN_REGIOO" org.eventb.core.parentSet="/TurnstileEvent-BColinModification_NoClock/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="MAIN_REGION'" org.eventb.core.type="MAIN_REGION_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMAIN_REGIOO" org.eventb.core.parentSet="/TurnstileEvent-BColinModification_NoClock/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTIDENTMAIN_REGIOO" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="OnOff/enter_OFF_ON/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/TurnstileEvent-BColinModification_NoClock/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTALLHYPMAIN_REGIOP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s∈dom(OnOff_MAP)∧OnOff_MAP∈MAIN_REGION_STATES ⇸ MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-BColinModification_NoClock/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_tA5WU22DEeWREprGD_RH_A|org.eventb.core.action#_tA5WV22DEeWREprGD_RH_A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/TurnstileEvent-BColinModification_NoClock/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_tA5WU22DEeWREprGD_RH_A|org.eventb.core.action#_tA5WV22DEeWREprGD_RH_A"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/TurnstileEvent-BColinModification_NoClock/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/TurnstileEvent-BColinModification_NoClock/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTALLHYPMAIN_REGIOP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTMAIN_REGIOP" org.eventb.core.parentSet="/TurnstileEvent-BColinModification_NoClock/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="s" org.eventb.core.type="MAIN_REGION_STATES"/>
+<org.eventb.core.poIdentifier name="MAIN_REGION'" org.eventb.core.type="MAIN_REGION_STATES"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMAIN_REGIOP" org.eventb.core.parentSet="/TurnstileEvent-BColinModification_NoClock/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#EVTIDENTMAIN_REGIOP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s∈dom(OnOff_MAP)∧s=MAIN_REGION" org.eventb.core.source="/TurnstileEvent-BColinModification_NoClock/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_tA5WU22DEeWREprGD_RH_A|org.eventb.core.guard#_tA5WVW2DEeWREprGD_RH_A"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="MAIN_REGION=ON∨MAIN_REGION=OFF" org.eventb.core.source="/TurnstileEvent-BColinModification_NoClock/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.event#_tA5WU22DEeWREprGD_RH_A|org.eventb.core.guard#_tA5WVm2DEeWREprGD_RH_A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/TurnstileEvent-BColinModification_NoClock/M0.bpo|org.eventb.core.poFile#M0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="MAIN_REGION∈MAIN_REGION_STATES" org.eventb.core.source="/TurnstileEvent-BColinModification_NoClock/M0.bum|org.eventb.core.machineFile#M0|org.eventb.core.invariant#_tA5WUG2DEeWREprGD_RH_A"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

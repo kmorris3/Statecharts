@@ -63,9 +63,7 @@ events
   @enter_READY "CARD_READER ≔ READY" 
   @set_Unblock "GateIn_Unblock ≔ FALSE" 
   @set_Block "GateIn_Block ≔ TRUE" 
-  @enter_BLOCKED "GATE ≔ BLOCKED" > "This should be an action that triggers the
-Event UNBLOCKED_OUT_TRANS 
-As it is now this requires human input· "
+  @enter_BLOCKED "GATE ≔ BLOCKED" > "This shouldn't be needed since it is always be the case· "
  end
  event CardOk  ordinary 
  where 
@@ -76,7 +74,7 @@ As it is now this requires human input· "
   @enter_ACCEPT "CARD_READER ≔ ACCEPT" 
   @enter_UNBLOCKED "GATE ≔ UNBLOCKED" > "This should be an action that triggers the
 Event BLOCKED_OUT_TRANS
-As it is now this requires human inpu"
+As it is now this requires human input"
  end
  event Ready  ordinary 
  where 

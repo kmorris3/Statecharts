@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
-<org.eventb.core.carrierSet name="_Tcg9IG2DEeWREprGD_RH_A" org.eventb.core.identifier="MAIN_REGION_STATES"/>
-<org.eventb.core.constant name="_Tcg9IW2DEeWREprGD_RH_A" org.eventb.core.identifier="ON"/>
-<org.eventb.core.constant name="_Tcg9Im2DEeWREprGD_RH_A" org.eventb.core.identifier="OFF"/>
-<org.eventb.core.constant name="_Tcg9I22DEeWREprGD_RH_A" org.eventb.core.identifier="OnOff_MAP"/>
-<org.eventb.core.axiom name="_Tcg9JG2DEeWREprGD_RH_A" org.eventb.core.label="typeof_ON" org.eventb.core.predicate="ON ∈ MAIN_REGION_STATES"/>
-<org.eventb.core.axiom name="_Tcg9JW2DEeWREprGD_RH_A" org.eventb.core.label="typeof_OFF" org.eventb.core.predicate="OFF ∈ MAIN_REGION_STATES"/>
-<org.eventb.core.axiom name="_Tcg9Jm2DEeWREprGD_RH_A" org.eventb.core.label="distinct_states_in_MAIN_REGION_STATES" org.eventb.core.predicate="partition(MAIN_REGION_STATES, {ON}, {OFF})"/>
-<org.eventb.core.axiom name="_Tcg9J22DEeWREprGD_RH_A" org.eventb.core.label="define_OnOff_MAP" org.eventb.core.predicate="OnOff_MAP = { ON↦OFF, OFF↦ON}"/>
-<org.eventb.core.axiom name="_TchkMG2DEeWREprGD_RH_A" org.eventb.core.label="domain_OnOff_MAP" org.eventb.core.predicate="dom(OnOff_MAP) = MAIN_REGION_STATES"/>
-<org.eventb.core.axiom name="_TchkMW2DEeWREprGD_RH_A" org.eventb.core.label="range_OnOff_MAP" org.eventb.core.predicate="ran(OnOff_MAP) = MAIN_REGION_STATES"/>
+<org.eventb.core.carrierSet name="_tAjYEG2DEeWREprGD_RH_A" org.eventb.core.identifier="MAIN_REGION_STATES"/>
+<org.eventb.core.constant name="_tAjYEW2DEeWREprGD_RH_A" org.eventb.core.identifier="ON"/>
+<org.eventb.core.constant name="_tAjYEm2DEeWREprGD_RH_A" org.eventb.core.identifier="OFF"/>
+<org.eventb.core.constant name="_tAjYE22DEeWREprGD_RH_A" org.eventb.core.identifier="OnOff_MAP"/>
+<org.eventb.core.axiom name="_tAjYFG2DEeWREprGD_RH_A" org.eventb.core.label="typeof_ON" org.eventb.core.predicate="ON ∈ MAIN_REGION_STATES"/>
+<org.eventb.core.axiom name="_tAjYFW2DEeWREprGD_RH_A" org.eventb.core.label="typeof_OFF" org.eventb.core.predicate="OFF ∈ MAIN_REGION_STATES"/>
+<org.eventb.core.axiom name="_tAjYFm2DEeWREprGD_RH_A" org.eventb.core.label="distinct_states_in_MAIN_REGION_STATES" org.eventb.core.predicate="partition(MAIN_REGION_STATES, {ON}, {OFF})"/>
+<org.eventb.core.axiom name="_tAjYF22DEeWREprGD_RH_A" org.eventb.core.label="define_OnOff_MAP" org.eventb.core.predicate="OnOff_MAP = { ON↦OFF, OFF↦ON}"/>
+<org.eventb.core.axiom name="_tAjYGG2DEeWREprGD_RH_A" org.eventb.core.label="domain_OnOff_MAP" org.eventb.core.predicate="dom(OnOff_MAP) = MAIN_REGION_STATES"/>
+<org.eventb.core.axiom name="_tAj_IG2DEeWREprGD_RH_A" org.eventb.core.label="range_OnOff_MAP" org.eventb.core.predicate="ran(OnOff_MAP) = MAIN_REGION_STATES"/>
 </org.eventb.core.contextFile>

@@ -285,24 +285,29 @@
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="ACCEPT" org.eventb.core.type="CARD_READER_STATES"/>
-<org.eventb.core.prIdent name="Block" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="CARD_READER_NULL" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.prIdent name="GateIn_Block" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="READING" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="READY" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prPred name="p29" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="CARD_READER=READY">
 <org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬READY=READING"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="⊤⇒Block=TRUE"/>
-<org.eventb.core.prPred name="p28" org.eventb.core.predicate="Unblock=FALSE">
-<org.eventb.core.prIdent name="Unblock" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Unblock=FALSE">
+<org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.prIdent name="GateIn_Unblock" org.eventb.core.type="BOOL"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬READY=READING"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬BLOCKED=GATE_NULL">
 <org.eventb.core.prIdent name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_STATES" org.eventb.core.type="ℙ(GATE_STATES)"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Block=TRUE">
+<org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="⊤⇒GateIn_Block=TRUE"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="GateIn_Block=TRUE"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="GATE_STATES={BLOCKED,UNBLOCKED,GATE_NULL}">
 <org.eventb.core.prIdent name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
@@ -320,13 +325,7 @@
 <org.eventb.core.prIdent name="MAIN_REGION_STATES" org.eventb.core.type="ℙ(MAIN_REGION_STATES)"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="MAIN_REGION_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="⊤⇒Unblock=FALSE">
-<org.eventb.core.prIdent name="Unblock" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬READY=ACCEPT"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="CARD_READER=READY⇒Block=TRUE">
-<org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬UNBLOCKED=GATE_NULL">
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_STATES" org.eventb.core.type="ℙ(GATE_STATES)"/>
@@ -339,6 +338,7 @@
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="CARD_READER_STATES={READY,READING,ACCEPT,CARD_READER_NULL}"/>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬READING=ACCEPT"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="⊥⇒GateIn_Block=TRUE"/>
 <org.eventb.core.prPred name="p23" org.eventb.core.predicate="GATE≠GATE_NULL⇔MAIN_REGION=ON">
 <org.eventb.core.prIdent name="GATE" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
@@ -346,6 +346,9 @@
 <org.eventb.core.prIdent name="MAIN_REGION" org.eventb.core.type="MAIN_REGION_STATES"/>
 <org.eventb.core.prIdent name="MAIN_REGION_STATES" org.eventb.core.type="ℙ(MAIN_REGION_STATES)"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="MAIN_REGION_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="⊤⇒GateIn_Unblock=FALSE">
+<org.eventb.core.prIdent name="GateIn_Unblock" org.eventb.core.type="BOOL"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬GATE=GATE_NULL⇔MAIN_REGION=ON">
 <org.eventb.core.prIdent name="GATE" org.eventb.core.type="GATE_STATES"/>
@@ -355,19 +358,14 @@
 <org.eventb.core.prIdent name="MAIN_REGION_STATES" org.eventb.core.type="ℙ(MAIN_REGION_STATES)"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="MAIN_REGION_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="Block=TRUE"/>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬READING=CARD_READER_NULL"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="CARD_READER=READY⇒Unblock=FALSE">
-<org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
-<org.eventb.core.prIdent name="Unblock" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬BLOCKED=UNBLOCKED">
 <org.eventb.core.prIdent name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_STATES" org.eventb.core.type="ℙ(GATE_STATES)"/>
 <org.eventb.core.prIdent name="UNBLOCKED" org.eventb.core.type="GATE_STATES"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬READY=CARD_READER_NULL"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="READING=READY⇒Block=TRUE"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="READING=READY⇒GateIn_Block=TRUE"/>
 <org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬CARD_READER=CARD_READER_NULL⇔MAIN_REGION=ON">
 <org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="MAIN_REGION" org.eventb.core.type="MAIN_REGION_STATES"/>
@@ -375,7 +373,6 @@
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="MAIN_REGION_STATES"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬ACCEPT=CARD_READER_NULL"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="⊥⇒Block=TRUE"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="MAIN_REGION_STATES={ON,OFF}">
 <org.eventb.core.prIdent name="MAIN_REGION_STATES" org.eventb.core.type="ℙ(MAIN_REGION_STATES)"/>
 <org.eventb.core.prIdent name="OFF" org.eventb.core.type="MAIN_REGION_STATES"/>
@@ -388,10 +385,13 @@
 <org.eventb.core.prIdent name="UNBLOCKED" org.eventb.core.type="GATE_STATES"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL})"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="GateIn_Unblock=FALSE">
+<org.eventb.core.prIdent name="GateIn_Unblock" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="CardIn/Requirement_2_READY/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="CARD_READER_STATES">
 <org.eventb.core.lang name="L"/>
@@ -433,22 +433,31 @@
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="ACCEPT" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="CARD_READER_NULL" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.prIdent name="GateIn_Unblock" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="READING" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="READY" org.eventb.core.type="CARD_READER_STATES"/>
-<org.eventb.core.prIdent name="Unblock" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prPred name="p29" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="CARD_READER=READY">
 <org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬READY=READING"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="⊤⇒Block=TRUE">
-<org.eventb.core.prIdent name="Block" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Unblock=FALSE">
+<org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p28" org.eventb.core.predicate="Unblock=FALSE"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬READY=READING"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬BLOCKED=GATE_NULL">
 <org.eventb.core.prIdent name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_STATES" org.eventb.core.type="ℙ(GATE_STATES)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Block=TRUE">
+<org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.prIdent name="GateIn_Block" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="⊤⇒GateIn_Block=TRUE">
+<org.eventb.core.prIdent name="GateIn_Block" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="GateIn_Block=TRUE">
+<org.eventb.core.prIdent name="GateIn_Block" org.eventb.core.type="BOOL"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="GATE_STATES={BLOCKED,UNBLOCKED,GATE_NULL}">
 <org.eventb.core.prIdent name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
@@ -461,18 +470,15 @@
 <org.eventb.core.prIdent name="OFF" org.eventb.core.type="MAIN_REGION_STATES"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="MAIN_REGION_STATES"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="⊥⇒GateIn_Unblock=FALSE"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="READING=READY⇒GateIn_Unblock=FALSE"/>
 <org.eventb.core.prPred name="p25" org.eventb.core.predicate="CARD_READER≠CARD_READER_NULL⇔MAIN_REGION=ON">
 <org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="MAIN_REGION" org.eventb.core.type="MAIN_REGION_STATES"/>
 <org.eventb.core.prIdent name="MAIN_REGION_STATES" org.eventb.core.type="ℙ(MAIN_REGION_STATES)"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="MAIN_REGION_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="⊤⇒Unblock=FALSE"/>
 <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬READY=ACCEPT"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="CARD_READER=READY⇒Block=TRUE">
-<org.eventb.core.prIdent name="Block" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬UNBLOCKED=GATE_NULL">
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_STATES" org.eventb.core.type="ℙ(GATE_STATES)"/>
@@ -493,7 +499,7 @@
 <org.eventb.core.prIdent name="MAIN_REGION_STATES" org.eventb.core.type="ℙ(MAIN_REGION_STATES)"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="MAIN_REGION_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="⊥⇒Unblock=FALSE"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="⊤⇒GateIn_Unblock=FALSE"/>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬GATE=GATE_NULL⇔MAIN_REGION=ON">
 <org.eventb.core.prIdent name="GATE" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
@@ -502,20 +508,13 @@
 <org.eventb.core.prIdent name="MAIN_REGION_STATES" org.eventb.core.type="ℙ(MAIN_REGION_STATES)"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="MAIN_REGION_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="Block=TRUE">
-<org.eventb.core.prIdent name="Block" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬READING=CARD_READER_NULL"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="CARD_READER=READY⇒Unblock=FALSE">
-<org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬BLOCKED=UNBLOCKED">
 <org.eventb.core.prIdent name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_STATES" org.eventb.core.type="ℙ(GATE_STATES)"/>
 <org.eventb.core.prIdent name="UNBLOCKED" org.eventb.core.type="GATE_STATES"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬READY=CARD_READER_NULL"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="READING=READY⇒Unblock=FALSE"/>
 <org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬CARD_READER=CARD_READER_NULL⇔MAIN_REGION=ON">
 <org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="MAIN_REGION" org.eventb.core.type="MAIN_REGION_STATES"/>
@@ -535,10 +534,11 @@
 <org.eventb.core.prIdent name="UNBLOCKED" org.eventb.core.type="GATE_STATES"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL})"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="GateIn_Unblock=FALSE"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="CardIn/Requirement_1_ACCEPT/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="CARD_READER_STATES">
 <org.eventb.core.lang name="L"/>
@@ -579,25 +579,30 @@
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="ACCEPT" org.eventb.core.type="CARD_READER_STATES"/>
-<org.eventb.core.prIdent name="Block" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="CARD_READER_NULL" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.prIdent name="GateIn_Block" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="READING" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="READY" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prPred name="p29" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="CARD_READER=READY">
 <org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬READY=READING"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="READING=ACCEPT⇒Block=FALSE"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="⊤⇒Block=TRUE"/>
-<org.eventb.core.prPred name="p28" org.eventb.core.predicate="Unblock=FALSE">
-<org.eventb.core.prIdent name="Unblock" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Unblock=FALSE">
+<org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.prIdent name="GateIn_Unblock" org.eventb.core.type="BOOL"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬READY=READING"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬BLOCKED=GATE_NULL">
 <org.eventb.core.prIdent name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_STATES" org.eventb.core.type="ℙ(GATE_STATES)"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Block=TRUE">
+<org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="READING=ACCEPT⇒GateIn_Block=FALSE"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="⊤⇒GateIn_Block=TRUE"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="GateIn_Block=TRUE"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="GATE_STATES={BLOCKED,UNBLOCKED,GATE_NULL}">
 <org.eventb.core.prIdent name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
@@ -615,13 +620,7 @@
 <org.eventb.core.prIdent name="MAIN_REGION_STATES" org.eventb.core.type="ℙ(MAIN_REGION_STATES)"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="MAIN_REGION_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="⊤⇒Unblock=FALSE">
-<org.eventb.core.prIdent name="Unblock" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬READY=ACCEPT"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="CARD_READER=READY⇒Block=TRUE">
-<org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬UNBLOCKED=GATE_NULL">
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_STATES" org.eventb.core.type="ℙ(GATE_STATES)"/>
@@ -633,6 +632,7 @@
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="MAIN_REGION_STATES"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="CARD_READER_STATES={READY,READING,ACCEPT,CARD_READER_NULL}"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="⊥⇒GateIn_Block=FALSE"/>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬READING=ACCEPT"/>
 <org.eventb.core.prPred name="p23" org.eventb.core.predicate="GATE≠GATE_NULL⇔MAIN_REGION=ON">
 <org.eventb.core.prIdent name="GATE" org.eventb.core.type="GATE_STATES"/>
@@ -642,6 +642,9 @@
 <org.eventb.core.prIdent name="MAIN_REGION_STATES" org.eventb.core.type="ℙ(MAIN_REGION_STATES)"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="MAIN_REGION_STATES"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="⊤⇒GateIn_Unblock=FALSE">
+<org.eventb.core.prIdent name="GateIn_Unblock" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬GATE=GATE_NULL⇔MAIN_REGION=ON">
 <org.eventb.core.prIdent name="GATE" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
@@ -650,19 +653,13 @@
 <org.eventb.core.prIdent name="MAIN_REGION_STATES" org.eventb.core.type="ℙ(MAIN_REGION_STATES)"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="MAIN_REGION_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="Block=TRUE"/>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬READING=CARD_READER_NULL"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="CARD_READER=READY⇒Unblock=FALSE">
-<org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
-<org.eventb.core.prIdent name="Unblock" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬BLOCKED=UNBLOCKED">
 <org.eventb.core.prIdent name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_STATES" org.eventb.core.type="ℙ(GATE_STATES)"/>
 <org.eventb.core.prIdent name="UNBLOCKED" org.eventb.core.type="GATE_STATES"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬READY=CARD_READER_NULL"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="⊥⇒Block=FALSE"/>
 <org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬CARD_READER=CARD_READER_NULL⇔MAIN_REGION=ON">
 <org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="MAIN_REGION" org.eventb.core.type="MAIN_REGION_STATES"/>
@@ -682,10 +679,13 @@
 <org.eventb.core.prIdent name="UNBLOCKED" org.eventb.core.type="GATE_STATES"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL})"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="GateIn_Unblock=FALSE">
+<org.eventb.core.prIdent name="GateIn_Unblock" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="CardIn/Requirement_2_ACCEPT/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="CARD_READER_STATES">
 <org.eventb.core.lang name="L"/>
@@ -727,24 +727,32 @@
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="ACCEPT" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="CARD_READER_NULL" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.prIdent name="GateIn_Unblock" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="READING" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="READY" org.eventb.core.type="CARD_READER_STATES"/>
-<org.eventb.core.prIdent name="Unblock" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prPred name="p29" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="CARD_READER=READY">
 <org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬READY=READING"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="⊤⇒Block=TRUE">
-<org.eventb.core.prIdent name="Block" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Unblock=FALSE">
+<org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p28" org.eventb.core.predicate="Unblock=FALSE"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬READY=READING"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬BLOCKED=GATE_NULL">
 <org.eventb.core.prIdent name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_STATES" org.eventb.core.type="ℙ(GATE_STATES)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="READING=ACCEPT⇒Unblock=TRUE"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Block=TRUE">
+<org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
+<org.eventb.core.prIdent name="GateIn_Block" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="⊤⇒GateIn_Block=TRUE">
+<org.eventb.core.prIdent name="GateIn_Block" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="GateIn_Block=TRUE">
+<org.eventb.core.prIdent name="GateIn_Block" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="GATE_STATES={BLOCKED,UNBLOCKED,GATE_NULL}">
 <org.eventb.core.prIdent name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
@@ -756,19 +764,14 @@
 <org.eventb.core.prIdent name="OFF" org.eventb.core.type="MAIN_REGION_STATES"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="MAIN_REGION_STATES"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="READING=ACCEPT⇒GateIn_Unblock=TRUE"/>
 <org.eventb.core.prPred name="p25" org.eventb.core.predicate="CARD_READER≠CARD_READER_NULL⇔MAIN_REGION=ON">
 <org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="MAIN_REGION" org.eventb.core.type="MAIN_REGION_STATES"/>
 <org.eventb.core.prIdent name="MAIN_REGION_STATES" org.eventb.core.type="ℙ(MAIN_REGION_STATES)"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="MAIN_REGION_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="⊤⇒Unblock=FALSE"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="⊥⇒Unblock=TRUE"/>
 <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬READY=ACCEPT"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="CARD_READER=READY⇒Block=TRUE">
-<org.eventb.core.prIdent name="Block" org.eventb.core.type="BOOL"/>
-<org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬UNBLOCKED=GATE_NULL">
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_STATES" org.eventb.core.type="ℙ(GATE_STATES)"/>
@@ -789,6 +792,8 @@
 <org.eventb.core.prIdent name="MAIN_REGION_STATES" org.eventb.core.type="ℙ(MAIN_REGION_STATES)"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="MAIN_REGION_STATES"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="⊤⇒GateIn_Unblock=FALSE"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="⊥⇒GateIn_Unblock=TRUE"/>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬GATE=GATE_NULL⇔MAIN_REGION=ON">
 <org.eventb.core.prIdent name="GATE" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
@@ -797,13 +802,7 @@
 <org.eventb.core.prIdent name="MAIN_REGION_STATES" org.eventb.core.type="ℙ(MAIN_REGION_STATES)"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="MAIN_REGION_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p27" org.eventb.core.predicate="Block=TRUE">
-<org.eventb.core.prIdent name="Block" org.eventb.core.type="BOOL"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬READING=CARD_READER_NULL"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="CARD_READER=READY⇒Unblock=FALSE">
-<org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬BLOCKED=UNBLOCKED">
 <org.eventb.core.prIdent name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_STATES" org.eventb.core.type="ℙ(GATE_STATES)"/>
@@ -829,10 +828,11 @@
 <org.eventb.core.prIdent name="UNBLOCKED" org.eventb.core.type="GATE_STATES"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL})"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="GateIn_Unblock=FALSE"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="CardError/superstateof_CARD_READER/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="CARD_READER_STATES,MAIN_REGION_STATES">
 <org.eventb.core.lang name="L"/>
@@ -9418,11 +9418,11 @@
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(MAIN_REGION_STATES,{ON},{OFF}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24,p25"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24,p25"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p24,p25"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p26,p27,p28,p29"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p19" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p26,p27,p28,p29"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p26,p27,p28,p29"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
@@ -9430,10 +9430,10 @@
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p30,p31,p32,p33,p34,p35,p36"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p37"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p38"/>
-<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="p23" org.eventb.core.prInfHyps="p39"/>
-<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p40" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p41"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p37"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p38"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="p23" org.eventb.core.prInfHyps="p39"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p40" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p41"/>
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p45">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p37" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p42"/>
@@ -9456,13 +9456,13 @@
 <org.eventb.core.prHypAction name="HIDE11" org.eventb.core.prHyps="p57"/>
 <org.eventb.core.prHypAction name="HIDE12" org.eventb.core.prHyps="p58"/>
 <org.eventb.core.prHypAction name="HIDE13" org.eventb.core.prHyps="p59"/>
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with MAIN_REGION=ON" org.eventb.core.prHyps="p5">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with MAIN_REGION=ON" org.eventb.core.prHyps="p6">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p44" org.eventb.core.prInfHyps="p60"/>
 <org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p44"/>
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with s=ON" org.eventb.core.prGoal="p45" org.eventb.core.prHyps="p60">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p61">
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p61" org.eventb.core.prHyps="p17,p12,p4,p7,p10,p1,p22,p21,p3,p9,p14,p6,p19,p11,p5,p23,p15,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p42,p43,p44,p60">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p61" org.eventb.core.prHyps="p18,p13,p5,p9,p12,p1,p3,p21,p22,p16,p10,p2,p8,p7,p6,p23,p15,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p42,p43,p44,p60">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -9486,11 +9486,12 @@
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="ACCEPT" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
-<org.eventb.core.prIdent name="Block" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="CARD_READER_NULL" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="GATE" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.prIdent name="GateIn_Block" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="GateIn_Unblock" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="M1_OnOff_MAP" org.eventb.core.type="ℙ(MAIN_REGION_STATES×MAIN_REGION_STATES)"/>
 <org.eventb.core.prIdent name="MAIN_REGION" org.eventb.core.type="MAIN_REGION_STATES"/>
 <org.eventb.core.prIdent name="OFF" org.eventb.core.type="MAIN_REGION_STATES"/>
@@ -9499,26 +9500,28 @@
 <org.eventb.core.prIdent name="READING" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="READY" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="UNBLOCKED" org.eventb.core.type="GATE_STATES"/>
-<org.eventb.core.prIdent name="Unblock" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="s" org.eventb.core.type="MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p54" org.eventb.core.predicate="ACCEPT∈CARD_READER_STATES"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="ran(OnOff_MAP)=MAIN_REGION_STATES"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Unblock=FALSE"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ran(OnOff_MAP)=MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p43" org.eventb.core.predicate="¬CARD_READER=CARD_READER_NULL"/>
 <org.eventb.core.prPred name="p50" org.eventb.core.predicate="BLOCKED∈GATE_STATES"/>
 <org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬BLOCKED=GATE_NULL"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="GATE_NULL≠GATE_NULL⇔OnOff_MAP(s)=ON"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="CARD_READER=ACCEPT⇒GateIn_Block=FALSE"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Block=TRUE"/>
 <org.eventb.core.prPred name="p26" org.eventb.core.predicate="GATE_STATES={BLOCKED,UNBLOCKED,GATE_NULL}"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="GATE=UNBLOCKED⇒Unblock=TRUE"/>
 <org.eventb.core.prPred name="p49" org.eventb.core.predicate="CARD_READER_NULL∈CARD_READER_STATES"/>
 <org.eventb.core.prPred name="p40" org.eventb.core.predicate="MAIN_REGION=ON∨MAIN_REGION=OFF"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="CARD_READER≠CARD_READER_NULL⇔MAIN_REGION=ON"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="CARD_READER≠CARD_READER_NULL⇔MAIN_REGION=ON"/>
 <org.eventb.core.prPred name="p48" org.eventb.core.predicate="GATE_NULL∈GATE_STATES"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="partition(MAIN_REGION_STATES,{ON},{OFF})"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(MAIN_REGION_STATES,{ON},{OFF})"/>
 <org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬GATE=GATE_NULL"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="GATE=BLOCKED⇒Block=TRUE"/>
 <org.eventb.core.prPred name="p52" org.eventb.core.predicate="READY∈CARD_READER_STATES"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="GATE≠GATE_NULL⇔MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="GATE=UNBLOCKED⇒Block=FALSE"/>
+<org.eventb.core.prPred name="p59" org.eventb.core.predicate="GateIn_Unblock∈BOOL"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="GATE=BLOCKED⇒GateIn_Block=TRUE"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="GATE≠GATE_NULL⇔MAIN_REGION=ON"/>
+<org.eventb.core.prPred name="p58" org.eventb.core.predicate="GateIn_Block∈BOOL"/>
 <org.eventb.core.prPred name="p57" org.eventb.core.predicate="CARD_READER∈CARD_READER_STATES"/>
 <org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬READING=CARD_READER_NULL"/>
 <org.eventb.core.prPred name="p41" org.eventb.core.predicate="⊤∨MAIN_REGION=OFF"/>
@@ -9527,58 +9530,55 @@
 <org.eventb.core.prPred name="p60" org.eventb.core.predicate="s=ON"/>
 <org.eventb.core.prPred name="p44" org.eventb.core.predicate="s=MAIN_REGION"/>
 <org.eventb.core.prPred name="p47" org.eventb.core.predicate="OFF∈MAIN_REGION_STATES"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="s∈dom(OnOff_MAP)∧s=MAIN_REGION"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="s∈dom(OnOff_MAP)∧s=MAIN_REGION"/>
 <org.eventb.core.prPred name="p38" org.eventb.core.predicate="CARD_READER≠CARD_READER_NULL⇔⊤"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="CARD_READER=ACCEPT⇒Unblock=TRUE"/>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="MAIN_REGION_STATES={ON,OFF}"/>
 <org.eventb.core.prPred name="p46" org.eventb.core.predicate="ON∈MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p55" org.eventb.core.predicate="MAIN_REGION∈MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p23" org.eventb.core.predicate="s∈dom(OnOff_MAP)"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="ran(M1_OnOff_MAP)=MAIN_REGION_STATES"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="MAIN_REGION=ON"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="MAIN_REGION=ON"/>
 <org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬READY=READING"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="M1_OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="M1_OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
 <org.eventb.core.prPred name="p56" org.eventb.core.predicate="GATE∈GATE_STATES"/>
 <org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬ON=OFF"/>
-<org.eventb.core.prPred name="p58" org.eventb.core.predicate="Block∈BOOL"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="dom(M1_OnOff_MAP)=MAIN_REGION_STATES"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="dom(M1_OnOff_MAP)=MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p61" org.eventb.core.predicate="¬OnOff_MAP(ON)=ON"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="dom(OnOff_MAP)=MAIN_REGION_STATES"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="CARD_READER=READY⇒Block=TRUE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="dom(OnOff_MAP)=MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬READY=ACCEPT"/>
 <org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬UNBLOCKED=GATE_NULL"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
 <org.eventb.core.prPred name="p30" org.eventb.core.predicate="CARD_READER_STATES={READY,READING,ACCEPT,CARD_READER_NULL}"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="GATE=BLOCKED⇒Unblock=FALSE"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="GATE=BLOCKED⇒GateIn_Unblock=FALSE"/>
 <org.eventb.core.prPred name="p37" org.eventb.core.predicate="GATE≠GATE_NULL⇔⊤"/>
 <org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬READING=ACCEPT"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="CARD_READER=READY⇒Unblock=FALSE"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="CARD_READER=ACCEPT⇒GateIn_Unblock=TRUE"/>
 <org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬READY=CARD_READER_NULL"/>
 <org.eventb.core.prPred name="p39" org.eventb.core.predicate="⊤∧s=MAIN_REGION"/>
-<org.eventb.core.prPred name="p59" org.eventb.core.predicate="Unblock∈BOOL"/>
 <org.eventb.core.prPred name="p45" org.eventb.core.predicate="¬OnOff_MAP(s)=ON"/>
 <org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬ACCEPT=CARD_READER_NULL"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="GATE=UNBLOCKED⇒GateIn_Unblock=TRUE"/>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="OnOff_MAP∈MAIN_REGION_STATES ⇸ MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p53" org.eventb.core.predicate="READING∈CARD_READER_STATES"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL})"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL})"/>
 <org.eventb.core.prPred name="p20" org.eventb.core.predicate="partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL})"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="CARD_READER=ACCEPT⇒Block=FALSE"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="GATE=UNBLOCKED⇒GateIn_Block=FALSE"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="OnOff_OFF/superstateof_CARD_READER/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23" org.eventb.core.prSets="CARD_READER_STATES,GATE_STATES,MAIN_REGION_STATES">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(MAIN_REGION_STATES,{ON},{OFF}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24,p25"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24,p25"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p24,p25"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p26,p27,p28,p29"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p19" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p26,p27,p28,p29"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p26,p27,p28,p29"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
@@ -9586,10 +9586,10 @@
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p30,p31,p32,p33,p34,p35,p36"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p37"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p38"/>
-<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="p23" org.eventb.core.prInfHyps="p39"/>
-<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p40" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p41"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p37"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p38"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="p23" org.eventb.core.prInfHyps="p39"/>
+<org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p40" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p41"/>
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p45">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p37" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p42"/>
@@ -9612,13 +9612,13 @@
 <org.eventb.core.prHypAction name="HIDE11" org.eventb.core.prHyps="p57"/>
 <org.eventb.core.prHypAction name="HIDE12" org.eventb.core.prHyps="p58"/>
 <org.eventb.core.prHypAction name="HIDE13" org.eventb.core.prHyps="p59"/>
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with MAIN_REGION=ON" org.eventb.core.prHyps="p5">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with MAIN_REGION=ON" org.eventb.core.prHyps="p6">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p44" org.eventb.core.prInfHyps="p60"/>
 <org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p44"/>
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with s=ON" org.eventb.core.prGoal="p45" org.eventb.core.prHyps="p60">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p61">
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p61" org.eventb.core.prHyps="p17,p12,p4,p7,p10,p1,p22,p21,p3,p9,p14,p6,p19,p11,p5,p23,p15,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p42,p43,p44,p60">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p61" org.eventb.core.prHyps="p18,p13,p5,p9,p12,p1,p3,p21,p22,p16,p10,p2,p8,p7,p6,p23,p15,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p42,p43,p44,p60">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -9642,11 +9642,12 @@
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="ACCEPT" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
-<org.eventb.core.prIdent name="Block" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="CARD_READER_NULL" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="GATE" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.prIdent name="GateIn_Block" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="GateIn_Unblock" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="M1_OnOff_MAP" org.eventb.core.type="ℙ(MAIN_REGION_STATES×MAIN_REGION_STATES)"/>
 <org.eventb.core.prIdent name="MAIN_REGION" org.eventb.core.type="MAIN_REGION_STATES"/>
 <org.eventb.core.prIdent name="OFF" org.eventb.core.type="MAIN_REGION_STATES"/>
@@ -9655,25 +9656,27 @@
 <org.eventb.core.prIdent name="READING" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="READY" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="UNBLOCKED" org.eventb.core.type="GATE_STATES"/>
-<org.eventb.core.prIdent name="Unblock" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="s" org.eventb.core.type="MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p54" org.eventb.core.predicate="ACCEPT∈CARD_READER_STATES"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="ran(OnOff_MAP)=MAIN_REGION_STATES"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Unblock=FALSE"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ran(OnOff_MAP)=MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p43" org.eventb.core.predicate="¬CARD_READER=CARD_READER_NULL"/>
 <org.eventb.core.prPred name="p50" org.eventb.core.predicate="BLOCKED∈GATE_STATES"/>
 <org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬BLOCKED=GATE_NULL"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="CARD_READER=ACCEPT⇒GateIn_Block=FALSE"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Block=TRUE"/>
 <org.eventb.core.prPred name="p26" org.eventb.core.predicate="GATE_STATES={BLOCKED,UNBLOCKED,GATE_NULL}"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="GATE=UNBLOCKED⇒Unblock=TRUE"/>
 <org.eventb.core.prPred name="p49" org.eventb.core.predicate="CARD_READER_NULL∈CARD_READER_STATES"/>
 <org.eventb.core.prPred name="p40" org.eventb.core.predicate="MAIN_REGION=ON∨MAIN_REGION=OFF"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="CARD_READER≠CARD_READER_NULL⇔MAIN_REGION=ON"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="CARD_READER≠CARD_READER_NULL⇔MAIN_REGION=ON"/>
 <org.eventb.core.prPred name="p48" org.eventb.core.predicate="GATE_NULL∈GATE_STATES"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="partition(MAIN_REGION_STATES,{ON},{OFF})"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(MAIN_REGION_STATES,{ON},{OFF})"/>
 <org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬GATE=GATE_NULL"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="GATE=BLOCKED⇒Block=TRUE"/>
 <org.eventb.core.prPred name="p52" org.eventb.core.predicate="READY∈CARD_READER_STATES"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="GATE≠GATE_NULL⇔MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="GATE=UNBLOCKED⇒Block=FALSE"/>
+<org.eventb.core.prPred name="p59" org.eventb.core.predicate="GateIn_Unblock∈BOOL"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="GATE=BLOCKED⇒GateIn_Block=TRUE"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="GATE≠GATE_NULL⇔MAIN_REGION=ON"/>
+<org.eventb.core.prPred name="p58" org.eventb.core.predicate="GateIn_Block∈BOOL"/>
 <org.eventb.core.prPred name="p57" org.eventb.core.predicate="CARD_READER∈CARD_READER_STATES"/>
 <org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬READING=CARD_READER_NULL"/>
 <org.eventb.core.prPred name="p41" org.eventb.core.predicate="⊤∨MAIN_REGION=OFF"/>
@@ -9682,49 +9685,46 @@
 <org.eventb.core.prPred name="p60" org.eventb.core.predicate="s=ON"/>
 <org.eventb.core.prPred name="p44" org.eventb.core.predicate="s=MAIN_REGION"/>
 <org.eventb.core.prPred name="p47" org.eventb.core.predicate="OFF∈MAIN_REGION_STATES"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="s∈dom(OnOff_MAP)∧s=MAIN_REGION"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="s∈dom(OnOff_MAP)∧s=MAIN_REGION"/>
 <org.eventb.core.prPred name="p38" org.eventb.core.predicate="CARD_READER≠CARD_READER_NULL⇔⊤"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="CARD_READER=ACCEPT⇒Unblock=TRUE"/>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="MAIN_REGION_STATES={ON,OFF}"/>
 <org.eventb.core.prPred name="p46" org.eventb.core.predicate="ON∈MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p55" org.eventb.core.predicate="MAIN_REGION∈MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p23" org.eventb.core.predicate="s∈dom(OnOff_MAP)"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="ran(M1_OnOff_MAP)=MAIN_REGION_STATES"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="MAIN_REGION=ON"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="MAIN_REGION=ON"/>
 <org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬READY=READING"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="M1_OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="M1_OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
 <org.eventb.core.prPred name="p56" org.eventb.core.predicate="GATE∈GATE_STATES"/>
 <org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬ON=OFF"/>
-<org.eventb.core.prPred name="p58" org.eventb.core.predicate="Block∈BOOL"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="dom(M1_OnOff_MAP)=MAIN_REGION_STATES"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="dom(M1_OnOff_MAP)=MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p61" org.eventb.core.predicate="¬OnOff_MAP(ON)=ON"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="dom(OnOff_MAP)=MAIN_REGION_STATES"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="CARD_READER=READY⇒Block=TRUE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="dom(OnOff_MAP)=MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬READY=ACCEPT"/>
 <org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬UNBLOCKED=GATE_NULL"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
 <org.eventb.core.prPred name="p30" org.eventb.core.predicate="CARD_READER_STATES={READY,READING,ACCEPT,CARD_READER_NULL}"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="GATE=BLOCKED⇒Unblock=FALSE"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="GATE=BLOCKED⇒GateIn_Unblock=FALSE"/>
 <org.eventb.core.prPred name="p37" org.eventb.core.predicate="GATE≠GATE_NULL⇔⊤"/>
 <org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬READING=ACCEPT"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="CARD_READER=READY⇒Unblock=FALSE"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="CARD_READER=ACCEPT⇒GateIn_Unblock=TRUE"/>
 <org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬READY=CARD_READER_NULL"/>
 <org.eventb.core.prPred name="p39" org.eventb.core.predicate="⊤∧s=MAIN_REGION"/>
-<org.eventb.core.prPred name="p59" org.eventb.core.predicate="Unblock∈BOOL"/>
 <org.eventb.core.prPred name="p45" org.eventb.core.predicate="¬OnOff_MAP(s)=ON"/>
 <org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬ACCEPT=CARD_READER_NULL"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="GATE=UNBLOCKED⇒GateIn_Unblock=TRUE"/>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="OnOff_MAP∈MAIN_REGION_STATES ⇸ MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p53" org.eventb.core.predicate="READING∈CARD_READER_STATES"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL})"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL})"/>
 <org.eventb.core.prPred name="p20" org.eventb.core.predicate="partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL})"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="CARD_READER=ACCEPT⇒Block=FALSE"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="CARD_READER_NULL≠CARD_READER_NULL⇔OnOff_MAP(s)=ON"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="GATE=UNBLOCKED⇒GateIn_Block=FALSE"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="OnOff_OFF/Requirement_1_BLOCKED/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="GATE_STATES">
 <org.eventb.core.lang name="L"/>
@@ -11086,11 +11086,11 @@
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(MAIN_REGION_STATES,{ON},{OFF}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24,p25"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24,p25"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p24,p25"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p26,p27,p28,p29"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p26,p27,p28,p29"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p26,p27,p28,p29"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
@@ -11098,12 +11098,12 @@
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p30,p31,p32,p33,p34,p35,p36"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="p23" org.eventb.core.prInfHyps="p37"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="p23" org.eventb.core.prInfHyps="p37"/>
 <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p38" org.eventb.core.prHyps="p22" org.eventb.core.prInfHyps="p39"/>
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p43">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p40"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p41"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p40"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p41"/>
 <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p37" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p42"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p39"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p43" org.eventb.core.prHyps="p28">
@@ -11161,7 +11161,7 @@
 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p69"/>
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with s=OFF" org.eventb.core.prGoal="p45" org.eventb.core.prHyps="p61">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p70">
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p70" org.eventb.core.prHyps="p16,p11,p4,p6,p9,p1,p21,p20,p3,p8,p13,p5,p18,p10,p22,p23,p14,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p42,p61,p63,p65,p67">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p70" org.eventb.core.prHyps="p17,p12,p5,p8,p11,p1,p3,p20,p21,p14,p9,p2,p7,p6,p22,p23,p15,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p42,p61,p63,p65,p67">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -11207,11 +11207,12 @@
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="ACCEPT" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
-<org.eventb.core.prIdent name="Block" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="CARD_READER_NULL" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="GATE" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.prIdent name="GateIn_Block" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="GateIn_Unblock" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="M1_OnOff_MAP" org.eventb.core.type="ℙ(MAIN_REGION_STATES×MAIN_REGION_STATES)"/>
 <org.eventb.core.prIdent name="MAIN_REGION" org.eventb.core.type="MAIN_REGION_STATES"/>
 <org.eventb.core.prIdent name="OFF" org.eventb.core.type="MAIN_REGION_STATES"/>
@@ -11220,27 +11221,29 @@
 <org.eventb.core.prIdent name="READING" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="READY" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="UNBLOCKED" org.eventb.core.type="GATE_STATES"/>
-<org.eventb.core.prIdent name="Unblock" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="s" org.eventb.core.type="MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p54" org.eventb.core.predicate="ACCEPT∈CARD_READER_STATES"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="ran(OnOff_MAP)=MAIN_REGION_STATES"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Unblock=FALSE"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ran(OnOff_MAP)=MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p50" org.eventb.core.predicate="BLOCKED∈GATE_STATES"/>
 <org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬BLOCKED=GATE_NULL"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="CARD_READER=ACCEPT⇒GateIn_Block=FALSE"/>
 <org.eventb.core.prPred name="p45" org.eventb.core.predicate="OnOff_MAP(s)=ON"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Block=TRUE"/>
 <org.eventb.core.prPred name="p26" org.eventb.core.predicate="GATE_STATES={BLOCKED,UNBLOCKED,GATE_NULL}"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="GATE=UNBLOCKED⇒Unblock=TRUE"/>
 <org.eventb.core.prPred name="p49" org.eventb.core.predicate="CARD_READER_NULL∈CARD_READER_STATES"/>
 <org.eventb.core.prPred name="p38" org.eventb.core.predicate="MAIN_REGION=ON∨MAIN_REGION=OFF"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="CARD_READER≠CARD_READER_NULL⇔MAIN_REGION=ON"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="CARD_READER≠CARD_READER_NULL⇔MAIN_REGION=ON"/>
 <org.eventb.core.prPred name="p48" org.eventb.core.predicate="GATE_NULL∈GATE_STATES"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="partition(MAIN_REGION_STATES,{ON},{OFF})"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="partition(MAIN_REGION_STATES,{ON},{OFF})"/>
 <org.eventb.core.prPred name="p39" org.eventb.core.predicate="MAIN_REGION=ON∨⊤"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="GATE=BLOCKED⇒Block=TRUE"/>
 <org.eventb.core.prPred name="p52" org.eventb.core.predicate="READY∈CARD_READER_STATES"/>
 <org.eventb.core.prPred name="p22" org.eventb.core.predicate="MAIN_REGION=OFF"/>
+<org.eventb.core.prPred name="p59" org.eventb.core.predicate="GateIn_Unblock∈BOOL"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="GATE=BLOCKED⇒GateIn_Block=TRUE"/>
 <org.eventb.core.prPred name="p62" org.eventb.core.predicate="¬GATE=GATE_NULL⇔⊥"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="GATE≠GATE_NULL⇔MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="GATE=UNBLOCKED⇒Block=FALSE"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="GATE≠GATE_NULL⇔MAIN_REGION=ON"/>
+<org.eventb.core.prPred name="p58" org.eventb.core.predicate="GateIn_Block∈BOOL"/>
 <org.eventb.core.prPred name="p57" org.eventb.core.predicate="CARD_READER∈CARD_READER_STATES"/>
 <org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬READING=CARD_READER_NULL"/>
 <org.eventb.core.prPred name="p64" org.eventb.core.predicate="¬⊤⇔MAIN_REGION=ON"/>
@@ -11250,9 +11253,8 @@
 <org.eventb.core.prPred name="p42" org.eventb.core.predicate="s=MAIN_REGION"/>
 <org.eventb.core.prPred name="p47" org.eventb.core.predicate="OFF∈MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p43" org.eventb.core.predicate="¬BLOCKED=GATE_NULL⇔OnOff_MAP(s)=ON"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="s∈dom(OnOff_MAP)∧s=MAIN_REGION"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="s∈dom(OnOff_MAP)∧s=MAIN_REGION"/>
 <org.eventb.core.prPred name="p69" org.eventb.core.predicate="¬⊥"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="CARD_READER=ACCEPT⇒Unblock=TRUE"/>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="MAIN_REGION_STATES={ON,OFF}"/>
 <org.eventb.core.prPred name="p46" org.eventb.core.predicate="ON∈MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p55" org.eventb.core.predicate="MAIN_REGION∈MAIN_REGION_STATES"/>
@@ -11263,52 +11265,50 @@
 <org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬READY=READING"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="BLOCKED≠GATE_NULL⇔OnOff_MAP(s)=ON"/>
 <org.eventb.core.prPred name="p67" org.eventb.core.predicate="CARD_READER=CARD_READER_NULL"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="M1_OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="M1_OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
 <org.eventb.core.prPred name="p66" org.eventb.core.predicate="¬CARD_READER=CARD_READER_NULL⇔⊥"/>
 <org.eventb.core.prPred name="p56" org.eventb.core.predicate="GATE∈GATE_STATES"/>
 <org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬ON=OFF"/>
-<org.eventb.core.prPred name="p58" org.eventb.core.predicate="Block∈BOOL"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="dom(M1_OnOff_MAP)=MAIN_REGION_STATES"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="dom(OnOff_MAP)=MAIN_REGION_STATES"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="CARD_READER=READY⇒Block=TRUE"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="dom(M1_OnOff_MAP)=MAIN_REGION_STATES"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="dom(OnOff_MAP)=MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬READY=ACCEPT"/>
 <org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬UNBLOCKED=GATE_NULL"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
 <org.eventb.core.prPred name="p30" org.eventb.core.predicate="CARD_READER_STATES={READY,READING,ACCEPT,CARD_READER_NULL}"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="GATE=BLOCKED⇒Unblock=FALSE"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="GATE=BLOCKED⇒GateIn_Unblock=FALSE"/>
 <org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬READING=ACCEPT"/>
 <org.eventb.core.prPred name="p65" org.eventb.core.predicate="¬MAIN_REGION=ON"/>
 <org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬GATE=GATE_NULL⇔MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="CARD_READER=READY⇒Unblock=FALSE"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="CARD_READER=ACCEPT⇒GateIn_Unblock=TRUE"/>
 <org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬READY=CARD_READER_NULL"/>
 <org.eventb.core.prPred name="p37" org.eventb.core.predicate="⊤∧s=MAIN_REGION"/>
 <org.eventb.core.prPred name="p63" org.eventb.core.predicate="GATE=GATE_NULL"/>
 <org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬CARD_READER=CARD_READER_NULL⇔MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p59" org.eventb.core.predicate="Unblock∈BOOL"/>
 <org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬ACCEPT=CARD_READER_NULL"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="OnOff_MAP∈MAIN_REGION_STATES ⇸ MAIN_REGION_STATES"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="OnOff_MAP∈MAIN_REGION_STATES ⇸ MAIN_REGION_STATES"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="GATE=UNBLOCKED⇒GateIn_Unblock=TRUE"/>
 <org.eventb.core.prPred name="p70" org.eventb.core.predicate="OnOff_MAP(OFF)=ON"/>
 <org.eventb.core.prPred name="p53" org.eventb.core.predicate="READING∈CARD_READER_STATES"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL})"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL})"/>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL})"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="CARD_READER=ACCEPT⇒Block=FALSE"/>
 <org.eventb.core.prPred name="p68" org.eventb.core.predicate="¬OFF=ON"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="GATE=UNBLOCKED⇒GateIn_Block=FALSE"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="OnOff_ON/superstateof_CARD_READER/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23" org.eventb.core.prSets="CARD_READER_STATES,GATE_STATES,MAIN_REGION_STATES">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(MAIN_REGION_STATES,{ON},{OFF}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24,p25"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24,p25"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p24,p25"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p26,p27,p28,p29"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p26,p27,p28,p29"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p26,p27,p28,p29"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
@@ -11316,12 +11316,12 @@
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p30,p31,p32,p33,p34,p35,p36"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="p23" org.eventb.core.prInfHyps="p37"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="p23" org.eventb.core.prInfHyps="p37"/>
 <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p38" org.eventb.core.prHyps="p22" org.eventb.core.prInfHyps="p39"/>
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p43">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p40"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p41"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p40"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p41"/>
 <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p37" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p42"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p39"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p43" org.eventb.core.prHyps="p33">
@@ -11379,7 +11379,7 @@
 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p69"/>
 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with s=OFF" org.eventb.core.prGoal="p45" org.eventb.core.prHyps="p61">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p70">
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p70" org.eventb.core.prHyps="p16,p11,p4,p6,p9,p1,p21,p20,p3,p8,p13,p5,p18,p10,p22,p23,p14,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p42,p61,p63,p65,p67">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p70" org.eventb.core.prHyps="p17,p12,p5,p8,p11,p1,p3,p20,p21,p14,p9,p2,p7,p6,p22,p23,p15,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p42,p61,p63,p65,p67">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -11425,11 +11425,12 @@
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="ACCEPT" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
-<org.eventb.core.prIdent name="Block" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="CARD_READER_NULL" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="GATE" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.prIdent name="GateIn_Block" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="GateIn_Unblock" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="M1_OnOff_MAP" org.eventb.core.type="ℙ(MAIN_REGION_STATES×MAIN_REGION_STATES)"/>
 <org.eventb.core.prIdent name="MAIN_REGION" org.eventb.core.type="MAIN_REGION_STATES"/>
 <org.eventb.core.prIdent name="OFF" org.eventb.core.type="MAIN_REGION_STATES"/>
@@ -11438,29 +11439,31 @@
 <org.eventb.core.prIdent name="READING" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="READY" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="UNBLOCKED" org.eventb.core.type="GATE_STATES"/>
-<org.eventb.core.prIdent name="Unblock" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="s" org.eventb.core.type="MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p54" org.eventb.core.predicate="ACCEPT∈CARD_READER_STATES"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="ran(OnOff_MAP)=MAIN_REGION_STATES"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Unblock=FALSE"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ran(OnOff_MAP)=MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p43" org.eventb.core.predicate="¬READY=CARD_READER_NULL⇔OnOff_MAP(s)=ON"/>
 <org.eventb.core.prPred name="p50" org.eventb.core.predicate="BLOCKED∈GATE_STATES"/>
 <org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬BLOCKED=GATE_NULL"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="CARD_READER=ACCEPT⇒GateIn_Block=FALSE"/>
 <org.eventb.core.prPred name="p45" org.eventb.core.predicate="OnOff_MAP(s)=ON"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Block=TRUE"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="READY≠CARD_READER_NULL⇔OnOff_MAP(s)=ON"/>
 <org.eventb.core.prPred name="p26" org.eventb.core.predicate="GATE_STATES={BLOCKED,UNBLOCKED,GATE_NULL}"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="GATE=UNBLOCKED⇒Unblock=TRUE"/>
 <org.eventb.core.prPred name="p49" org.eventb.core.predicate="CARD_READER_NULL∈CARD_READER_STATES"/>
 <org.eventb.core.prPred name="p38" org.eventb.core.predicate="MAIN_REGION=ON∨MAIN_REGION=OFF"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="CARD_READER≠CARD_READER_NULL⇔MAIN_REGION=ON"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="CARD_READER≠CARD_READER_NULL⇔MAIN_REGION=ON"/>
 <org.eventb.core.prPred name="p48" org.eventb.core.predicate="GATE_NULL∈GATE_STATES"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="partition(MAIN_REGION_STATES,{ON},{OFF})"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="partition(MAIN_REGION_STATES,{ON},{OFF})"/>
 <org.eventb.core.prPred name="p39" org.eventb.core.predicate="MAIN_REGION=ON∨⊤"/>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="GATE=BLOCKED⇒Block=TRUE"/>
 <org.eventb.core.prPred name="p52" org.eventb.core.predicate="READY∈CARD_READER_STATES"/>
 <org.eventb.core.prPred name="p22" org.eventb.core.predicate="MAIN_REGION=OFF"/>
+<org.eventb.core.prPred name="p59" org.eventb.core.predicate="GateIn_Unblock∈BOOL"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="GATE=BLOCKED⇒GateIn_Block=TRUE"/>
 <org.eventb.core.prPred name="p66" org.eventb.core.predicate="¬GATE=GATE_NULL⇔⊥"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="GATE≠GATE_NULL⇔MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="GATE=UNBLOCKED⇒Block=FALSE"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="GATE≠GATE_NULL⇔MAIN_REGION=ON"/>
+<org.eventb.core.prPred name="p58" org.eventb.core.predicate="GateIn_Block∈BOOL"/>
 <org.eventb.core.prPred name="p57" org.eventb.core.predicate="CARD_READER∈CARD_READER_STATES"/>
 <org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬READING=CARD_READER_NULL"/>
 <org.eventb.core.prPred name="p64" org.eventb.core.predicate="¬⊤⇔MAIN_REGION=ON"/>
@@ -11468,9 +11471,8 @@
 <org.eventb.core.prPred name="p51" org.eventb.core.predicate="UNBLOCKED∈GATE_STATES"/>
 <org.eventb.core.prPred name="p42" org.eventb.core.predicate="s=MAIN_REGION"/>
 <org.eventb.core.prPred name="p47" org.eventb.core.predicate="OFF∈MAIN_REGION_STATES"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="s∈dom(OnOff_MAP)∧s=MAIN_REGION"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="s∈dom(OnOff_MAP)∧s=MAIN_REGION"/>
 <org.eventb.core.prPred name="p69" org.eventb.core.predicate="¬⊥"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="CARD_READER=ACCEPT⇒Unblock=TRUE"/>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="MAIN_REGION_STATES={ON,OFF}"/>
 <org.eventb.core.prPred name="p46" org.eventb.core.predicate="ON∈MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p55" org.eventb.core.predicate="MAIN_REGION∈MAIN_REGION_STATES"/>
@@ -11480,43 +11482,41 @@
 <org.eventb.core.prPred name="p44" org.eventb.core.predicate="¬⊥⇔OnOff_MAP(s)=ON"/>
 <org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬READY=READING"/>
 <org.eventb.core.prPred name="p63" org.eventb.core.predicate="CARD_READER=CARD_READER_NULL"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="M1_OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="M1_OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
 <org.eventb.core.prPred name="p62" org.eventb.core.predicate="¬CARD_READER=CARD_READER_NULL⇔⊥"/>
 <org.eventb.core.prPred name="p56" org.eventb.core.predicate="GATE∈GATE_STATES"/>
 <org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬ON=OFF"/>
 <org.eventb.core.prPred name="p60" org.eventb.core.predicate="¬CARD_READER=CARD_READER_NULL⇔OFF=ON"/>
-<org.eventb.core.prPred name="p58" org.eventb.core.predicate="Block∈BOOL"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="dom(M1_OnOff_MAP)=MAIN_REGION_STATES"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="dom(OnOff_MAP)=MAIN_REGION_STATES"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="CARD_READER=READY⇒Block=TRUE"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="dom(M1_OnOff_MAP)=MAIN_REGION_STATES"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="dom(OnOff_MAP)=MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬READY=ACCEPT"/>
 <org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬UNBLOCKED=GATE_NULL"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
 <org.eventb.core.prPred name="p30" org.eventb.core.predicate="CARD_READER_STATES={READY,READING,ACCEPT,CARD_READER_NULL}"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="GATE=BLOCKED⇒Unblock=FALSE"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="GATE=BLOCKED⇒GateIn_Unblock=FALSE"/>
 <org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬READING=ACCEPT"/>
 <org.eventb.core.prPred name="p65" org.eventb.core.predicate="¬MAIN_REGION=ON"/>
 <org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬GATE=GATE_NULL⇔MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="CARD_READER=READY⇒Unblock=FALSE"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="CARD_READER=ACCEPT⇒GateIn_Unblock=TRUE"/>
 <org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬READY=CARD_READER_NULL"/>
 <org.eventb.core.prPred name="p37" org.eventb.core.predicate="⊤∧s=MAIN_REGION"/>
 <org.eventb.core.prPred name="p67" org.eventb.core.predicate="GATE=GATE_NULL"/>
 <org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬CARD_READER=CARD_READER_NULL⇔MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p59" org.eventb.core.predicate="Unblock∈BOOL"/>
 <org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬ACCEPT=CARD_READER_NULL"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="OnOff_MAP∈MAIN_REGION_STATES ⇸ MAIN_REGION_STATES"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="OnOff_MAP∈MAIN_REGION_STATES ⇸ MAIN_REGION_STATES"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="GATE=UNBLOCKED⇒GateIn_Unblock=TRUE"/>
 <org.eventb.core.prPred name="p70" org.eventb.core.predicate="OnOff_MAP(OFF)=ON"/>
 <org.eventb.core.prPred name="p53" org.eventb.core.predicate="READING∈CARD_READER_STATES"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL})"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL})"/>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL})"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="CARD_READER=ACCEPT⇒Block=FALSE"/>
 <org.eventb.core.prPred name="p68" org.eventb.core.predicate="¬OFF=ON"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="GATE=UNBLOCKED⇒GateIn_Block=FALSE"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="OnOff_ON/Requirement_1_BLOCKED/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="GATE_STATES">
 <org.eventb.core.lang name="L"/>
@@ -12912,11 +12912,11 @@
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(MAIN_REGION_STATES,{ON},{OFF}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21,p22"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21,p22"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p21,p22"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23,p24,p25,p26"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23,p24,p25,p26"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p23,p24,p25,p26"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
@@ -12924,8 +12924,8 @@
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p27,p28,p29,p30,p31,p32,p33"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p36">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p36" org.eventb.core.prHyps="p26">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p37">
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p37" org.eventb.core.prHyps="">
@@ -12954,7 +12954,7 @@
 <org.eventb.core.prHypAction name="HIDE11" org.eventb.core.prHyps="p54"/>
 <org.eventb.core.prHypAction name="HIDE12" org.eventb.core.prHyps="p55"/>
 <org.eventb.core.prHypAction name="HIDE13" org.eventb.core.prHyps="p56"/>
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p38" org.eventb.core.prHyps="p15,p10,p4,p6,p8,p1,p19,p18,p3,p7,p12,p5,p16,p9,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p41,p42">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p38" org.eventb.core.prHyps="p16,p11,p5,p8,p10,p1,p3,p18,p19,p13,p9,p2,p7,p6,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p41,p42">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -12980,11 +12980,12 @@
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="ACCEPT" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
-<org.eventb.core.prIdent name="Block" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="CARD_READER_NULL" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="GATE" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.prIdent name="GateIn_Block" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="GateIn_Unblock" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="M1_OnOff_MAP" org.eventb.core.type="ℙ(MAIN_REGION_STATES×MAIN_REGION_STATES)"/>
 <org.eventb.core.prIdent name="MAIN_REGION" org.eventb.core.type="MAIN_REGION_STATES"/>
 <org.eventb.core.prIdent name="OFF" org.eventb.core.type="MAIN_REGION_STATES"/>
@@ -12993,30 +12994,31 @@
 <org.eventb.core.prIdent name="READING" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="READY" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="UNBLOCKED" org.eventb.core.type="GATE_STATES"/>
-<org.eventb.core.prIdent name="Unblock" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prPred name="p51" org.eventb.core.predicate="ACCEPT∈CARD_READER_STATES"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="ran(OnOff_MAP)=MAIN_REGION_STATES"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Unblock=FALSE"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ran(OnOff_MAP)=MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬BLOCKED=GATE_NULL"/>
 <org.eventb.core.prPred name="p47" org.eventb.core.predicate="BLOCKED∈GATE_STATES"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="CARD_READER=ACCEPT⇒GateIn_Block=FALSE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Block=TRUE"/>
 <org.eventb.core.prPred name="p23" org.eventb.core.predicate="GATE_STATES={BLOCKED,UNBLOCKED,GATE_NULL}"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="GATE=UNBLOCKED⇒Unblock=TRUE"/>
 <org.eventb.core.prPred name="p46" org.eventb.core.predicate="CARD_READER_NULL∈CARD_READER_STATES"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="CARD_READER≠CARD_READER_NULL⇔MAIN_REGION=ON"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="CARD_READER≠CARD_READER_NULL⇔MAIN_REGION=ON"/>
 <org.eventb.core.prPred name="p45" org.eventb.core.predicate="GATE_NULL∈GATE_STATES"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="partition(MAIN_REGION_STATES,{ON},{OFF})"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="partition(MAIN_REGION_STATES,{ON},{OFF})"/>
 <org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬UNBLOCKED=GATE_NULL⇔MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="GATE=BLOCKED⇒Block=TRUE"/>
 <org.eventb.core.prPred name="p49" org.eventb.core.predicate="READY∈CARD_READER_STATES"/>
+<org.eventb.core.prPred name="p56" org.eventb.core.predicate="GateIn_Unblock∈BOOL"/>
 <org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬⊥⇔MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="GATE≠GATE_NULL⇔MAIN_REGION=ON"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="GATE=BLOCKED⇒GateIn_Block=TRUE"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="GATE≠GATE_NULL⇔MAIN_REGION=ON"/>
 <org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬GATE=GATE_NULL⇔⊥"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="GATE=UNBLOCKED⇒Block=FALSE"/>
+<org.eventb.core.prPred name="p55" org.eventb.core.predicate="GateIn_Block∈BOOL"/>
 <org.eventb.core.prPred name="p54" org.eventb.core.predicate="CARD_READER∈CARD_READER_STATES"/>
 <org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬READING=CARD_READER_NULL"/>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬BLOCKED=UNBLOCKED"/>
 <org.eventb.core.prPred name="p48" org.eventb.core.predicate="UNBLOCKED∈GATE_STATES"/>
 <org.eventb.core.prPred name="p44" org.eventb.core.predicate="OFF∈MAIN_REGION_STATES"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="CARD_READER=ACCEPT⇒Unblock=TRUE"/>
 <org.eventb.core.prPred name="p21" org.eventb.core.predicate="MAIN_REGION_STATES={ON,OFF}"/>
 <org.eventb.core.prPred name="p43" org.eventb.core.predicate="ON∈MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p52" org.eventb.core.predicate="MAIN_REGION∈MAIN_REGION_STATES"/>
@@ -13025,60 +13027,58 @@
 <org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬READY=READING"/>
 <org.eventb.core.prPred name="p38" org.eventb.core.predicate="MAIN_REGION=ON"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="UNBLOCKED≠GATE_NULL⇔MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="M1_OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="M1_OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
 <org.eventb.core.prPred name="p42" org.eventb.core.predicate="CARD_READER=CARD_READER_NULL"/>
 <org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬CARD_READER=CARD_READER_NULL⇔⊥"/>
 <org.eventb.core.prPred name="p53" org.eventb.core.predicate="GATE∈GATE_STATES"/>
 <org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬ON=OFF"/>
-<org.eventb.core.prPred name="p55" org.eventb.core.predicate="Block∈BOOL"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="dom(M1_OnOff_MAP)=MAIN_REGION_STATES"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="dom(OnOff_MAP)=MAIN_REGION_STATES"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="CARD_READER=READY⇒Block=TRUE"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="dom(M1_OnOff_MAP)=MAIN_REGION_STATES"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="dom(OnOff_MAP)=MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬READY=ACCEPT"/>
 <org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬UNBLOCKED=GATE_NULL"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
 <org.eventb.core.prPred name="p27" org.eventb.core.predicate="CARD_READER_STATES={READY,READING,ACCEPT,CARD_READER_NULL}"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="GATE=BLOCKED⇒Unblock=FALSE"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="GATE=BLOCKED⇒GateIn_Unblock=FALSE"/>
 <org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬READING=ACCEPT"/>
 <org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬GATE=GATE_NULL⇔MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="CARD_READER=READY⇒Unblock=FALSE"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="CARD_READER=ACCEPT⇒GateIn_Unblock=TRUE"/>
 <org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬READY=CARD_READER_NULL"/>
 <org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬CARD_READER=CARD_READER_NULL⇔MAIN_REGION=ON"/>
 <org.eventb.core.prPred name="p41" org.eventb.core.predicate="GATE=GATE_NULL"/>
-<org.eventb.core.prPred name="p56" org.eventb.core.predicate="Unblock∈BOOL"/>
 <org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬ACCEPT=CARD_READER_NULL"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="GATE=UNBLOCKED⇒GateIn_Unblock=TRUE"/>
 <org.eventb.core.prPred name="p50" org.eventb.core.predicate="READING∈CARD_READER_STATES"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL})"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL})"/>
 <org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL})"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="CARD_READER=ACCEPT⇒Block=FALSE"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="GATE=UNBLOCKED⇒GateIn_Block=FALSE"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="Reset/superstateof_GATE/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18" org.eventb.core.prSets="CARD_READER_STATES,GATE_STATES,MAIN_REGION_STATES">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(MAIN_REGION_STATES,{ON},{OFF}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19,p20"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19,p20"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p19,p20"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21,p22,p23,p24"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21,p22,p23,p24"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p21,p22,p23,p24"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p25,p26,p27,p28,p29,p30,p31"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p25,p26,p27,p28,p29,p30,p31"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p25,p26,p27,p28,p29,p30,p31"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p32"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p33"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="p10" org.eventb.core.prInfHyps="p32"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="p10" org.eventb.core.prInfHyps="p33"/>
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p38">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
 <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p32" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p36"/>
 <org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p33" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p37"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p38" org.eventb.core.prHyps="p23">
@@ -13112,7 +13112,7 @@
 <org.eventb.core.prHypAction name="HIDE11" org.eventb.core.prHyps="p59"/>
 <org.eventb.core.prHypAction name="HIDE12" org.eventb.core.prHyps="p60"/>
 <org.eventb.core.prHypAction name="HIDE13" org.eventb.core.prHyps="p61"/>
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p43" org.eventb.core.prHyps="p14,p9,p3,p5,p7,p1,p18,p17,p11,p4,p6,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p36,p37,p46,p47">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p43" org.eventb.core.prHyps="p16,p12,p5,p8,p11,p1,p3,p18,p9,p2,p10,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p36,p37,p46,p47">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -13140,11 +13140,12 @@
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="ACCEPT" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
-<org.eventb.core.prIdent name="Block" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="CARD_READER_NULL" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="GATE" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.prIdent name="GateIn_Block" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="GateIn_Unblock" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="M1_OnOff_MAP" org.eventb.core.type="ℙ(MAIN_REGION_STATES×MAIN_REGION_STATES)"/>
 <org.eventb.core.prIdent name="MAIN_REGION" org.eventb.core.type="MAIN_REGION_STATES"/>
 <org.eventb.core.prIdent name="OFF" org.eventb.core.type="MAIN_REGION_STATES"/>
@@ -13153,74 +13154,73 @@
 <org.eventb.core.prIdent name="READING" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="READY" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="UNBLOCKED" org.eventb.core.type="GATE_STATES"/>
-<org.eventb.core.prIdent name="Unblock" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prPred name="p56" org.eventb.core.predicate="ACCEPT∈CARD_READER_STATES"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="BLOCKED≠GATE_NULL⇔MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="ran(OnOff_MAP)=MAIN_REGION_STATES"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Unblock=FALSE"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="GateIn_Block=FALSE"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ran(OnOff_MAP)=MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p52" org.eventb.core.predicate="BLOCKED∈GATE_STATES"/>
 <org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬BLOCKED=GATE_NULL"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="CARD_READER=ACCEPT⇒GateIn_Block=FALSE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Block=TRUE"/>
 <org.eventb.core.prPred name="p21" org.eventb.core.predicate="GATE_STATES={BLOCKED,UNBLOCKED,GATE_NULL}"/>
-<org.eventb.core.prPred name="p41" org.eventb.core.predicate="GATE=UNBLOCKED⇒Unblock=TRUE"/>
 <org.eventb.core.prPred name="p51" org.eventb.core.predicate="CARD_READER_NULL∈CARD_READER_STATES"/>
 <org.eventb.core.prPred name="p50" org.eventb.core.predicate="GATE_NULL∈GATE_STATES"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="CARD_READER≠CARD_READER_NULL⇔MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="partition(MAIN_REGION_STATES,{ON},{OFF})"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="GATE=BLOCKED⇒Block=TRUE"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="CARD_READER≠CARD_READER_NULL⇔MAIN_REGION=ON"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="partition(MAIN_REGION_STATES,{ON},{OFF})"/>
 <org.eventb.core.prPred name="p54" org.eventb.core.predicate="READY∈CARD_READER_STATES"/>
+<org.eventb.core.prPred name="p61" org.eventb.core.predicate="GateIn_Unblock∈BOOL"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="⊤⇒GateIn_Block=FALSE"/>
 <org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬⊥⇔MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="GATE≠GATE_NULL⇔MAIN_REGION=ON"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="GATE=BLOCKED⇒GateIn_Block=TRUE"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="GATE≠GATE_NULL⇔MAIN_REGION=ON"/>
 <org.eventb.core.prPred name="p44" org.eventb.core.predicate="¬GATE=GATE_NULL⇔⊥"/>
-<org.eventb.core.prPred name="p39" org.eventb.core.predicate="GATE=UNBLOCKED⇒Block=FALSE"/>
+<org.eventb.core.prPred name="p60" org.eventb.core.predicate="GateIn_Block∈BOOL"/>
 <org.eventb.core.prPred name="p59" org.eventb.core.predicate="CARD_READER∈CARD_READER_STATES"/>
 <org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬READING=CARD_READER_NULL"/>
 <org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬BLOCKED=UNBLOCKED"/>
 <org.eventb.core.prPred name="p53" org.eventb.core.predicate="UNBLOCKED∈GATE_STATES"/>
 <org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬BLOCKED=GATE_NULL⇔MAIN_REGION=ON"/>
 <org.eventb.core.prPred name="p49" org.eventb.core.predicate="OFF∈MAIN_REGION_STATES"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="CARD_READER=ACCEPT"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="CARD_READER=ACCEPT⇒Unblock=TRUE"/>
-<org.eventb.core.prPred name="p36" org.eventb.core.predicate="Block=FALSE"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="CARD_READER=ACCEPT"/>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="MAIN_REGION_STATES={ON,OFF}"/>
 <org.eventb.core.prPred name="p48" org.eventb.core.predicate="ON∈MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p40" org.eventb.core.predicate="GATE=UNBLOCKED⇒⊤"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="⊤⇒GateIn_Unblock=TRUE"/>
 <org.eventb.core.prPred name="p57" org.eventb.core.predicate="MAIN_REGION∈MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="ran(M1_OnOff_MAP)=MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬READY=READING"/>
 <org.eventb.core.prPred name="p43" org.eventb.core.predicate="MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="M1_OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="M1_OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
 <org.eventb.core.prPred name="p47" org.eventb.core.predicate="CARD_READER=CARD_READER_NULL"/>
 <org.eventb.core.prPred name="p45" org.eventb.core.predicate="¬CARD_READER=CARD_READER_NULL⇔⊥"/>
 <org.eventb.core.prPred name="p58" org.eventb.core.predicate="GATE∈GATE_STATES"/>
 <org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬ON=OFF"/>
-<org.eventb.core.prPred name="p60" org.eventb.core.predicate="Block∈BOOL"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="dom(M1_OnOff_MAP)=MAIN_REGION_STATES"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="dom(OnOff_MAP)=MAIN_REGION_STATES"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="CARD_READER=READY⇒Block=TRUE"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="dom(M1_OnOff_MAP)=MAIN_REGION_STATES"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="dom(OnOff_MAP)=MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p27" org.eventb.core.predicate="¬READY=ACCEPT"/>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬UNBLOCKED=GATE_NULL"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
 <org.eventb.core.prPred name="p25" org.eventb.core.predicate="CARD_READER_STATES={READY,READING,ACCEPT,CARD_READER_NULL}"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="GATE=BLOCKED⇒Unblock=FALSE"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="GATE=BLOCKED⇒GateIn_Unblock=FALSE"/>
 <org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬READING=ACCEPT"/>
 <org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬GATE=GATE_NULL⇔MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p37" org.eventb.core.predicate="Unblock=TRUE"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="CARD_READER=READY⇒Unblock=FALSE"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="CARD_READER=ACCEPT⇒GateIn_Unblock=TRUE"/>
 <org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬READY=CARD_READER_NULL"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="GateIn_Unblock=TRUE"/>
 <org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬CARD_READER=CARD_READER_NULL⇔MAIN_REGION=ON"/>
 <org.eventb.core.prPred name="p46" org.eventb.core.predicate="GATE=GATE_NULL"/>
-<org.eventb.core.prPred name="p61" org.eventb.core.predicate="Unblock∈BOOL"/>
 <org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬ACCEPT=CARD_READER_NULL"/>
-<org.eventb.core.prPred name="p32" org.eventb.core.predicate="⊤⇒Block=FALSE"/>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="GATE=UNBLOCKED⇒GateIn_Unblock=TRUE"/>
 <org.eventb.core.prPred name="p55" org.eventb.core.predicate="READING∈CARD_READER_STATES"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL})"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL})"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="CARD_READER=ACCEPT⇒Block=FALSE"/>
-<org.eventb.core.prPred name="p33" org.eventb.core.predicate="⊤⇒Unblock=TRUE"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL})"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL})"/>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="GATE=UNBLOCKED⇒GateIn_Block=FALSE"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="CardError/Requirement_1_BLOCKED/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="GATE_STATES">
 <org.eventb.core.lang name="L"/>
@@ -13788,11 +13788,11 @@
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(MAIN_REGION_STATES,{ON},{OFF}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21,p22"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21,p22"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p21,p22"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23,p24,p25,p26"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23,p24,p25,p26"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p23,p24,p25,p26"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
@@ -13800,8 +13800,8 @@
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p27,p28,p29,p30,p31,p32,p33"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p36">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p36" org.eventb.core.prHyps="p25">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p37">
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p37" org.eventb.core.prHyps="">
@@ -13830,7 +13830,7 @@
 <org.eventb.core.prHypAction name="HIDE11" org.eventb.core.prHyps="p54"/>
 <org.eventb.core.prHypAction name="HIDE12" org.eventb.core.prHyps="p55"/>
 <org.eventb.core.prHypAction name="HIDE13" org.eventb.core.prHyps="p56"/>
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p38" org.eventb.core.prHyps="p15,p10,p4,p6,p8,p1,p19,p18,p3,p7,p12,p5,p16,p9,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p41,p42">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p38" org.eventb.core.prHyps="p16,p11,p5,p8,p10,p1,p3,p18,p19,p13,p9,p2,p7,p6,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p41,p42">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -13856,11 +13856,12 @@
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="ACCEPT" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="BLOCKED" org.eventb.core.type="GATE_STATES"/>
-<org.eventb.core.prIdent name="Block" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="CARD_READER" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="CARD_READER_NULL" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="GATE" org.eventb.core.type="GATE_STATES"/>
 <org.eventb.core.prIdent name="GATE_NULL" org.eventb.core.type="GATE_STATES"/>
+<org.eventb.core.prIdent name="GateIn_Block" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="GateIn_Unblock" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prIdent name="M1_OnOff_MAP" org.eventb.core.type="ℙ(MAIN_REGION_STATES×MAIN_REGION_STATES)"/>
 <org.eventb.core.prIdent name="MAIN_REGION" org.eventb.core.type="MAIN_REGION_STATES"/>
 <org.eventb.core.prIdent name="OFF" org.eventb.core.type="MAIN_REGION_STATES"/>
@@ -13869,31 +13870,32 @@
 <org.eventb.core.prIdent name="READING" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="READY" org.eventb.core.type="CARD_READER_STATES"/>
 <org.eventb.core.prIdent name="UNBLOCKED" org.eventb.core.type="GATE_STATES"/>
-<org.eventb.core.prIdent name="Unblock" org.eventb.core.type="BOOL"/>
 <org.eventb.core.prPred name="p51" org.eventb.core.predicate="ACCEPT∈CARD_READER_STATES"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="BLOCKED≠GATE_NULL⇔MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="ran(OnOff_MAP)=MAIN_REGION_STATES"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Unblock=FALSE"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ran(OnOff_MAP)=MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬BLOCKED=GATE_NULL"/>
 <org.eventb.core.prPred name="p47" org.eventb.core.predicate="BLOCKED∈GATE_STATES"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="CARD_READER=ACCEPT⇒GateIn_Block=FALSE"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="CARD_READER=READY⇒GateIn_Block=TRUE"/>
 <org.eventb.core.prPred name="p23" org.eventb.core.predicate="GATE_STATES={BLOCKED,UNBLOCKED,GATE_NULL}"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="GATE=UNBLOCKED⇒Unblock=TRUE"/>
 <org.eventb.core.prPred name="p46" org.eventb.core.predicate="CARD_READER_NULL∈CARD_READER_STATES"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="CARD_READER≠CARD_READER_NULL⇔MAIN_REGION=ON"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="CARD_READER≠CARD_READER_NULL⇔MAIN_REGION=ON"/>
 <org.eventb.core.prPred name="p45" org.eventb.core.predicate="GATE_NULL∈GATE_STATES"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="partition(MAIN_REGION_STATES,{ON},{OFF})"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="GATE=BLOCKED⇒Block=TRUE"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="partition(MAIN_REGION_STATES,{ON},{OFF})"/>
 <org.eventb.core.prPred name="p49" org.eventb.core.predicate="READY∈CARD_READER_STATES"/>
+<org.eventb.core.prPred name="p56" org.eventb.core.predicate="GateIn_Unblock∈BOOL"/>
 <org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬⊥⇔MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="GATE≠GATE_NULL⇔MAIN_REGION=ON"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="GATE=BLOCKED⇒GateIn_Block=TRUE"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="GATE≠GATE_NULL⇔MAIN_REGION=ON"/>
 <org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬GATE=GATE_NULL⇔⊥"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="GATE=UNBLOCKED⇒Block=FALSE"/>
+<org.eventb.core.prPred name="p55" org.eventb.core.predicate="GateIn_Block∈BOOL"/>
 <org.eventb.core.prPred name="p54" org.eventb.core.predicate="CARD_READER∈CARD_READER_STATES"/>
 <org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬READING=CARD_READER_NULL"/>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬BLOCKED=UNBLOCKED"/>
 <org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬BLOCKED=GATE_NULL⇔MAIN_REGION=ON"/>
 <org.eventb.core.prPred name="p48" org.eventb.core.predicate="UNBLOCKED∈GATE_STATES"/>
 <org.eventb.core.prPred name="p44" org.eventb.core.predicate="OFF∈MAIN_REGION_STATES"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="CARD_READER=ACCEPT⇒Unblock=TRUE"/>
 <org.eventb.core.prPred name="p21" org.eventb.core.predicate="MAIN_REGION_STATES={ON,OFF}"/>
 <org.eventb.core.prPred name="p43" org.eventb.core.predicate="ON∈MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p52" org.eventb.core.predicate="MAIN_REGION∈MAIN_REGION_STATES"/>
@@ -13901,36 +13903,34 @@
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="ran(M1_OnOff_MAP)=MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬READY=READING"/>
 <org.eventb.core.prPred name="p38" org.eventb.core.predicate="MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="M1_OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="M1_OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
 <org.eventb.core.prPred name="p42" org.eventb.core.predicate="CARD_READER=CARD_READER_NULL"/>
 <org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬CARD_READER=CARD_READER_NULL⇔⊥"/>
 <org.eventb.core.prPred name="p53" org.eventb.core.predicate="GATE∈GATE_STATES"/>
 <org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬ON=OFF"/>
-<org.eventb.core.prPred name="p55" org.eventb.core.predicate="Block∈BOOL"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="dom(M1_OnOff_MAP)=MAIN_REGION_STATES"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="dom(OnOff_MAP)=MAIN_REGION_STATES"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="CARD_READER=READY⇒Block=TRUE"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="dom(M1_OnOff_MAP)=MAIN_REGION_STATES"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="dom(OnOff_MAP)=MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬READY=ACCEPT"/>
 <org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬UNBLOCKED=GATE_NULL"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="OnOff_MAP={ON ↦ OFF,OFF ↦ ON}"/>
 <org.eventb.core.prPred name="p27" org.eventb.core.predicate="CARD_READER_STATES={READY,READING,ACCEPT,CARD_READER_NULL}"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="GATE=BLOCKED⇒Unblock=FALSE"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="GATE=BLOCKED⇒GateIn_Unblock=FALSE"/>
 <org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬READING=ACCEPT"/>
 <org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬GATE=GATE_NULL⇔MAIN_REGION=ON"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="CARD_READER=READY⇒Unblock=FALSE"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="CARD_READER=ACCEPT⇒GateIn_Unblock=TRUE"/>
 <org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬READY=CARD_READER_NULL"/>
 <org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬CARD_READER=CARD_READER_NULL⇔MAIN_REGION=ON"/>
 <org.eventb.core.prPred name="p41" org.eventb.core.predicate="GATE=GATE_NULL"/>
-<org.eventb.core.prPred name="p56" org.eventb.core.predicate="Unblock∈BOOL"/>
 <org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬ACCEPT=CARD_READER_NULL"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="GATE=UNBLOCKED⇒GateIn_Unblock=TRUE"/>
 <org.eventb.core.prPred name="p50" org.eventb.core.predicate="READING∈CARD_READER_STATES"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL})"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="partition(GATE_STATES,{BLOCKED},{UNBLOCKED},{GATE_NULL})"/>
 <org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(CARD_READER_STATES,{READY},{READING},{ACCEPT},{CARD_READER_NULL})"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="CARD_READER=ACCEPT⇒Block=FALSE"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="GATE=UNBLOCKED⇒GateIn_Block=FALSE"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
 </org.eventb.core.prProof>
 </org.eventb.core.prFile>
