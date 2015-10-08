@@ -1,0 +1,13 @@
+context C0 
+sets 
+ MAIN_REGION_STATES 
+constants 
+ ON  OFF  OnOff_MAP 
+axioms 
+ @typeof_ON "ON ∈ MAIN_REGION_STATES"  
+ @typeof_OFF "OFF ∈ MAIN_REGION_STATES"  
+ @distinct_states_in_MAIN_REGION_STATES "partition(MAIN_REGION_STATES, {ON}, {OFF})"  
+ @define_OnOff_MAP "OnOff_MAP = { ON↦OFF, OFF↦ON}"  
+ @domain_OnOff_MAP "dom(OnOff_MAP) = MAIN_REGION_STATES"  
+ @range_OnOff_MAP "ran(OnOff_MAP) = MAIN_REGION_STATES"  
+end
