@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="_obr7MHm3EeWNGKUEhYGm3A" org.eventb.core.target="M0"/>
+<org.eventb.core.seesContext name="_obr7MXm3EeWNGKUEhYGm3A" org.eventb.core.target="C1"/>
+<org.eventb.core.variable name="_obr7Mnm3EeWNGKUEhYGm3A" org.eventb.core.identifier="GATE"/>
+<org.eventb.core.variable name="_obr7M3m3EeWNGKUEhYGm3A" org.eventb.core.identifier="CARD_READER"/>
+<org.eventb.core.variable name="_obsiQHm3EeWNGKUEhYGm3A" org.eventb.core.identifier="MAIN_REGION"/>
+<org.eventb.core.variable name="_obsiQXm3EeWNGKUEhYGm3A" org.eventb.core.identifier="GateIn_Block"/>
+<org.eventb.core.variable name="_obsiQnm3EeWNGKUEhYGm3A" org.eventb.core.identifier="GateIn_Unblock"/>
+<org.eventb.core.variable name="_obsiQ3m3EeWNGKUEhYGm3A" org.eventb.core.identifier="OnIn_Reset"/>
+<org.eventb.core.variable name="_obsiRHm3EeWNGKUEhYGm3A" org.eventb.core.identifier="OnIn_CardAccept"/>
+<org.eventb.core.invariant name="_obsiRXm3EeWNGKUEhYGm3A" org.eventb.core.label="typeof_GATE" org.eventb.core.predicate="GATE ∈ GATE_STATES"/>
+<org.eventb.core.invariant name="_obsiRnm3EeWNGKUEhYGm3A" org.eventb.core.label="typeof_CARD_READER" org.eventb.core.predicate="CARD_READER ∈ CARD_READER_STATES"/>
+<org.eventb.core.invariant name="_obsiR3m3EeWNGKUEhYGm3A" org.eventb.core.label="superstateof_GATE" org.eventb.core.predicate="GATE ≠ GATE_NULL ⇔ MAIN_REGION = ON"/>
+<org.eventb.core.invariant name="_obsiSHm3EeWNGKUEhYGm3A" org.eventb.core.label="superstateof_CARD_READER" org.eventb.core.predicate="CARD_READER ≠ CARD_READER_NULL ⇔ MAIN_REGION = ON"/>
+<org.eventb.core.invariant name="_obsiSXm3EeWNGKUEhYGm3A" org.eventb.core.label="typeof_Block" org.eventb.core.predicate="GateIn_Block ∈ BOOL"/>
+<org.eventb.core.invariant name="_obtJUHm3EeWNGKUEhYGm3A" org.eventb.core.label="typeof_Unblock" org.eventb.core.predicate="GateIn_Unblock ∈ BOOL"/>
+<org.eventb.core.invariant name="_obtJUXm3EeWNGKUEhYGm3A" org.eventb.core.label="typeof_Reset" org.eventb.core.predicate="OnIn_Reset ∈ BOOL"/>
+<org.eventb.core.invariant name="_obtJUnm3EeWNGKUEhYGm3A" org.eventb.core.label="typeof_CardAccept" org.eventb.core.predicate="OnIn_CardAccept ∈ BOOL"/>
+<org.eventb.core.invariant name="_obtJU3m3EeWNGKUEhYGm3A" org.eventb.core.label="check_BLOCKED" org.eventb.core.predicate="GATE=BLOCKED ⇔ GateIn_Block=TRUE"/>
+<org.eventb.core.invariant name="_obtJVHm3EeWNGKUEhYGm3A" org.eventb.core.label="check_UNBLOCKED" org.eventb.core.predicate="GATE=UNBLOCKED ⇔ GateIn_Unblock=TRUE"/>
+<org.eventb.core.invariant name="_obtJVXm3EeWNGKUEhYGm3A" org.eventb.core.comment="This invariant uses OnIn_CardAccept=FALSE so assure that&#10; the transition BLOCKED2UNBLOCKED has taken place·&#10; With additional synchronization functionality we &#10; should be able to write &#10; CARD_READER = ACCEPT ⇒ GATE = UNBLOCKED " org.eventb.core.label="Accept_Before_Unlocked" org.eventb.core.predicate="(CARD_READER = ACCEPT ∧ OnIn_CardAccept=FALSE) ⇒ (GATE = UNBLOCKED)"/>
+<org.eventb.core.event name="_obtJVnm3EeWNGKUEhYGm3A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_obtJV3m3EeWNGKUEhYGm3A" org.eventb.core.assignment="GATE ≔ GATE_NULL" org.eventb.core.label="init_GATE"/>
+<org.eventb.core.action name="_obtwYHm3EeWNGKUEhYGm3A" org.eventb.core.assignment="CARD_READER ≔ CARD_READER_NULL" org.eventb.core.label="init_CARD_READER"/>
+<org.eventb.core.action name="_obtwYXm3EeWNGKUEhYGm3A" org.eventb.core.assignment="GateIn_Block≔FALSE" org.eventb.core.label="init_Block"/>
+<org.eventb.core.action name="_obtwYnm3EeWNGKUEhYGm3A" org.eventb.core.assignment="GateIn_Unblock≔FALSE" org.eventb.core.label="init_Unblock"/>
+<org.eventb.core.action name="_obtwY3m3EeWNGKUEhYGm3A" org.eventb.core.assignment="OnIn_CardAccept≔FALSE" org.eventb.core.label="init_CardAccept"/>
+<org.eventb.core.action name="_obtwZHm3EeWNGKUEhYGm3A" org.eventb.core.assignment="OnIn_Reset≔FALSE" org.eventb.core.label="init_Reset"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_obtwZXm3EeWNGKUEhYGm3A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="OnOff_OFF">
+<org.eventb.core.refinesEvent name="_obtwZnm3EeWNGKUEhYGm3A" org.eventb.core.target="OnOff"/>
+<org.eventb.core.guard name="_obtwZ3m3EeWNGKUEhYGm3A" org.eventb.core.label="isin_ON" org.eventb.core.predicate="MAIN_REGION = ON"/>
+<org.eventb.core.action name="_obtwaHm3EeWNGKUEhYGm3A" org.eventb.core.assignment="GATE ≔ GATE_NULL" org.eventb.core.label="leave_GATE"/>
+<org.eventb.core.action name="_obtwaXm3EeWNGKUEhYGm3A" org.eventb.core.assignment="CARD_READER ≔ CARD_READER_NULL" org.eventb.core.label="leave_CARD_READER"/>
+<org.eventb.core.action name="_obtwanm3EeWNGKUEhYGm3A" org.eventb.core.assignment="GateIn_Unblock ≔ FALSE" org.eventb.core.label="set_Unblock"/>
+<org.eventb.core.action name="_obuXcHm3EeWNGKUEhYGm3A" org.eventb.core.assignment="GateIn_Block ≔ FALSE" org.eventb.core.label="set_Block"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_obuXcXm3EeWNGKUEhYGm3A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="OnOff_ON">
+<org.eventb.core.refinesEvent name="_obuXcnm3EeWNGKUEhYGm3A" org.eventb.core.target="OnOff"/>
+<org.eventb.core.guard name="_obuXc3m3EeWNGKUEhYGm3A" org.eventb.core.label="isin_OFF" org.eventb.core.predicate="MAIN_REGION = OFF"/>
+<org.eventb.core.action name="_obuXdHm3EeWNGKUEhYGm3A" org.eventb.core.assignment="GATE ≔ BLOCKED" org.eventb.core.label="enter_BLOCKED"/>
+<org.eventb.core.action name="_obuXdXm3EeWNGKUEhYGm3A" org.eventb.core.assignment="CARD_READER ≔ READY" org.eventb.core.label="enter_READY"/>
+<org.eventb.core.action name="_obuXdnm3EeWNGKUEhYGm3A" org.eventb.core.assignment="GateIn_Block ≔ TRUE" org.eventb.core.label="set_Block"/>
+<org.eventb.core.action name="_obuXd3m3EeWNGKUEhYGm3A" org.eventb.core.assignment="OnIn_Reset ≔ FALSE" org.eventb.core.label="set_Reset"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_obuXeHm3EeWNGKUEhYGm3A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CardIn">
+<org.eventb.core.guard name="_obuXeXm3EeWNGKUEhYGm3A" org.eventb.core.label="isin_READY" org.eventb.core.predicate="CARD_READER = READY"/>
+<org.eventb.core.guard name="_obu-gHm3EeWNGKUEhYGm3A" org.eventb.core.comment="NOT IN THE SCXML NEEDED FOR CORRECT BEHAVIOR&#10;   IF IT IS NOT PRESENT NON−DETERMINISM ALLOWS FOR &#10;   MALFUCNTION OF THE SYSTEM" org.eventb.core.label="check_Reset" org.eventb.core.predicate="OnIn_Reset = FALSE"/>
+<org.eventb.core.action name="_obu-gXm3EeWNGKUEhYGm3A" org.eventb.core.assignment="CARD_READER ≔ READING" org.eventb.core.label="enter_READING"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_obu-gnm3EeWNGKUEhYGm3A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CardError">
+<org.eventb.core.guard name="_obu-g3m3EeWNGKUEhYGm3A" org.eventb.core.label="isin_READING" org.eventb.core.predicate="CARD_READER = READING"/>
+<org.eventb.core.action name="_obu-hHm3EeWNGKUEhYGm3A" org.eventb.core.assignment="CARD_READER ≔ READY" org.eventb.core.label="enter_READY"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_obu-hXm3EeWNGKUEhYGm3A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CardOk">
+<org.eventb.core.guard name="_obu-hnm3EeWNGKUEhYGm3A" org.eventb.core.label="isin_READING" org.eventb.core.predicate="CARD_READER = READING"/>
+<org.eventb.core.action name="_obu-h3m3EeWNGKUEhYGm3A" org.eventb.core.assignment="CARD_READER ≔ ACCEPT" org.eventb.core.label="enter_ACCEPT"/>
+<org.eventb.core.action name="_obu-iHm3EeWNGKUEhYGm3A" org.eventb.core.assignment="OnIn_CardAccept ≔ TRUE" org.eventb.core.label="set_CardAccept"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_obu-iXm3EeWNGKUEhYGm3A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Ready">
+<org.eventb.core.guard name="_obvlkHm3EeWNGKUEhYGm3A" org.eventb.core.label="isin_ACCEPT" org.eventb.core.predicate="CARD_READER = ACCEPT"/>
+<org.eventb.core.guard name="_obvlkXm3EeWNGKUEhYGm3A" org.eventb.core.comment="NOT IN THE SCXML NEEDED FOR CORRECT BEHAVIOR &#10;   IF IT IS NOT PRESENT NON−DETERMINISM ALLOWS FOR &#10;   MALFUCNTION OF THE SYSTEM" org.eventb.core.label="check_CardAccept" org.eventb.core.predicate="OnIn_CardAccept = FALSE"/>
+<org.eventb.core.action name="_obvlknm3EeWNGKUEhYGm3A" org.eventb.core.assignment="CARD_READER ≔ READY" org.eventb.core.label="enter_READY"/>
+<org.eventb.core.action name="_obvlk3m3EeWNGKUEhYGm3A" org.eventb.core.assignment="OnIn_Reset ≔ TRUE" org.eventb.core.label="set_Reset"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_obvllHm3EeWNGKUEhYGm3A" org.eventb.core.comment="Handles unnamed transition with conditions" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="UNBLOCKED_OUT_TRANS">
+<org.eventb.core.guard name="_obvllXm3EeWNGKUEhYGm3A" org.eventb.core.label="isin_UNBLOCKED" org.eventb.core.predicate="GATE = UNBLOCKED"/>
+<org.eventb.core.guard name="_obvllnm3EeWNGKUEhYGm3A" org.eventb.core.label="check_Reset" org.eventb.core.predicate="OnIn_Reset=TRUE"/>
+<org.eventb.core.action name="_obvll3m3EeWNGKUEhYGm3A" org.eventb.core.assignment="GATE ≔ BLOCKED" org.eventb.core.label="enter_BLOCKED"/>
+<org.eventb.core.action name="_obvlmHm3EeWNGKUEhYGm3A" org.eventb.core.assignment="GateIn_Block ≔ TRUE" org.eventb.core.label="set_Block"/>
+<org.eventb.core.action name="_obvlmXm3EeWNGKUEhYGm3A" org.eventb.core.assignment="OnIn_Reset ≔ FALSE" org.eventb.core.label="set_Reset"/>
+<org.eventb.core.action name="_obvlmnm3EeWNGKUEhYGm3A" org.eventb.core.assignment="GateIn_Unblock ≔ FALSE" org.eventb.core.label="set_Unblock"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_obwMoHm3EeWNGKUEhYGm3A" org.eventb.core.comment="Handles unnamed transition with conditions" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="BLOCKED_OUT_TRANS">
+<org.eventb.core.guard name="_obwMoXm3EeWNGKUEhYGm3A" org.eventb.core.label="isin_BLOCKED" org.eventb.core.predicate="GATE = BLOCKED"/>
+<org.eventb.core.guard name="_obwMonm3EeWNGKUEhYGm3A" org.eventb.core.label="check_CardAccept" org.eventb.core.predicate="OnIn_CardAccept=TRUE"/>
+<org.eventb.core.action name="_obwMo3m3EeWNGKUEhYGm3A" org.eventb.core.assignment="GATE ≔ UNBLOCKED" org.eventb.core.label="enter_UNBLOCKED"/>
+<org.eventb.core.action name="_obwMpHm3EeWNGKUEhYGm3A" org.eventb.core.assignment="GateIn_Unblock ≔ TRUE" org.eventb.core.label="set_Unblock"/>
+<org.eventb.core.action name="_obwMpXm3EeWNGKUEhYGm3A" org.eventb.core.assignment="OnIn_CardAccept ≔ FALSE" org.eventb.core.label="set_CardAccept"/>
+<org.eventb.core.action name="_obwMpnm3EeWNGKUEhYGm3A" org.eventb.core.assignment="GateIn_Block ≔ FALSE" org.eventb.core.label="set_Block"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

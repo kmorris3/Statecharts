@@ -1,10 +1,10 @@
-machine M1 
+machine M1Diagram 
 refines 
  M0
 sees 
  C1
 variables 
- GATE  CARD_READER  MAIN_REGION  GateIn_Block  GateIn_Unblock 
+ GATE  CARD_READER  MAIN_REGION  GateIn_Block  GateIn_Unblock  OnIn_Reset  OnIn_CardAccept 
 invariants 
  @typeof_GATE "GATE ∈ GATE_STATES"  
  @typeof_CARD_READER "CARD_READER ∈ CARD_READER_STATES"  
@@ -12,21 +12,24 @@ invariants
  @superstateof_CARD_READER "CARD_READER ≠ CARD_READER_NULL ⇔ MAIN_REGION = ON"  
  @typeof_Block "GateIn_Block ∈ BOOL"  
  @typeof_Unblock "GateIn_Unblock ∈ BOOL"  
- @Requirement_1_BLOCKED "GATE = BLOCKED ⇒ GateIn_Block = TRUE "  
- @Requirement_2_BLOCKED "GATE = BLOCKED ⇒ GateIn_Unblock = FALSE"  
- @Requirement_1_UNBLOCKED "GATE = UNBLOCKED ⇒ GateIn_Block = FALSE "  
- @Requirement_2_UNBLOCKED "GATE = UNBLOCKED ⇒ GateIn_Unblock = TRUE"  
- @Requirement_1_READY "CARD_READER = READY ⇒ GateIn_Block = TRUE "  
- @Requirement_2_READY "CARD_READER = READY ⇒ GateIn_Unblock = FALSE"  
- @Requirement_1_ACCEPT "CARD_READER = ACCEPT ⇒ GateIn_Block = FALSE "  
- @Requirement_2_ACCEPT "CARD_READER = ACCEPT ⇒ GateIn_Unblock = TRUE"  
+ @typeof_Reset "OnIn_Reset ∈ BOOL"  
+ @typeof_CardAccept "OnIn_CardAccept ∈ BOOL" 
+ @check_BLOCKED "GATE=BLOCKED ⇔ GateIn_Block=TRUE" 
+ @check_UNBLOCKED "GATE=UNBLOCKED ⇔ GateIn_Unblock=TRUE" 
+ @Accept_Before_Unlocked "(CARD_READER = ACCEPT) ⇒ (GATE = UNBLOCKED)"  > "This invariant uses OnIn_CardAccept=FALSE so assure that
+ the transition BLOCKED2UNBLOCKED has taken place·
+ With additional synchronization functionality we 
+ should be able to write 
+ CARD_READER = ACCEPT ⇒ GATE = UNBLOCKED "
 events 
  event INITIALISATION  extended ordinary 
  then
   @init_GATE "GATE ≔ GATE_NULL" 
   @init_CARD_READER "CARD_READER ≔ CARD_READER_NULL" 
-  @typeof_Block "GateIn_Block≔FALSE" 
-  @typeof_Unblock "GateIn_Unblock≔FALSE" 
+  @init_Block "GateIn_Block≔FALSE" 
+  @init_Unblock "GateIn_Unblock≔FALSE" 
+  @init_CardAccept "OnIn_CardAccept≔FALSE" 
+  @init_Reset "OnIn_Reset≔FALSE" 
  end
  event OnOff_OFF  extended ordinary 
  refines
@@ -47,12 +50,16 @@ events
  then
   @enter_BLOCKED "GATE ≔ BLOCKED" 
   @enter_READY "CARD_READER ≔ READY" 
-  @set_Unblock "GateIn_Unblock ≔ FALSE" 
   @set_Block "GateIn_Block ≔ TRUE" 
+  @set_Reset "OnIn_Reset ≔ FALSE" 
  end
  event CardIn  ordinary 
  where 
-   @isin_READY "CARD_READER = READY"  
+   @isin_READY "CARD_READER = READY"  >
+   "@check_Reset OnIn_Reset = FALSE  > 
+   NOT IN THE SCXML NEEDED FOR CORRECT BEHAVIOR
+   IF IT IS NOT PRESENT NON−DETERMINISM ALLOWS FOR 
+   MALFUCNTION OF THE SYSTEM"
  then
   @enter_READING "CARD_READER ≔ READING" 
  end
@@ -61,46 +68,43 @@ events
    @isin_READING "CARD_READER = READING"  
  then
   @enter_READY "CARD_READER ≔ READY" 
-  @set_Unblock "GateIn_Unblock ≔ FALSE" 
-  @set_Block "GateIn_Block ≔ TRUE" 
-  @enter_BLOCKED "GATE ≔ BLOCKED" > "This shouldn't be needed since it is always be the case· "
  end
  event CardOk  ordinary 
  where 
    @isin_READING "CARD_READER = READING"  
  then
-  @set_Unblock "GateIn_Unblock ≔ TRUE" 
-  @set_Block "GateIn_Block ≔ FALSE" 
   @enter_ACCEPT "CARD_READER ≔ ACCEPT" 
-  @enter_UNBLOCKED "GATE ≔ UNBLOCKED" > "This should be an action that triggers the
-Event BLOCKED_OUT_TRANS
-As it is now this requires human input"
+  @set_CardAccept "OnIn_CardAccept ≔ TRUE" 
  end
  event Ready  ordinary 
  where 
-   @isin_ACCEPT "CARD_READER = ACCEPT"  
+   @isin_ACCEPT "CARD_READER = ACCEPT"  >
+   "@check_CardAccept OnIn_CardAccept = FALSE  > 
+   NOT IN THE SCXML NEEDED FOR CORRECT BEHAVIOR 
+   IF IT IS NOT PRESENT NON−DETERMINISM ALLOWS FOR 
+   MALFUCNTION OF THE SYSTEM"
  then
-  @set_Unblock "GateIn_Unblock ≔ FALSE" 
-  @set_Block "GateIn_Block ≔ TRUE" 
   @enter_READY "CARD_READER ≔ READY" 
-  @enter_BLOCKED "GATE ≔ BLOCKED" > "As it is now this requires human input "
+  @set_Reset "OnIn_Reset ≔ TRUE" 
  end
  event UNBLOCKED_OUT_TRANS  ordinary > "Handles unnamed transition with conditions"
  where 
    @isin_UNBLOCKED "GATE = UNBLOCKED"  
-   @check_Block "GateIn_Unblock=TRUE"  
+   @check_Reset "OnIn_Reset=TRUE"  
  then
   @enter_BLOCKED "GATE ≔ BLOCKED" 
+  @set_Block "GateIn_Block ≔ TRUE" 
+  @set_Reset "OnIn_Reset ≔ FALSE" 
   @set_Unblock "GateIn_Unblock ≔ FALSE" 
-  @set_Block "GateIn_Block ≔ TRUE" > "Need to add raise Reset some how· Short way is to copy actions, but this isn't always the desire behavior·"
  end
  event BLOCKED_OUT_TRANS  ordinary > "Handles unnamed transition with conditions"
  where 
    @isin_BLOCKED "GATE = BLOCKED"  
-   @check_Unblock "GateIn_Block=TRUE"  
+   @check_CardAccept "OnIn_CardAccept=TRUE"  
  then
   @enter_UNBLOCKED "GATE ≔ UNBLOCKED" 
   @set_Unblock "GateIn_Unblock ≔ TRUE" 
+  @set_CardAccept "OnIn_CardAccept ≔ FALSE" 
   @set_Block "GateIn_Block ≔ FALSE" 
  end
 end
