@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.carrierSet name="_nnPzEHmiEeWdk4X6MiZ2PA" org.eventb.core.identifier="MAIN_REGION_STATES"/>
+<org.eventb.core.constant name="_nnPzEXmiEeWdk4X6MiZ2PA" org.eventb.core.identifier="ON"/>
+<org.eventb.core.constant name="_nnQaIHmiEeWdk4X6MiZ2PA" org.eventb.core.identifier="OFF"/>
+<org.eventb.core.constant name="_nnQaIXmiEeWdk4X6MiZ2PA" org.eventb.core.identifier="OnOff_MAP"/>
+<org.eventb.core.axiom name="_nnQaInmiEeWdk4X6MiZ2PA" org.eventb.core.label="typeof_ON" org.eventb.core.predicate="ON ∈ MAIN_REGION_STATES"/>
+<org.eventb.core.axiom name="_nnQaI3miEeWdk4X6MiZ2PA" org.eventb.core.label="typeof_OFF" org.eventb.core.predicate="OFF ∈ MAIN_REGION_STATES"/>
+<org.eventb.core.axiom name="_nnQaJHmiEeWdk4X6MiZ2PA" org.eventb.core.label="distinct_states_in_MAIN_REGION_STATES" org.eventb.core.predicate="partition(MAIN_REGION_STATES, {ON}, {OFF})"/>
+<org.eventb.core.axiom name="_nnQaJXmiEeWdk4X6MiZ2PA" org.eventb.core.label="define_OnOff_MAP" org.eventb.core.predicate="OnOff_MAP = { ON↦OFF, OFF↦ON}"/>
+<org.eventb.core.axiom name="_nnQaJnmiEeWdk4X6MiZ2PA" org.eventb.core.label="domain_OnOff_MAP" org.eventb.core.predicate="dom(OnOff_MAP) = MAIN_REGION_STATES"/>
+<org.eventb.core.axiom name="_nnQaJ3miEeWdk4X6MiZ2PA" org.eventb.core.label="range_OnOff_MAP" org.eventb.core.predicate="ran(OnOff_MAP) = MAIN_REGION_STATES"/>
+</org.eventb.core.contextFile>

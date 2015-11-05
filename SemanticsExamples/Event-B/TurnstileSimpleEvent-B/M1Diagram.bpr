@@ -2390,10 +2390,10 @@
 <org.eventb.core.prIdent name="MAIN_REGION_STATES" org.eventb.core.type="ℙ(MAIN_REGION_STATES)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p21" org.eventb.core.predicate="GATE=UNBLOCKED"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="Ready/superstateof_CARD_READER/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="CARD_READER_STATES,MAIN_REGION_STATES">
 <org.eventb.core.lang name="L"/>
@@ -3185,10 +3185,10 @@
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="GATE=UNBLOCKED">
 <org.eventb.core.prIdent name="GATE" org.eventb.core.type="GATE_STATES"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="BLOCKED_OUT_TRANS/superstateof_GATE/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="GATE_STATES,MAIN_REGION_STATES">
 <org.eventb.core.lang name="L"/>
@@ -4503,11 +4503,11 @@
 <org.eventb.core.prPred name="p38" org.eventb.core.predicate="MAIN_REGION∈MAIN_REGION_STATES"/>
 <org.eventb.core.prPred name="p45" org.eventb.core.predicate="s=OFF"/>
 <org.eventb.core.prPred name="p26" org.eventb.core.predicate="s∈dom(OnOff_MAP)"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="UNBLOCKED_OUT_TRANS/check_BLOCKED/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="GATE_STATES">
 <org.eventb.core.lang name="L"/>
